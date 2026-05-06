@@ -3504,6 +3504,168 @@ footer {
 
   </div><!-- /article-content-wrap -->
 
+  <!-- ═══════════════════════ ENGAGEMENT BAR ═══════════════════════ -->
+  <div class="engagement-bar">
+    <div class="engagement-strip">
+
+      <!-- Views -->
+      <div class="eng-stat">
+        <span class="eng-stat-icon">👁</span>
+        <div>
+          <div class="eng-stat-num" id="viewCount">2,847</div>
+          <div class="eng-stat-label">Views</div>
+        </div>
+      </div>
+
+      <!-- Likes -->
+      <button class="eng-like-btn" id="likeBtn" onclick="toggleLike()">
+        <span class="like-heart" id="likeHeart">♡</span>
+        <div>
+          <div class="eng-stat-num" id="likeCount">184</div>
+          <div class="eng-stat-label">Likes</div>
+        </div>
+      </button>
+
+      <!-- Comments (scroll to section) -->
+      <div class="eng-stat" style="cursor:pointer;" onclick="scrollToComments()">
+        <span class="eng-stat-icon">💬</span>
+        <div>
+          <div class="eng-stat-num" id="commentCountBadge">0</div>
+          <div class="eng-stat-label">Comments</div>
+        </div>
+      </div>
+
+      <!-- Rating -->
+      <div class="eng-stat" style="cursor:pointer;" onclick="scrollToRating()">
+        <span class="eng-stat-icon">⭐</span>
+        <div>
+          <div class="eng-stat-num" id="avgRatingBadge">4.7</div>
+          <div class="eng-stat-label">Rating</div>
+        </div>
+      </div>
+
+      <!-- Spacer -->
+      <div style="flex:1;"></div>
+
+      <!-- Share dropdown -->
+      <div style="position:relative;">
+        <button class="eng-share-btn" id="shareToggleBtn" onclick="toggleShareDropdown(event)">
+          <span>↗</span> SHARE
+        </button>
+        <div class="share-dropdown" id="shareDropdown">
+          <button class="share-dropdown-item" onclick="engShare('twitter')">
+            <span class="sdi-icon">𝕏</span> Share on X / Twitter
+          </button>
+          <button class="share-dropdown-item" onclick="engShare('whatsapp')">
+            <span class="sdi-icon">💬</span> Share on WhatsApp
+          </button>
+          <button class="share-dropdown-item" onclick="engShare('facebook')">
+            <span class="sdi-icon">📘</span> Share on Facebook
+          </button>
+          <button class="share-dropdown-item" onclick="engShare('copy')">
+            <span class="sdi-icon">🔗</span> Copy Link
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══════════════════════ STAR RATING ═══════════════════════ -->
+  <div class="rating-section" id="ratingSection">
+    <div class="rating-box">
+
+      <!-- Left: aggregate score -->
+      <div class="rating-left">
+        <div class="rating-big-num" id="ratingBigNum">4.7</div>
+        <div class="rating-stars-display" id="ratingStarsDisplay">
+          <span class="rating-star-filled">★</span>
+          <span class="rating-star-filled">★</span>
+          <span class="rating-star-filled">★</span>
+          <span class="rating-star-filled">★</span>
+          <span class="rating-star-filled">★</span>
+        </div>
+        <div class="rating-count" id="ratingCountLabel">238 ratings</div>
+      </div>
+
+      <div class="rating-divider"></div>
+
+      <!-- Middle: bar breakdown -->
+      <div style="flex:1; min-width:160px;">
+        <div class="rating-bar-row"><span class="rating-bar-label">5</span><div class="rating-bar-track"><div class="rating-bar-fill" id="bar5" style="width:72%"></div></div><span class="rating-bar-pct" id="pct5">72%</span></div>
+        <div class="rating-bar-row"><span class="rating-bar-label">4</span><div class="rating-bar-track"><div class="rating-bar-fill" id="bar4" style="width:18%"></div></div><span class="rating-bar-pct" id="pct4">18%</span></div>
+        <div class="rating-bar-row"><span class="rating-bar-label">3</span><div class="rating-bar-track"><div class="rating-bar-fill" id="bar3" style="width:6%"></div></div><span class="rating-bar-pct" id="pct3">6%</span></div>
+        <div class="rating-bar-row"><span class="rating-bar-label">2</span><div class="rating-bar-track"><div class="rating-bar-fill" id="bar2" style="width:3%"></div></div><span class="rating-bar-pct" id="pct2">3%</span></div>
+        <div class="rating-bar-row"><span class="rating-bar-label">1</span><div class="rating-bar-track"><div class="rating-bar-fill" id="bar1" style="width:1%"></div></div><span class="rating-bar-pct" id="pct1">1%</span></div>
+      </div>
+
+      <div class="rating-divider"></div>
+
+      <!-- Right: interactive stars -->
+      <div class="rating-right">
+        <div class="rating-right-label">RATE THIS ARTICLE</div>
+        <div class="rating-interactive" id="ratingInteractive">
+          <span class="ri-star" data-val="1" onmouseover="hoverStar(1)" onmouseout="unhoverStar()" onclick="submitRating(1)">★</span>
+          <span class="ri-star" data-val="2" onmouseover="hoverStar(2)" onmouseout="unhoverStar()" onclick="submitRating(2)">★</span>
+          <span class="ri-star" data-val="3" onmouseover="hoverStar(3)" onmouseout="unhoverStar()" onclick="submitRating(3)">★</span>
+          <span class="ri-star" data-val="4" onmouseover="hoverStar(4)" onmouseout="unhoverStar()" onclick="submitRating(4)">★</span>
+          <span class="ri-star" data-val="5" onmouseover="hoverStar(5)" onmouseout="unhoverStar()" onclick="submitRating(5)">★</span>
+        </div>
+        <div class="rating-feedback" id="ratingFeedback">Tap a star to rate</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══════════════════════ COMMENTS SECTION ═══════════════════════ -->
+  <div class="comments-section" id="commentsSection">
+
+    <div class="comments-header">
+      <div class="comments-title">DISCUSSION</div>
+      <div class="comments-count-badge" id="commentsCountHeader">0 Comments</div>
+    </div>
+
+    <!-- Write a comment -->
+    <div class="comment-form">
+      <div class="comment-form-title">Join the Conversation</div>
+      <div class="comment-form-row">
+        <input class="comment-input" id="commentName"  type="text"  placeholder="Your name *" maxlength="50">
+        <input class="comment-input" id="commentEmail" type="email" placeholder="Email (not published)" maxlength="80">
+      </div>
+      <textarea class="comment-textarea" id="commentText" placeholder="Share your thoughts on this article... Be real." maxlength="1000"></textarea>
+      <div class="comment-form-footer">
+        <span class="comment-char-count"><span id="charLeft">1000</span> characters remaining</span>
+        <button class="comment-submit-btn" id="commentSubmitBtn" onclick="submitComment()">POST COMMENT →</button>
+      </div>
+    </div>
+
+    <!-- Sort bar -->
+    <div class="comments-sort-bar" id="commentsSortBar" style="display:none;">
+      <span class="comments-sort-label">Sort by:</span>
+      <button class="sort-btn active" id="sortNewest" onclick="sortComments('newest')">Newest</button>
+      <button class="sort-btn" id="sortOldest" onclick="sortComments('oldest')">Oldest</button>
+      <button class="sort-btn" id="sortTop"    onclick="sortComments('top')">Top Liked</button>
+    </div>
+
+    <!-- Comments list -->
+    <div class="comments-list" id="commentsList"></div>
+
+    <!-- Empty state (shown when no comments) -->
+    <div class="comments-empty" id="commentsEmpty">
+      <div class="comments-empty-icon">✍🏾</div>
+      <div class="comments-empty-text">No comments yet. Be the first to speak your truth.</div>
+    </div>
+
+    <!-- Load more -->
+    <button class="load-more-comments" id="loadMoreComments" style="display:none;" onclick="loadMoreComments()">
+      LOAD MORE COMMENTS ↓
+    </button>
+
+  </div>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast"></div>
+
   <!-- Prev / Next Navigation -->
   <div class="article-nav-strip">
     <div class="article-nav-inner">
