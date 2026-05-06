@@ -714,6 +714,19 @@ body {
   color: rgba(0,0,0,0.08);
   letter-spacing: 4px;
 }
+.post-card--featured {
+  border-left: 4px solid var(--crimson);
+  padding-left: 20px;
+  background: #fff8f8;
+}
+.post-card--featured .post-tag {
+  background: var(--crimson);
+  color: #fff;
+  border: none;
+  padding: 4px 10px;
+}
+.post-card--featured .post-title { font-size: 24px; }
+
 .post-body { order: 1; }
 .post-tag {
   display: inline-block;
@@ -1454,6 +1467,61 @@ footer {
   .author-section::before { font-size: 120px; }
 }
 
+/* ── Article Images ── */
+.article-img-wrap {
+  margin: 0 0 40px 0;
+  position: relative;
+}
+.article-img-wrap img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  border: 1px solid #e8e0d4;
+}
+.article-img-hero {
+  margin-bottom: 40px;
+}
+.article-img-hero img {
+  height: 460px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+.article-img-caption {
+  font-size: 12px;
+  color: #888;
+  font-style: italic;
+  line-height: 1.5;
+  padding: 10px 14px;
+  background: #faf8f5;
+  border: 1px solid #e8e0d4;
+  border-top: none;
+}
+/* Post card image — real photo */
+.post-card-img {
+  height: 140px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  order: 2;
+}
+.post-card-img .post-img-inner {
+  position: absolute;
+  inset: 0;
+  transition: transform 0.4s;
+}
+.post-card:hover .post-img-inner { transform: scale(1.06); }
+.post-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+@media (max-width: 640px) {
+  .article-img-hero img { height: 260px; }
+}
+
 /* ──────────────────────────── ARTICLE PAGE VIEW ─────────────────────────── */
 /* Page management */
 .page { display: block; }
@@ -1791,6 +1859,524 @@ footer {
 @media (max-width: 600px) {
   .article-header { padding: 40px 20px 36px; }
   .article-content-wrap { padding: 32px 20px 60px; }
+}
+
+/* ──────────────────────────── ENGAGEMENT BAR ─────────────────────────── */
+.engagement-bar {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px 0;
+}
+.engagement-strip {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  border: 1px solid #e0d8cc;
+  background: #ffffff;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+.eng-stat {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 22px;
+  border-right: 1px solid #e8e0d4;
+  font-size: 12px;
+  color: #888;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+.eng-stat:last-child { border-right: none; }
+.eng-stat-icon { font-size: 15px; }
+.eng-stat-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px;
+  color: #111;
+  line-height: 1;
+}
+.eng-stat-label { font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; }
+
+/* Like button */
+.eng-like-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 22px;
+  border: none;
+  border-right: 1px solid #e8e0d4;
+  background: #fff;
+  cursor: pointer;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #666;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.eng-like-btn:hover { background: #fff5f5; color: var(--crimson); }
+.eng-like-btn.liked { background: #fff5f5; color: var(--crimson); }
+.eng-like-btn.liked .like-heart { animation: heartpop 0.35s ease; }
+.like-heart { font-size: 16px; transition: transform 0.2s; }
+@keyframes heartpop {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.5); }
+  100% { transform: scale(1); }
+}
+
+/* Share row in engagement bar */
+.eng-share-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 22px;
+  border: none;
+  border-right: 1px solid #e8e0d4;
+  background: #fff;
+  cursor: pointer;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #666;
+  transition: all 0.2s;
+  white-space: nowrap;
+  position: relative;
+}
+.eng-share-btn:last-child { border-right: none; }
+.eng-share-btn:hover { background: #f5f8ff; color: #1a1aff; }
+
+/* Share dropdown */
+.share-dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  background: #fff;
+  border: 1px solid #e0d8cc;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  z-index: 200;
+  min-width: 200px;
+  display: none;
+}
+.share-dropdown.open { display: block; }
+.share-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 16px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  border-bottom: 1px solid #f0ece4;
+  transition: background 0.15s;
+}
+.share-dropdown-item:last-child { border-bottom: none; }
+.share-dropdown-item:hover { background: #faf8f5; }
+.share-dropdown-item .sdi-icon { font-size: 16px; width: 20px; text-align: center; }
+
+/* ──────────────────────────── STAR RATING ─────────────────────────── */
+.rating-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 24px 0;
+}
+.rating-box {
+  background: #faf8f5;
+  border: 1px solid #e8e0d4;
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.rating-left { flex-shrink: 0; text-align: center; }
+.rating-big-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 56px;
+  color: #111;
+  line-height: 1;
+}
+.rating-stars-display { display: flex; gap: 3px; margin: 4px 0; }
+.rating-star-filled { color: #f0a500; font-size: 16px; }
+.rating-star-empty  { color: #ddd;    font-size: 16px; }
+.rating-count { font-size: 11px; color: #888; letter-spacing: 1px; }
+.rating-divider { width: 1px; background: #e0d8cc; align-self: stretch; }
+.rating-right { flex: 1; min-width: 200px; }
+.rating-right-label {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  color: #111;
+  margin-bottom: 14px;
+}
+.rating-interactive { display: flex; gap: 6px; margin-bottom: 10px; }
+.rating-interactive .ri-star {
+  font-size: 28px;
+  cursor: pointer;
+  color: #ddd;
+  transition: color 0.15s, transform 0.15s;
+  user-select: none;
+  line-height: 1;
+}
+.rating-interactive .ri-star:hover,
+.rating-interactive .ri-star.hovered { color: #f0a500; transform: scale(1.15); }
+.rating-interactive .ri-star.selected { color: #f0a500; }
+.rating-feedback {
+  font-size: 12px;
+  color: var(--crimson);
+  font-style: italic;
+  min-height: 18px;
+  transition: opacity 0.3s;
+}
+.rating-bar-row { display: flex; align-items: center; gap: 8px; margin-bottom: 5px; }
+.rating-bar-label { font-size: 11px; color: #888; width: 12px; text-align: right; flex-shrink: 0; }
+.rating-bar-track { flex: 1; height: 6px; background: #eee; border-radius: 3px; overflow: hidden; }
+.rating-bar-fill  { height: 100%; background: #f0a500; border-radius: 3px; transition: width 0.4s ease; }
+.rating-bar-pct   { font-size: 10px; color: #aaa; width: 28px; text-align: right; flex-shrink: 0; }
+
+/* ──────────────────────────── COMMENTS SECTION ─────────────────────────── */
+.comments-section {
+  max-width: 1100px;
+  margin: 40px auto 0;
+  padding: 0 24px 60px;
+}
+.comments-header {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #111;
+}
+.comments-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 32px;
+  letter-spacing: 3px;
+  color: #111;
+}
+.comments-count-badge {
+  background: var(--crimson);
+  color: #fff;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  padding: 3px 10px;
+}
+/* Write comment form */
+.comment-form {
+  background: #faf8f5;
+  border: 1px solid #e8e0d4;
+  padding: 28px;
+  margin-bottom: 40px;
+}
+.comment-form-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: #111;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.comment-form-title::before { content: ''; width: 4px; height: 18px; background: var(--crimson); flex-shrink: 0; }
+.comment-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+.comment-input {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #d8d0c4;
+  padding: 11px 14px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: #111;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.comment-input:focus { border-color: var(--crimson); }
+.comment-textarea {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #d8d0c4;
+  padding: 14px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: #111;
+  outline: none;
+  resize: vertical;
+  min-height: 110px;
+  transition: border-color 0.2s;
+  margin-bottom: 14px;
+  line-height: 1.6;
+}
+.comment-textarea:focus { border-color: var(--crimson); }
+.comment-form-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.comment-char-count { font-size: 11px; color: #aaa; }
+.comment-submit-btn {
+  background: var(--crimson);
+  color: #fff;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 15px;
+  letter-spacing: 3px;
+  padding: 12px 28px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.comment-submit-btn:hover { background: var(--crimson-hot); }
+.comment-submit-btn:disabled { background: #ccc; cursor: not-allowed; }
+/* Sort/filter bar */
+.comments-sort-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+.comments-sort-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: #888; margin-right: 4px; }
+.sort-btn {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 6px 14px;
+  border: 1px solid #e0d8cc;
+  background: #fff;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.sort-btn.active { background: #111; color: #fff; border-color: #111; }
+.sort-btn:hover:not(.active) { border-color: #aaa; color: #333; }
+/* Comment list */
+.comments-list { display: flex; flex-direction: column; gap: 0; }
+.comment-item {
+  padding: 24px 0;
+  border-bottom: 1px solid #ece8e0;
+  animation: commentIn 0.4s ease;
+}
+.comment-item:first-child { border-top: 1px solid #ece8e0; }
+@keyframes commentIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.comment-header { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 12px; }
+.comment-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 0;
+  background: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px;
+  color: #fff;
+  flex-shrink: 0;
+  letter-spacing: 1px;
+}
+.comment-meta { flex: 1; }
+.comment-author-name {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #111;
+  margin-bottom: 2px;
+}
+.comment-timestamp { font-size: 11px; color: #aaa; letter-spacing: 0.5px; }
+.comment-verified {
+  display: inline-block;
+  background: var(--crimson);
+  color: #fff;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 2px 6px;
+  margin-left: 6px;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+.comment-body {
+  font-family: 'DM Serif Display', serif;
+  font-size: 15px;
+  line-height: 1.75;
+  color: #333;
+  margin-bottom: 14px;
+  margin-left: 54px;
+}
+.comment-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 54px;
+  flex-wrap: wrap;
+}
+.comment-action-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #888;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: color 0.2s, background 0.2s;
+  border-radius: 2px;
+}
+.comment-action-btn:hover { color: #111; background: #f5f0e8; }
+.comment-action-btn.liked-comment { color: var(--crimson); }
+.comment-action-sep { color: #ddd; font-size: 10px; padding: 0 2px; }
+/* Reply thread */
+.comment-replies {
+  margin-left: 54px;
+  margin-top: 16px;
+  border-left: 3px solid #f0ece4;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.reply-item { padding: 14px 0; border-bottom: 1px solid #f0ece4; }
+.reply-item:last-child { border-bottom: none; }
+.reply-header { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; }
+.reply-avatar {
+  width: 30px;
+  height: 30px;
+  background: #e8e0d4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 13px;
+  color: #555;
+  flex-shrink: 0;
+}
+.reply-body {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #444;
+  margin-left: 40px;
+  margin-bottom: 8px;
+}
+.reply-actions { margin-left: 40px; }
+/* Inline reply form */
+.inline-reply-form {
+  margin-left: 54px;
+  margin-top: 14px;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+}
+.inline-reply-form.open { display: flex; }
+.inline-reply-input {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #d8d0c4;
+  padding: 10px 14px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: #111;
+  outline: none;
+  transition: border-color 0.2s;
+  resize: none;
+  min-height: 80px;
+  line-height: 1.6;
+}
+.inline-reply-input:focus { border-color: var(--crimson); }
+.inline-reply-actions { display: flex; gap: 8px; }
+.inline-reply-submit {
+  background: var(--crimson);
+  color: #fff;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 13px;
+  letter-spacing: 2px;
+  padding: 8px 18px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.inline-reply-submit:hover { background: var(--crimson-hot); }
+.inline-reply-cancel {
+  background: #f0ece4;
+  color: #555;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 13px;
+  letter-spacing: 2px;
+  padding: 8px 18px;
+  border: 1px solid #d8d0c4;
+  cursor: pointer;
+}
+/* Empty state */
+.comments-empty {
+  text-align: center;
+  padding: 48px 24px;
+  border: 2px dashed #e0d8cc;
+}
+.comments-empty-icon { font-size: 40px; margin-bottom: 12px; }
+.comments-empty-text {
+  font-family: 'DM Serif Display', serif;
+  font-style: italic;
+  font-size: 18px;
+  color: #888;
+}
+/* Load more comments */
+.load-more-comments {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #e0d8cc;
+  padding: 14px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 14px;
+  letter-spacing: 3px;
+  color: #666;
+  cursor: pointer;
+  margin-top: 24px;
+  transition: all 0.2s;
+}
+.load-more-comments:hover { border-color: var(--crimson); color: var(--crimson); }
+/* Success toast */
+.toast {
+  position: fixed;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%) translateY(80px);
+  background: #111;
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  padding: 12px 24px;
+  border-left: 4px solid var(--crimson);
+  z-index: 9999;
+  transition: transform 0.35s cubic-bezier(0.22,1,0.36,1), opacity 0.35s;
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+}
+.toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
+
+@media (max-width: 700px) {
+  .engagement-strip { flex-wrap: wrap; }
+  .eng-stat, .eng-like-btn, .eng-share-btn { padding: 12px 14px; }
+  .comment-form-row { grid-template-columns: 1fr; }
+  .rating-box { flex-direction: column; gap: 20px; }
+  .rating-divider { display: none; }
+  .comment-body, .comment-actions, .comment-replies, .inline-reply-form { margin-left: 0; }
+  .reply-body, .reply-actions { margin-left: 0; }
 }
 
 /* ──────────────────────────── ARTICLE MODAL ─────────────────────────── */
@@ -2168,7 +2754,7 @@ footer {
     <div class="hero-img-bg"></div>
     <div class="hero-pattern"></div>
     <div class="hero-vol">I</div>
-    <div class="hero-featured-card">
+    <div class="hero-featured-card" onclick="showArticle()" style="cursor:pointer;">
       <div class="card-tag">Latest Post</div>
       <div class="card-title">The Woman Who Knew Her Son Was About to Make the Biggest Mistake of His Life</div>
       <div class="card-meta">
@@ -2341,7 +2927,7 @@ footer {
       <div class="blog-feed">
 
         <!-- ★ FEATURED ARTICLE: THERE IS NO ONE -->
-        <a href="#" class="post-card post-card--featured" onclick="openArticle(event)">
+        <a href="#there-is-no-one" class="post-card post-card--featured" onclick="showArticle(event)">
           <div class="post-body">
             <span class="post-tag">Intersexual Dynamics</span>
             <h3 class="post-title">There Is No One: The Soulmate Myth That's Keeping You Weak</h3>
@@ -2354,8 +2940,8 @@ footer {
             </div>
           </div>
           <div class="post-card-img">
-            <div class="post-img-inner" style="background: linear-gradient(135deg, #fce8e8 0%, #f5c8c8 100%); display:flex; align-items:center; justify-content:center;">
-              <div style="font-family:'Bebas Neue',sans-serif; font-size:52px; color:rgba(192,21,42,0.18); letter-spacing:4px; text-align:center; line-height:1; padding:10px;">NO<br>ONE</div>
+            <div class="post-img-inner" style="padding:0; overflow:hidden;">
+              <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&q=80&fit=crop&crop=faces" alt="Man sitting alone in thought" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" />
             </div>
           </div>
         </a>
@@ -2713,111 +3299,413 @@ footer {
 <!-- BACK TO TOP -->
 <button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
-<!-- FULL ARTICLE MODAL: THERE IS NO ONE -->
-<div class="article-modal" id="articleModal" role="dialog" aria-modal="true" aria-label="Article: There Is No One">
-  <div class="article-modal-backdrop" onclick="closeArticle()"></div>
-  <div class="article-modal-panel">
-    <div class="article-modal-header">
-      <button class="article-modal-close" onclick="closeArticle()" aria-label="Close article">✕</button>
-      <div class="article-modal-tag">Intersexual Dynamics</div>
-      <h1 class="article-modal-title">THERE IS NO ONE</h1>
-      <div class="article-modal-meta">
-        <span class="author">Osubula</span>
-        <span>·</span>
+</div><!-- /homePage -->
+
+<!-- ═══════════════════════════════════════════════════════
+     ARTICLE PAGE — THERE IS NO ONE
+     (Intersexual Dynamics · Article 1 of 14)
+     ═══════════════════════════════════════════════════════ -->
+<div id="articlePage" class="page hidden article-page">
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb-bar">
+    <div class="breadcrumb-inner">
+      <a href="#" onclick="showHome(event)">Home</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="#" onclick="showHome(event)">Intersexual Dynamics</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>There Is No One</span>
+    </div>
+  </div>
+
+  <!-- Article Header -->
+  <div class="article-header">
+    <div class="article-header-inner">
+      <div class="article-header-tag">⚡ Intersexual Dynamics</div>
+      <h1 class="article-header-title">THERE IS NO ONE</h1>
+      <div class="article-header-meta">
+        <span class="meta-author">By Osubula</span>
+        <span class="meta-divider">·</span>
         <span>May 2024</span>
-        <span>·</span>
+        <span class="meta-divider">·</span>
         <span>7 min read</span>
+        <span class="meta-divider">·</span>
+        <span>Article 1 of 14 in Intersexual Dynamics</span>
       </div>
     </div>
-    <div class="article-modal-body">
+  </div>
 
-      <p class="article-lead">There is no single perfect soulmate waiting for you. There is no "The One." There are good matches and bad matches, but never one magical person who is your only destiny.</p>
+  <!-- Article Body + Sidebar -->
+  <div class="article-content-wrap">
 
-      <div class="article-section-title">What Is ONEitis?</div>
-      <p class="article-p">ONEitis is believing <em>"This person is my possible soulmate."</em> It is paralysis. You stop growing. You stop moving forward. You stop being your real self.</p>
+    <!-- Main Content -->
+    <div class="article-content-main">
+
+      <button class="back-to-blog-btn" onclick="showHome()">Back to all articles</button>
+
+      <!-- Hero Image -->
+      <div class="article-img-wrap article-img-hero">
+        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=860&q=80&fit=crop&crop=faces" alt="Man sitting alone in deep thought, looking out a window" loading="lazy" />
+        <div class="article-img-caption">The myth of "The One" traps men in cycles of dependency and inaction — before they ever recognise it is happening.</div>
+      </div>
+
+      <p class="article-lead">There is no single perfect soulmate waiting for you. There is no "The One." There are good matches and bad matches — but never one magical person who is your only destiny. This is one of the most uncomfortable truths you will ever sit with. But it is also one of the most freeing.</p>
+
+      <!-- ── SECTION 1 ── -->
+      <div id="toc-oneitis" class="article-section-title">What Is ONEitis?</div>
+
+      <p class="article-p">ONEitis is the deeply held belief that a specific person is your only possible soulmate — that without them, your romantic life is essentially over. It is not a clinical term, but it describes something very real that happens inside men and women every single day. You fixate. You obsess. You build an entire imaginary future around someone who may not even know the weight you have placed on them.</p>
+
+      <p class="article-p">The word "itis" comes from the medical suffix meaning inflammation — an infection of the mind, essentially. And that is exactly what it feels like from the inside. Everything becomes coloured by this one person. You check their social media at 2am. You replay conversations looking for hidden meaning. You plan what you will say the next time you see them. Your whole emotional world orbits around someone who is just a human being — flawed, uncertain, and not obligated to be your salvation.</p>
+
       <div class="article-pullquote">
-        <p>It feels like love — but it's actually fear and insecurity in disguise.</p>
+        <p>It feels like love. It presents itself as devotion. But underneath it is fear — fear that you are not enough to attract another person, fear that you peaked, fear that this was your one shot and you are watching it slip through your fingers.</p>
       </div>
 
-      <div class="article-section-title">The Soulmate Myth</div>
-      <p class="article-p">Movies, songs, books, and ads all tell us: <em>"One day you will meet THE perfect person."</em> This is a nice story for romantic comedies, but it is terrible for real life.</p>
-      <p class="article-p">It makes people waste years searching for a fantasy instead of building real relationships.</p>
+      <p class="article-p">ONEitis is paralysis dressed up as passion. When you have it, you stop growing because you are waiting. Waiting for them to text back. Waiting for the right moment to confess your feelings. Waiting for them to see how perfect you are together. Meanwhile, your actual life — your purpose, your development, your freedom — sits on pause.</p>
 
-      <div class="article-section-title">Why It Messes People Up</div>
-      <div class="article-example"><strong>When you're single:</strong> You feel desperate and scared you'll never find "The One."</div>
-      <div class="article-example"><strong>When you're in a relationship:</strong> You stay even if it's unhealthy, because you think "If I lose this person, I'll never find anyone else." You ignore red flags and try to fix the person — or yourself — to make the fantasy come true.</div>
+      <!-- ── SECTION 2 ── -->
+      <div id="toc-myth" class="article-section-title">The Soulmate Myth — Where It Comes From</div>
 
-      <div class="article-section-title">It Creates a Power Problem</div>
-      <p class="article-p">If you believe your partner is your ONLY possible love, they hold all the power. You feel powerless. The relationship becomes lopsided — one person dominates, the other begs or settles.</p>
-      <div class="article-example"><strong>Example 1:</strong> A beautiful woman stays with an abusive boyfriend because she believes he is her "One."</div>
-      <div class="article-example"><strong>Example 2:</strong> A man stays in a bad marriage because he is convinced no one else will ever love him.</div>
+      <p class="article-p">Movies, songs, books, and advertisements have been selling us the same story for decades: <em>"One day you will meet THE perfect person. You will know instantly. And everything will fall into place."</em> It is a beautiful story. It is also one of the most damaging ideas ever mass-produced.</p>
 
-      <div class="article-section-title">Where Does This Idea Come From?</div>
+      <p class="article-p">Think about every romantic film you have ever watched. The hero pursues one specific person. Every obstacle, every heartbreak, every near-miss — all of it is in service of ending up with that one person. The message is clear: persistence will be rewarded. The right love is the one you fight for. Letting go means giving up.</p>
+
+      <p class="article-p">This is a narrative built for entertainment, not for life. In real life, "fighting for" someone who does not want you is not romantic — it is harassment. "Never giving up" is not devotion — it is an inability to process rejection in a healthy way. The myth does not just mislead people. It actively teaches them dysfunctional behaviour and frames it as noble.</p>
+
+      <p class="article-p">Dating apps have doubled down on this. Their entire marketing is built around the promise of "your perfect match" — as if somewhere in a database there is one specific person algorithmically destined for you. They profit enormously from the anxiety that comes when that match does not materialise. Keep swiping. Keep subscribing. Your soulmate is just one more profile away.</p>
+
+      <!-- ── SECTION 3 ── -->
+      <div id="toc-why" class="article-section-title">Why the Myth Messes People Up</div>
+
+      <p class="article-p">The damage done by the soulmate myth operates differently depending on where you are in your relational life — but it causes harm in both states.</p>
+
+      <p class="article-p"><strong>When you are single,</strong> the myth makes ordinary loneliness feel catastrophic. You are not just single — you are failing to find your destiny. Every date that does not work out is not just a mismatch, it is evidence that you are somehow broken, unworthy, or running out of time. The anxiety this produces is not subtle. It warps how you present yourself. You come to first dates desperate rather than curious. You cling to early chemistry because you are terrified that this might be your only shot. People can sense that energy, and it pushes them away — which then "proves" your fear.</p>
+
+      <p class="article-p"><strong>When you are in a relationship,</strong> the myth becomes a trap. If you believe this person is your one and only, you will tolerate almost anything to keep them. Red flags get rationalised. Disrespect gets excused. You stop holding standards because the alternative — being alone — feels like the end of the world rather than a temporary state. You fix yourself. You shrink yourself. You bend until you no longer recognise who you were before this person walked into your life.</p>
+
+      <p class="article-p">Both versions produce the same outcome: a person who has surrendered their power, their growth, and their self-respect to a myth that was never real in the first place.</p>
+
+      <!-- ── SECTION 4 ── -->
+      <div id="toc-power" class="article-section-title">It Creates a Power Problem</div>
+
+      <p class="article-p">Power in a relationship is not something most people like to think about openly. We prefer to talk about love, compatibility, and connection. But power is always present — and when one person believes the other is irreplaceable, the power balance tips severely.</p>
+
+      <p class="article-p">If you believe your partner is your ONLY possible love, they hold all the power — whether they intend to use it or not. You become accommodating to avoid conflict. You become agreeable to keep the peace. You swallow your opinions, your discomfort, and your legitimate needs because the fear of losing them outweighs everything else. This is not a partnership. It is a hostage situation wrapped in romantic language.</p>
+
+      <p class="article-p">The examples are not extreme or rare. They happen in ordinary households, in ordinary relationships, every single day.</p>
+
+      <div class="article-example"><strong>Example 1:</strong> A woman stays with a man who belittles her in front of friends, controls her finances, and monitors her phone. She knows it is wrong. She has friends who tell her it is wrong. But she stays — because she has convinced herself that what they have is rare, that no one will ever know her the way he does, that love this intense must mean something. She has made the myth more real to her than her own wellbeing.</div>
+
+      <div class="article-example"><strong>Example 2:</strong> A man watches his wife slowly lose respect for him over years. She dismisses his opinions, makes major decisions without him, and is increasingly contemptuous. He knows something is broken. But he tolerates it — because he has built his entire sense of identity around being her husband, and the thought of that identity collapsing is more frightening to him than the slow erosion of his dignity. He does not leave. He stays and suffers because he has no framework for the idea that there could be a life — or a love — beyond this one.</div>
+
+      <p class="article-p">Neither of these people is weak or stupid. They are operating inside a story that society handed them and called it wisdom. The story is wrong. And until they see it clearly, they cannot change it.</p>
+
+      <!-- ── SECTION 5 ── -->
+      <div id="toc-source" class="article-section-title">Where Does This Idea Actually Come From?</div>
+
+      <p class="article-p">The soulmate myth did not emerge from nowhere. It has deep roots in culture, religion, commerce, and basic human psychology — which is precisely why it is so persistent and so difficult to challenge.</p>
+
       <ul class="article-list">
-        <li>Pop culture — movies, music, books that romanticise a single perfect match</li>
-        <li>Dating apps and ads that say "We'll find your soulmate!"</li>
-        <li>Society repeating the myth like it is a religion</li>
+        <li><strong>Pop culture:</strong> Every romantic film, love song, and bestselling novel reinforces the idea that there is one specific person out there who will "complete" you. From childhood we absorb this framework. By the time we reach adulthood, it feels less like a story and more like a law of nature.</li>
+        <li><strong>The dating industry:</strong> Dating apps, matchmaking services, and relationship coaches profit directly from the anxiety produced by the soulmate myth. The more you believe in "The One," the more desperately you will search, and the more money you will spend in that search. The myth is not just cultural — it is commercial.</li>
+        <li><strong>Religious and spiritual traditions:</strong> Many traditions include concepts of divinely ordained partners — the idea that God or the universe has a specific person set aside for you. For millions of people, this belief is sincere and meaningful. But when applied to romantic choices, it can produce the same paralysis and poor boundary-setting as the secular version of the myth.</li>
+        <li><strong>Basic human pattern recognition:</strong> Our brains are wired to find patterns and create narratives. When we experience intense chemistry with someone, the brain interprets that intensity as significance — as destiny. But chemistry is chemistry. Intensity is not the same as compatibility. The feeling of "this is the one" is a neurochemical event, not a cosmic declaration.</li>
       </ul>
+
       <div class="article-callout">
-        <p>Even guys who are perfectly logical about science, business, and sports suddenly become emotional and defensive when you say "There is no The One." It scares them.</p>
+        <p>Even men who are perfectly logical about science, business, sports, and money suddenly become emotional and defensive the moment you tell them "There is no The One." Watch their face. The myth is that deep. It is not just a belief — it is an identity. And identities do not go quietly.</p>
       </div>
 
-      <div class="article-section-title">Healthy Love vs. ONEitis</div>
+      <!-- ── SECTION 6 ── -->
+      <div id="toc-healthy" class="article-section-title">Healthy Love vs. ONEitis — What the Difference Actually Looks Like</div>
+
+      <p class="article-p">People often fear that letting go of the soulmate myth means becoming cold, transactional, or incapable of genuine love. This is the wrong conclusion. Dropping the myth does not mean love disappears. It means love becomes something you choose rather than something that holds you hostage.</p>
+
+      <p class="article-p">The difference between healthy love and ONEitis is not about the depth of feeling. It is about the structure of the relationship and where each person draws their sense of worth.</p>
+
       <div class="article-comparison">
         <div class="article-comparison-col good">
-          <div class="article-comparison-label">Healthy Relationship</div>
-          <p>Mutual respect. Both people are happy. Both can leave if needed. Each person maintains their identity and self-worth independent of the other.</p>
+          <div class="article-comparison-label">✓ Healthy Relationship</div>
+          <p>Both people maintain their individual identities, friendships, and goals. Each person stays because they genuinely want to — not because they are afraid of what leaving would mean. Standards are maintained with warmth. Conflict is navigated with honesty. The relationship adds to each person's life rather than consuming it. Either person could walk away and rebuild — and both know this. That knowledge does not create insecurity; it creates respect.</p>
         </div>
         <div class="article-comparison-col bad">
-          <div class="article-comparison-label">ONEitis Relationship</div>
-          <p>One person feels they "can't live without" the other. That's not love — that's dependency. It breeds resentment, manipulation, and eventual collapse.</p>
+          <div class="article-comparison-label">✕ ONEitis Relationship</div>
+          <p>One person has made the other their entire emotional world. Their mood depends on this person's mood. Their plans depend on this person's decisions. They have slowly stopped investing in friendships, ambitions, and self-care because all of that energy flows toward maintaining this one relationship. They are not in a partnership — they are in a dependency. And dependency breeds resentment in the person who holds the power, whether they want it or not.</p>
         </div>
       </div>
 
-      <div class="article-section-title">The Better Way to Think</div>
-      <p class="article-p">Forget "The One." Instead, remember this simple truth:</p>
+      <p class="article-p">The tragedy of ONEitis is that it often destroys the very relationship it is trying to protect. The desperation it produces — the clinginess, the need for constant reassurance, the inability to enforce healthy limits — is deeply unattractive. People are drawn to those who value themselves. When you have given all your self-worth to another person, there is nothing left for them to be attracted to.</p>
+
+      <!-- ── SECTION 7 ── -->
+      <div id="toc-better" class="article-section-title">The Better Way to Think — And Why It Is Actually Good News</div>
+
+      <p class="article-p">Here is the reframe that changes everything: there is no "The One" — but there are many good ones. This is not a pessimistic conclusion. It is a liberating one.</p>
+
+      <p class="article-p">On a planet of eight billion people, the idea that only one specific individual could be your compatible partner is statistically absurd — and emotionally ruinous. The belief that your happiness depends on one person finding you, choosing you, and staying with you is an enormous amount of weight to place on circumstances entirely outside your control.</p>
+
       <div class="article-pullquote">
-        <p>There are LOTS of good "Ones" out there. Some will be great. Some will be bad. But none of them is your only chance at happiness.</p>
+        <p>Real power comes from knowing you control your own life — not from chasing a person who may or may not reflect the fantasy you have built around them.</p>
       </div>
-      <p class="article-p">Real power comes from knowing you control your own life — not from chasing a fantasy soulmate. Drop the myth. You will be freer, happier, and able to grow.</p>
+
+      <p class="article-p">When you drop the myth, something shifts in how you carry yourself. You stop auditioning. You stop shrinking. You start showing up as a complete person — because you know that your worth is not contingent on whether this particular individual chooses you. You become someone who selects rather than someone who waits to be selected. That energy is fundamentally different. And people feel it.</p>
+
+      <p class="article-p">This does not mean you become detached or careless with love. It means you love with open hands rather than a closed fist. You are fully present in a relationship without being defined by it. You give generously — but from abundance rather than desperation. You stay because you choose to stay, not because leaving feels impossible. That is not less love. That is more of the right kind.</p>
+
+      <p class="article-p">Clear your head of everything you have been taught about soulmates. Not because love is not real — it is. But because the version of love the myth describes is a cage. The version that exists on the other side of it — chosen, conscious, and rooted in self-respect — is the one worth building toward.</p>
+
+      <p class="article-p">There is no One. There are many good ones. And you will only find them when you stop searching for a fairy tale and start becoming someone worth finding.</p>
 
       <div class="article-closing">
         <p>THERE IS NO <span>ONE</span>.<br>THERE ARE MANY GOOD ONES —<br>AND THAT'S ACTUALLY <span>MUCH BETTER NEWS.</span></p>
       </div>
 
+    </div><!-- /article-content-main -->
+
+    <!-- Article Sidebar -->
+    <aside class="article-sidebar">
+
+      <!-- Table of Contents -->
+      <div class="article-toc">
+        <div class="article-toc-title">In This Article</div>
+        <ul class="article-toc-list">
+          <li><a href="#toc-oneitis" onclick="scrollToSection(event,'toc-oneitis')">What Is ONEitis?</a></li>
+          <li><a href="#toc-myth" onclick="scrollToSection(event,'toc-myth')">The Soulmate Myth</a></li>
+          <li><a href="#toc-why" onclick="scrollToSection(event,'toc-why')">Why It Messes People Up</a></li>
+          <li><a href="#toc-power" onclick="scrollToSection(event,'toc-power')">It Creates a Power Problem</a></li>
+          <li><a href="#toc-source" onclick="scrollToSection(event,'toc-source')">Where This Idea Comes From</a></li>
+          <li><a href="#toc-healthy" onclick="scrollToSection(event,'toc-healthy')">Healthy Love vs. ONEitis</a></li>
+          <li><a href="#toc-better" onclick="scrollToSection(event,'toc-better')">The Better Way to Think</a></li>
+        </ul>
+      </div>
+
+      <!-- Share Widget -->
+      <div class="article-share-widget">
+        <div class="article-share-title">Share Article</div>
+        <div class="article-share-btns">
+          <button class="article-share-btn" onclick="shareArticle('twitter')">𝕏 Share on X</button>
+          <button class="article-share-btn" onclick="shareArticle('whatsapp')">💬 Share on WhatsApp</button>
+          <button class="article-share-btn" onclick="shareArticle('copy')">🔗 Copy Link</button>
+        </div>
+      </div>
+
+      <!-- Category Widget -->
+      <div class="article-toc">
+        <div class="article-toc-title">More in This Topic</div>
+        <ul class="article-toc-list">
+          <li><a href="#" onclick="showHome(event)">The Hypergamy Trap</a></li>
+          <li><a href="#" onclick="showHome(event)">The Comfort Paradox</a></li>
+          <li><a href="#" onclick="showHome(event)">The Provider Trap</a></li>
+          <li><a href="#" onclick="showHome(event)">Female Communication Decoded</a></li>
+        </ul>
+      </div>
+
+    </aside>
+
+  </div><!-- /article-content-wrap -->
+
+  <!-- Prev / Next Navigation -->
+  <div class="article-nav-strip">
+    <div class="article-nav-inner">
+      <div class="article-nav-item prev" onclick="showHome()">
+        <div class="article-nav-dir">← Previous</div>
+        <div class="article-nav-title">Back to All Articles</div>
+        <div class="article-nav-cat">Home · Full Feed</div>
+      </div>
+      <div class="article-nav-item next" onclick="showHome()">
+        <div class="article-nav-dir">Next Article →</div>
+        <div class="article-nav-title">Why She Lost Attraction After You "Won" Her</div>
+        <div class="article-nav-cat">Intersexual Dynamics</div>
+      </div>
     </div>
   </div>
-</div>
+
+  <!-- Related Articles -->
+  <div class="article-related">
+    <div class="article-related-inner">
+      <div class="article-related-title">READ NEXT</div>
+      <div class="article-related-grid">
+        <div class="article-related-card" onclick="showHome()">
+          <div class="article-related-tag">⚡ Intersexual Dynamics</div>
+          <div class="article-related-h">Why She Lost Attraction After You "Won" Her: The Comfort Paradox</div>
+          <div class="article-related-meta">9 min read · Apr 2024</div>
+        </div>
+        <div class="article-related-card" onclick="showHome()">
+          <div class="article-related-tag">🔱 Masculinity & Identity</div>
+          <div class="article-related-h">The Provider Trap: How Good Men Get Used and Why They Let It Happen</div>
+          <div class="article-related-meta">11 min read · Mar 2024</div>
+        </div>
+        <div class="article-related-card" onclick="showHome()">
+          <div class="article-related-tag">🧠 Female Psychology</div>
+          <div class="article-related-h">The Solipsism Lens: Understanding Why Women Experience the World Differently</div>
+          <div class="article-related-meta">14 min read · Feb 2024</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Article Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" onclick="showHome(event)" class="logo">OSUBULA<span>TALKS</span></a>
+        <p class="footer-desc">Not for motivation — for transformation. The straight talk about men, women, and how the world actually works.</p>
+        <div class="footer-socials">
+          <a href="#" class="footer-social-btn">𝕏</a>
+          <a href="#" class="footer-social-btn">📷</a>
+          <a href="#" class="footer-social-btn">▶</a>
+          <a href="#" class="footer-social-btn">✉</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Topics</div>
+        <ul class="footer-links">
+          <li><a href="#" onclick="showHome(event)">Intersexual Dynamics</a></li>
+          <li><a href="#" onclick="showHome(event)">Masculinity & Identity</a></li>
+          <li><a href="#" onclick="showHome(event)">Relationships & Dating</a></li>
+          <li><a href="#" onclick="showHome(event)">Female Psychology</a></li>
+          <li><a href="#" onclick="showHome(event)">Marriage & Commitment</a></li>
+          <li><a href="#" onclick="showHome(event)">Self-Improvement</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Navigate</div>
+        <ul class="footer-links">
+          <li><a href="#" onclick="showHome(event)">Home</a></li>
+          <li><a href="#" onclick="showHome(event)">All Articles</a></li>
+          <li><a href="#" onclick="showHome(event)">About the Author</a></li>
+          <li><a href="#" onclick="showHome(event)">Newsletter</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Legal</div>
+        <ul class="footer-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 OSUBULATALKS — All rights reserved.</span>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Disclaimer</a>
+      </div>
+    </div>
+  </footer>
+
+</div><!-- /articlePage -->
 
 <script>
-// ── Hamburger / Mobile Menu
-const hamburger = document.getElementById('hamburger');
+// ═══════════════════════════════════════════
+// PAGE NAVIGATION (SPA)
+// ═══════════════════════════════════════════
+const homePage    = document.getElementById('homePage');
+const articlePage = document.getElementById('articlePage');
+const progress    = document.getElementById('articleProgress');
+
+function showArticle(e) {
+  if (e && e.preventDefault) e.preventDefault();
+  homePage.classList.add('hidden');
+  articlePage.classList.remove('hidden');
+  window.scrollTo({ top: 0, behavior: 'instant' });
+  document.title = 'There Is No One — OSUBULATALKS';
+  history.pushState({ page: 'article', id: 'there-is-no-one' }, '', '#there-is-no-one');
+  initReveal();
+}
+
+function showHome(e) {
+  if (e && e.preventDefault) e.preventDefault();
+  articlePage.classList.add('hidden');
+  homePage.classList.remove('hidden');
+  window.scrollTo({ top: 0, behavior: 'instant' });
+  document.title = 'OSUBULATALKS — Forged in Pain, Sharpened in Solitude';
+  history.pushState({ page: 'home' }, '', '#');
+  progress.style.width = '0%';
+}
+
+// Browser back/forward
+window.addEventListener('popstate', (e) => {
+  if (location.hash === '#there-is-no-one') {
+    showArticle();
+  } else {
+    showHome();
+  }
+});
+
+// Handle initial load with hash
+if (location.hash === '#there-is-no-one') showArticle();
+
+// ── Scroll to TOC section inside article page
+function scrollToSection(e, id) {
+  if (e && e.preventDefault) e.preventDefault();
+  const el = document.getElementById(id);
+  if (el) {
+    const offset = 88;
+    const top = el.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({ top, behavior: 'smooth' });
+  }
+}
+
+// ── Reading progress bar (article page only)
+window.addEventListener('scroll', () => {
+  if (!articlePage.classList.contains('hidden')) {
+    const doc   = document.documentElement;
+    const body  = document.body;
+    const total = Math.max(doc.scrollHeight, body.scrollHeight) - window.innerHeight;
+    const pct   = total > 0 ? (window.scrollY / total) * 100 : 0;
+    progress.style.width = Math.min(pct, 100) + '%';
+  } else {
+    progress.style.width = '0%';
+  }
+  // back to top
+  backTop.classList.toggle('visible', window.scrollY > 400);
+});
+
+// ═══════════════════════════════════════════
+// HAMBURGER / MOBILE MENU
+// ═══════════════════════════════════════════
+const hamburger  = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
-const mobileClose = document.getElementById('mobileClose');
+const mobileClose= document.getElementById('mobileClose');
 
 hamburger.addEventListener('click', () => mobileMenu.classList.add('open'));
 mobileClose.addEventListener('click', () => mobileMenu.classList.remove('open'));
 function closeMobile() { mobileMenu.classList.remove('open'); }
 
-// ── Back to top
+// ═══════════════════════════════════════════
+// BACK TO TOP
+// ═══════════════════════════════════════════
 const backTop = document.getElementById('backTop');
-window.addEventListener('scroll', () => {
-  backTop.classList.toggle('visible', window.scrollY > 400);
+backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+// ═══════════════════════════════════════════
+// SCROLL REVEAL
+// ═══════════════════════════════════════════
+function initReveal() {
+  const els = document.querySelectorAll('.reveal:not(.visible), .post-card:not(.visible)');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), 80);
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  els.forEach(el => obs.observe(el));
+}
+initReveal();
+
+// Stagger post cards
+document.querySelectorAll('.post-card').forEach((card, i) => {
+  card.style.transitionDelay = `${i * 80}ms`;
 });
 
-// ── Scroll reveal
-const revealEls = document.querySelectorAll('.reveal, .post-card');
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry, i) => {
-    if (entry.isIntersecting) {
-      setTimeout(() => entry.target.classList.add('visible'), 80);
-      revealObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.1 });
-revealEls.forEach(el => revealObserver.observe(el));
-
-// ── Load more
+// ═══════════════════════════════════════════
+// LOAD MORE
+// ═══════════════════════════════════════════
 const loadMoreBtn = document.getElementById('loadMoreBtn');
 let loadMoreClicks = 0;
 loadMoreBtn.addEventListener('click', () => {
@@ -2836,9 +3724,11 @@ loadMoreBtn.addEventListener('click', () => {
   }, 1200);
 });
 
-// ── Newsletter: sidebar
+// ═══════════════════════════════════════════
+// NEWSLETTER
+// ═══════════════════════════════════════════
 function sidebarSubscribe() {
-  const email = document.getElementById('sidebarEmail').value.trim();
+  const email   = document.getElementById('sidebarEmail').value.trim();
   const success = document.getElementById('sidebarSuccess');
   if (!email || !email.includes('@')) {
     document.getElementById('sidebarEmail').style.borderColor = 'var(--crimson)';
@@ -2850,9 +3740,8 @@ function sidebarSubscribe() {
   document.querySelector('.nl-btn').style.display = 'none';
 }
 
-// ── Newsletter: banner
 function bannerSubscribe() {
-  const email = document.getElementById('bannerEmail').value.trim();
+  const email   = document.getElementById('bannerEmail').value.trim();
   const success = document.getElementById('bannerSuccess');
   if (!email || !email.includes('@')) {
     document.getElementById('bannerEmail').style.borderColor = 'rgba(0,0,0,0.5)';
@@ -2863,27 +3752,33 @@ function bannerSubscribe() {
   document.getElementById('bannerEmail').disabled = true;
 }
 
-// ── Article modal
-function openArticle(e) {
-  e.preventDefault();
-  const modal = document.getElementById('articleModal');
-  modal.classList.add('open');
-  document.body.style.overflow = 'hidden';
-  // scroll panel to top
-  modal.querySelector('.article-modal-panel').scrollTop = 0;
+// ═══════════════════════════════════════════
+// SHARE
+// ═══════════════════════════════════════════
+function shareArticle(platform) {
+  const url   = window.location.href.split('#')[0] + '#there-is-no-one';
+  const title = 'There Is No One — OSUBULATALKS';
+  if (platform === 'twitter') {
+    window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`, '_blank');
+  } else if (platform === 'whatsapp') {
+    window.open(`https://wa.me/?text=${encodeURIComponent(title + ' ' + url)}`, '_blank');
+  } else if (platform === 'copy') {
+    navigator.clipboard.writeText(url).then(() => {
+      const btn = document.querySelector('.article-share-btn:last-child');
+      const orig = btn.textContent;
+      btn.textContent = '✓ Link Copied!';
+      setTimeout(() => btn.textContent = orig, 2000);
+    });
+  }
 }
-function closeArticle() {
-  document.getElementById('articleModal').classList.remove('open');
-  document.body.style.overflow = '';
-}
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') closeArticle();
-});
 
-// ── Stagger post cards on scroll
-const postCards = document.querySelectorAll('.post-card');
-postCards.forEach((card, i) => {
-  card.style.transitionDelay = `${i * 80}ms`;
+// ═══════════════════════════════════════════
+// WIRE UP: featured card & post card → article
+// ═══════════════════════════════════════════
+document.addEventListener('DOMContentLoaded', () => {
+  // Featured card onclick hook
+  const featCard = document.querySelector('.post-card--featured');
+  if (featCard) featCard.addEventListener('click', showArticle);
 });
 </script>
 </body>
