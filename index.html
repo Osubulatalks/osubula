@@ -1187,7 +1187,7 @@ footer {
   overflow: hidden;
 }
 .about-strip::before {
-  content: '⚠️';
+  content: '⚠';
   position: absolute;
   right: 40px;
   top: 50%;
@@ -1860,6 +1860,291 @@ footer {
   .article-header { padding: 40px 20px 36px; }
   .article-content-wrap { padding: 32px 20px 60px; }
 }
+
+/* ── Engagement Row ── */
+.eng-row {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  border-top: 2px solid #111;
+  border-bottom: 2px solid #111;
+  margin: 36px 0 0;
+  flex-wrap: wrap;
+}
+.eng-row-like {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 14px 20px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #444;
+  background: none;
+  border: none;
+  border-right: 1px solid #e8e0d4;
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s;
+  white-space: nowrap;
+  letter-spacing: 0.3px;
+}
+.eng-row-like:hover   { color: var(--crimson); background: #fff5f5; }
+.eng-row-like.liked   { color: var(--crimson); background: #fff5f5; }
+.eng-row-like .liked-heart { animation: heartpop 0.35s ease; display: inline-block; }
+.eng-row-stat {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 14px 18px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #666;
+  border-right: 1px solid #e8e0d4;
+  white-space: nowrap;
+  letter-spacing: 0.3px;
+}
+.eng-row-stat.clickable {
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s;
+}
+.eng-row-stat.clickable:hover { color: #111; background: #faf8f5; }
+.eng-row-icon   { font-size: 15px; }
+.eng-row-label  { font-size: 11px; font-weight: 400; color: #aaa; margin-left: 2px; }
+.eng-row-share-wrap {
+  margin-left: auto;
+  position: relative;
+}
+.eng-row-share-btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 14px 22px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 15px;
+  letter-spacing: 2.5px;
+  color: #fff;
+  background: #111;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap;
+  height: 100%;
+}
+.eng-row-share-btn:hover { background: var(--crimson); }
+
+/* rating-bars flex fix */
+.rating-bars {
+  flex: 1;
+  min-width: 140px;
+}
+
+@media (max-width: 640px) {
+  .eng-row { flex-wrap: wrap; }
+  .eng-row-like,
+  .eng-row-stat { padding: 11px 14px; font-size: 12px; }
+  .eng-row-share-btn { padding: 11px 16px; font-size: 13px; }
+  .eng-row-share-wrap { margin-left: 0; border-top: 1px solid #e8e0d4; width: 100%; }
+  .eng-row-share-btn  { width: 100%; justify-content: center; }
+}
+
+/* hide old bar entirely */
+.inline-engagement-bar { display: none !important; }
+.engagement-bar        { display: none !important; }
+
+/* ── Article content typography ── */
+.article-author-card {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  border-top: 2px solid #111;
+  border-bottom: 1px solid #e8e0d4;
+  padding: 28px 0;
+  margin-top: 48px;
+}
+.article-author-avatar {
+  width: 56px;
+  height: 56px;
+  background: #111;
+  color: #fff;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  letter-spacing: 1px;
+}
+.article-author-info { flex: 1; }
+.article-author-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px;
+  letter-spacing: 3px;
+  color: #111;
+  margin-bottom: 2px;
+}
+.article-author-role {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--crimson);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.article-author-bio {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* ── Rating & Comments inside single col ── */
+.article-content-single .rating-section {
+  padding: 32px 0 0;
+  max-width: 100%;
+}
+.article-content-single .rating-box {
+  border: 1px solid #e8e0d4;
+  background: #faf8f5;
+}
+.article-content-single .comments-section {
+  max-width: 100%;
+  padding: 40px 0 60px;
+  margin: 0;
+}
+
+/* ── Article content typography ── */
+.article-section-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 26px;
+  letter-spacing: 2px;
+  color: #111;
+  margin: 44px 0 16px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #111;
+  line-height: 1.1;
+}
+.article-lead {
+  font-family: 'DM Serif Display', serif;
+  font-size: 20px;
+  line-height: 1.7;
+  color: #222;
+  margin-bottom: 28px;
+  font-style: italic;
+}
+.article-p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.85;
+  color: #333;
+  margin-bottom: 22px;
+  font-weight: 400;
+}
+.article-pullquote {
+  border-left: 4px solid var(--crimson);
+  padding: 18px 24px;
+  margin: 32px 0;
+  background: #fff8f5;
+}
+.article-pullquote p {
+  font-family: 'DM Serif Display', serif;
+  font-style: italic;
+  font-size: 19px;
+  line-height: 1.6;
+  color: #111;
+  margin: 0;
+}
+.article-example {
+  background: #f5f0e8;
+  border-left: 3px solid #d0c8bc;
+  padding: 16px 20px;
+  margin: 20px 0;
+  font-size: 15px;
+  line-height: 1.75;
+  color: #444;
+}
+.article-callout {
+  background: #111;
+  color: #f0ece4;
+  padding: 24px 28px;
+  margin: 32px 0;
+  font-family: 'DM Serif Display', serif;
+  font-style: italic;
+  font-size: 17px;
+  line-height: 1.65;
+}
+.article-callout p { margin: 0; }
+.article-list {
+  padding-left: 0;
+  list-style: none;
+  margin: 20px 0 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.article-list li {
+  font-size: 15px;
+  line-height: 1.75;
+  color: #333;
+  padding-left: 20px;
+  position: relative;
+}
+.article-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--crimson);
+  font-weight: 700;
+}
+.article-comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  background: #e0d8cc;
+  margin: 28px 0;
+}
+.article-comparison-col {
+  padding: 22px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #444;
+}
+.article-comparison-col.good { background: #f5fff5; }
+.article-comparison-col.bad  { background: #fff8f5; }
+.article-comparison-label {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 15px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  color: #111;
+}
+.article-comparison-col.good .article-comparison-label { color: #1a7a1a; }
+.article-comparison-col.bad  .article-comparison-label { color: var(--crimson); }
+.article-closing {
+  background: #111;
+  color: #fff;
+  padding: 40px 32px;
+  text-align: center;
+  margin: 40px 0 0;
+}
+.article-closing p {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  letter-spacing: 3px;
+  line-height: 1.4;
+  margin: 0;
+}
+.article-closing span { color: var(--crimson); }
+
+@media (max-width: 640px) {
+  .article-comparison { grid-template-columns: 1fr; }
+  .inline-engagement-bar { gap: 2px; padding: 8px 10px; }
+  .ieb-stat { padding: 5px 8px; font-size: 11px; }
+  .article-content-single { padding: 28px 18px 0; }
+  .article-author-card { flex-direction: column; gap: 14px; }
+}
+
+/* ── Remove old standalone engagement-bar outside article ── */
+.engagement-bar { display: none !important; }
 
 /* ──────────────────────────── ENGAGEMENT BAR ─────────────────────────── */
 .engagement-bar {
@@ -2852,7 +3137,7 @@ footer {
 <div class="cat-strip" id="categories">
   <div class="cat-strip-inner">
     <a href="#" class="cat-item">
-      <span class="cat-icon">⚡️</span>
+      <span class="cat-icon">⚡</span>
       <span class="cat-name">Intersexual Dynamics</span>
       <span class="cat-count">14 articles</span>
     </a>
@@ -2877,7 +3162,7 @@ footer {
       <span class="cat-count">7 articles</span>
     </a>
     <a href="#" class="cat-item">
-      <span class="cat-icon">⚔️</span>
+      <span class="cat-icon">⚔</span>
       <span class="cat-name">Self-Improvement</span>
       <span class="cat-count">12 articles</span>
     </a>
@@ -3133,12 +3418,12 @@ footer {
               <div class="social-label">Followers</div>
             </a>
             <a href="#" class="social-item">
-              <div class="social-platform">▶️</div>
+              <div class="social-platform">▶</div>
               <div class="social-count">5.3K</div>
               <div class="social-label">Subscribers</div>
             </a>
             <a href="#" class="social-item">
-              <div class="social-platform">✉️</div>
+              <div class="social-platform">✉</div>
               <div class="social-count">3.8K</div>
               <div class="social-label">Subscribers</div>
             </a>
@@ -3250,8 +3535,8 @@ footer {
       <div class="footer-socials">
         <a href="#" class="footer-social-btn">𝕏</a>
         <a href="#" class="footer-social-btn">📷</a>
-        <a href="#" class="footer-social-btn">▶️</a>
-        <a href="#" class="footer-social-btn">✉️</a>
+        <a href="#" class="footer-social-btn">▶</a>
+        <a href="#" class="footer-social-btn">✉</a>
       </div>
     </div>
     <div>
@@ -3321,7 +3606,7 @@ footer {
   <!-- Article Header -->
   <div class="article-header">
     <div class="article-header-inner">
-      <div class="article-header-tag">⚡️ Intersexual Dynamics</div>
+      <div class="article-header-tag">⚡ Intersexual Dynamics</div>
       <h1 class="article-header-title">THERE IS NO ONE</h1>
       <div class="article-header-meta">
         <span class="meta-author">By Osubula</span>
@@ -3335,335 +3620,229 @@ footer {
     </div>
   </div>
 
-  <!-- Article Body + Sidebar -->
-  <div class="article-content-wrap">
+  <!-- Article Body — single column, engagement inside -->
+  <div class="article-content-wrap article-content-single">
 
-    <!-- Main Content -->
     <div class="article-content-main">
 
-      <button class="back-to-blog-btn" onclick="showHome()">Back to all articles</button>
+      <button class="back-to-blog-btn" onclick="showHome()">← Back to all articles</button>
 
       <!-- Hero Image -->
       <div class="article-img-wrap article-img-hero">
-        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=860&q=80&fit=crop&crop=faces" alt="Man sitting alone in deep thought, looking out a window" loading="lazy" />
-        <div class="article-img-caption">The myth of "The One" traps men in cycles of dependency and inaction — before they ever recognise it is happening.</div>
+        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=900&q=80&fit=crop&crop=faces"
+             alt="Young Black man sitting alone by a window, deep in thought"
+             loading="lazy" />
+        <div class="article-img-caption">The belief that one person holds the key to your entire romantic future is not love — it is a trap dressed up in pretty words.</div>
       </div>
 
-      <p class="article-lead">There is no single perfect soulmate waiting for you. There is no "The One." There are good matches and bad matches — but never one magical person who is your only destiny. This is one of the most uncomfortable truths you will ever sit with. But it is also one of the most freeing.</p>
+      <!-- ── ARTICLE BODY ── -->
+      <p class="article-lead">There is no single perfect soulmate waiting for you. There is no "The One." There are good matches and bad matches, but never one magical person who is your only destiny.</p>
 
       <!-- ── SECTION 1 ── -->
       <div id="toc-oneitis" class="article-section-title">What Is ONEitis?</div>
 
-      <p class="article-p">ONEitis is the deeply held belief that a specific person is your only possible soulmate — that without them, your romantic life is essentially over. It is not a clinical term, but it describes something very real that happens inside men and women every single day. You fixate. You obsess. You build an entire imaginary future around someone who may not even know the weight you have placed on them.</p>
-
-      <p class="article-p">The word "itis" comes from the medical suffix meaning inflammation — an infection of the mind, essentially. And that is exactly what it feels like from the inside. Everything becomes coloured by this one person. You check their social media at 2am. You replay conversations looking for hidden meaning. You plan what you will say the next time you see them. Your whole emotional world orbits around someone who is just a human being — flawed, uncertain, and not obligated to be your salvation.</p>
-
-      <div class="article-pullquote">
-        <p>It feels like love. It presents itself as devotion. But underneath it is fear — fear that you are not enough to attract another person, fear that you peaked, fear that this was your one shot and you are watching it slip through your fingers.</p>
-      </div>
-
-      <p class="article-p">ONEitis is paralysis dressed up as passion. When you have it, you stop growing because you are waiting. Waiting for them to text back. Waiting for the right moment to confess your feelings. Waiting for them to see how perfect you are together. Meanwhile, your actual life — your purpose, your development, your freedom — sits on pause.</p>
+      <p class="article-p">ONEitis is believing "This person is my possible soulmate." It is paralysis. You stop growing, you stop moving forward, and you stop being your real self. It feels like love, but it's actually fear and insecurity in disguise.</p>
 
       <!-- ── SECTION 2 ── -->
-      <div id="toc-myth" class="article-section-title">The Soulmate Myth — Where It Comes From</div>
+      <div id="toc-myth" class="article-section-title">The Soulmate Myth (The Fantasy Everyone Believes)</div>
 
-      <p class="article-p">Movies, songs, books, and advertisements have been selling us the same story for decades: <em>"One day you will meet THE perfect person. You will know instantly. And everything will fall into place."</em> It is a beautiful story. It is also one of the most damaging ideas ever mass-produced.</p>
-
-      <p class="article-p">Think about every romantic film you have ever watched. The hero pursues one specific person. Every obstacle, every heartbreak, every near-miss — all of it is in service of ending up with that one person. The message is clear: persistence will be rewarded. The right love is the one you fight for. Letting go means giving up.</p>
-
-      <p class="article-p">This is a narrative built for entertainment, not for life. In real life, "fighting for" someone who does not want you is not romantic — it is harassment. "Never giving up" is not devotion — it is an inability to process rejection in a healthy way. The myth does not just mislead people. It actively teaches them dysfunctional behaviour and frames it as noble.</p>
-
-      <p class="article-p">Dating apps have doubled down on this. Their entire marketing is built around the promise of "your perfect match" — as if somewhere in a database there is one specific person algorithmically destined for you. They profit enormously from the anxiety that comes when that match does not materialise. Keep swiping. Keep subscribing. Your soulmate is just one more profile away.</p>
+      <p class="article-p">Movies, songs, books, and ads tell us: "One day you will meet THE perfect person." This is a nice story for romantic comedies, but terrible for real life. It makes people waste years searching for a fantasy instead of building real relationships.</p>
 
       <!-- ── SECTION 3 ── -->
-      <div id="toc-why" class="article-section-title">Why the Myth Messes People Up</div>
+      <div id="toc-why" class="article-section-title">Why It Messes People Up</div>
 
-      <p class="article-p">The damage done by the soulmate myth operates differently depending on where you are in your relational life — but it causes harm in both states.</p>
-
-      <p class="article-p"><strong>When you are single,</strong> the myth makes ordinary loneliness feel catastrophic. You are not just single — you are failing to find your destiny. Every date that does not work out is not just a mismatch, it is evidence that you are somehow broken, unworthy, or running out of time. The anxiety this produces is not subtle. It warps how you present yourself. You come to first dates desperate rather than curious. You cling to early chemistry because you are terrified that this might be your only shot. People can sense that energy, and it pushes them away — which then "proves" your fear.</p>
-
-      <p class="article-p"><strong>When you are in a relationship,</strong> the myth becomes a trap. If you believe this person is your one and only, you will tolerate almost anything to keep them. Red flags get rationalised. Disrespect gets excused. You stop holding standards because the alternative — being alone — feels like the end of the world rather than a temporary state. You fix yourself. You shrink yourself. You bend until you no longer recognise who you were before this person walked into your life.</p>
-
-      <p class="article-p">Both versions produce the same outcome: a person who has surrendered their power, their growth, and their self-respect to a myth that was never real in the first place.</p>
+      <p class="article-p"><strong>When you're single,</strong> you feel desperate and scared you'll never find "The One." <strong>When you're in a relationship,</strong> you stay even if it's unhealthy, because you think "If I lose this person, I'll never find anyone else." You ignore red flags and try to "fix" the person or yourself to make the fantasy come true.</p>
 
       <!-- ── SECTION 4 ── -->
       <div id="toc-power" class="article-section-title">It Creates a Power Problem</div>
 
-      <p class="article-p">Power in a relationship is not something most people like to think about openly. We prefer to talk about love, compatibility, and connection. But power is always present — and when one person believes the other is irreplaceable, the power balance tips severely.</p>
+      <p class="article-p">If you believe your partner is your ONLY possible love, they hold all the power. You feel powerless. The relationship becomes lopsided — one person dominates, the other begs or settles.</p>
 
-      <p class="article-p">If you believe your partner is your ONLY possible love, they hold all the power — whether they intend to use it or not. You become accommodating to avoid conflict. You become agreeable to keep the peace. You swallow your opinions, your discomfort, and your legitimate needs because the fear of losing them outweighs everything else. This is not a partnership. It is a hostage situation wrapped in romantic language.</p>
-
-      <p class="article-p">The examples are not extreme or rare. They happen in ordinary households, in ordinary relationships, every single day.</p>
-
-      <div class="article-example"><strong>Example 1:</strong> A woman stays with a man who belittles her in front of friends, controls her finances, and monitors her phone. She knows it is wrong. She has friends who tell her it is wrong. But she stays — because she has convinced herself that what they have is rare, that no one will ever know her the way he does, that love this intense must mean something. She has made the myth more real to her than her own wellbeing.</div>
-
-      <div class="article-example"><strong>Example 2:</strong> A man watches his wife slowly lose respect for him over years. She dismisses his opinions, makes major decisions without him, and is increasingly contemptuous. He knows something is broken. But he tolerates it — because he has built his entire sense of identity around being her husband, and the thought of that identity collapsing is more frightening to him than the slow erosion of his dignity. He does not leave. He stays and suffers because he has no framework for the idea that there could be a life — or a love — beyond this one.</div>
-
-      <p class="article-p">Neither of these people is weak or stupid. They are operating inside a story that society handed them and called it wisdom. The story is wrong. And until they see it clearly, they cannot change it.</p>
-
-      <!-- ── SECTION 5 ── -->
-      <div id="toc-source" class="article-section-title">Where Does This Idea Actually Come From?</div>
-
-      <p class="article-p">The soulmate myth did not emerge from nowhere. It has deep roots in culture, religion, commerce, and basic human psychology — which is precisely why it is so persistent and so difficult to challenge.</p>
-
-      <ul class="article-list">
-        <li><strong>Pop culture:</strong> Every romantic film, love song, and bestselling novel reinforces the idea that there is one specific person out there who will "complete" you. From childhood we absorb this framework. By the time we reach adulthood, it feels less like a story and more like a law of nature.</li>
-        <li><strong>The dating industry:</strong> Dating apps, matchmaking services, and relationship coaches profit directly from the anxiety produced by the soulmate myth. The more you believe in "The One," the more desperately you will search, and the more money you will spend in that search. The myth is not just cultural — it is commercial.</li>
-        <li><strong>Religious and spiritual traditions:</strong> Many traditions include concepts of divinely ordained partners — the idea that God or the universe has a specific person set aside for you. For millions of people, this belief is sincere and meaningful. But when applied to romantic choices, it can produce the same paralysis and poor boundary-setting as the secular version of the myth.</li>
-        <li><strong>Basic human pattern recognition:</strong> Our brains are wired to find patterns and create narratives. When we experience intense chemistry with someone, the brain interprets that intensity as significance — as destiny. But chemistry is chemistry. Intensity is not the same as compatibility. The feeling of "this is the one" is a neurochemical event, not a cosmic declaration.</li>
-      </ul>
-
-      <div class="article-callout">
-        <p>Even men who are perfectly logical about science, business, sports, and money suddenly become emotional and defensive the moment you tell them "There is no The One." Watch their face. The myth is that deep. It is not just a belief — it is an identity. And identities do not go quietly.</p>
+      <div class="article-example">
+        <strong>Example 1:</strong> A beautiful woman stays with an abusive boyfriend because she thinks he is her "One."
       </div>
 
+      <div class="article-example">
+        <strong>Example 2:</strong> A man stays in a bad marriage because he believes no one else will ever love him.
+      </div>
+
+      <!-- ── SECTION 5 ── -->
+      <div id="toc-source" class="article-section-title">Where Does This Idea Come From?</div>
+
+      <ul class="article-list">
+        <li>Pop culture (movies, music, books)</li>
+        <li>Dating apps and ads that say "We'll find your soulmate!"</li>
+        <li>Society keeps repeating the myth like it's a religion.</li>
+      </ul>
+
+      <p class="article-p">Even guys who are logical about science, business, and sports suddenly become emotional and defensive when you say "There is no The One." It scares them.</p>
+
       <!-- ── SECTION 6 ── -->
-      <div id="toc-healthy" class="article-section-title">Healthy Love vs. ONEitis — What the Difference Actually Looks Like</div>
-
-      <p class="article-p">People often fear that letting go of the soulmate myth means becoming cold, transactional, or incapable of genuine love. This is the wrong conclusion. Dropping the myth does not mean love disappears. It means love becomes something you choose rather than something that holds you hostage.</p>
-
-      <p class="article-p">The difference between healthy love and ONEitis is not about the depth of feeling. It is about the structure of the relationship and where each person draws their sense of worth.</p>
+      <div id="toc-healthy" class="article-section-title">Healthy Love vs. ONEitis</div>
 
       <div class="article-comparison">
         <div class="article-comparison-col good">
           <div class="article-comparison-label">✓ Healthy Relationship</div>
-          <p>Both people maintain their individual identities, friendships, and goals. Each person stays because they genuinely want to — not because they are afraid of what leaving would mean. Standards are maintained with warmth. Conflict is navigated with honesty. The relationship adds to each person's life rather than consuming it. Either person could walk away and rebuild — and both know this. That knowledge does not create insecurity; it creates respect.</p>
+          <p>Mutual respect, both people are happy, both can leave if needed.</p>
         </div>
         <div class="article-comparison-col bad">
           <div class="article-comparison-label">✕ ONEitis Relationship</div>
-          <p>One person has made the other their entire emotional world. Their mood depends on this person's mood. Their plans depend on this person's decisions. They have slowly stopped investing in friendships, ambitions, and self-care because all of that energy flows toward maintaining this one relationship. They are not in a partnership — they are in a dependency. And dependency breeds resentment in the person who holds the power, whether they want it or not.</p>
+          <p>One person feels they "can't live without" the other.</p>
         </div>
       </div>
 
-      <p class="article-p">The tragedy of ONEitis is that it often destroys the very relationship it is trying to protect. The desperation it produces — the clinginess, the need for constant reassurance, the inability to enforce healthy limits — is deeply unattractive. People are drawn to those who value themselves. When you have given all your self-worth to another person, there is nothing left for them to be attracted to.</p>
+      <p class="article-p">That's not love, that's dependency.</p>
 
       <!-- ── SECTION 7 ── -->
-      <div id="toc-better" class="article-section-title">The Better Way to Think — And Why It Is Actually Good News</div>
+      <div id="toc-better" class="article-section-title">The Better Way to Think</div>
 
-      <p class="article-p">Here is the reframe that changes everything: there is no "The One" — but there are many good ones. This is not a pessimistic conclusion. It is a liberating one.</p>
-
-      <p class="article-p">On a planet of eight billion people, the idea that only one specific individual could be your compatible partner is statistically absurd — and emotionally ruinous. The belief that your happiness depends on one person finding you, choosing you, and staying with you is an enormous amount of weight to place on circumstances entirely outside your control.</p>
-
-      <div class="article-pullquote">
-        <p>Real power comes from knowing you control your own life — not from chasing a person who may or may not reflect the fantasy you have built around them.</p>
-      </div>
-
-      <p class="article-p">When you drop the myth, something shifts in how you carry yourself. You stop auditioning. You stop shrinking. You start showing up as a complete person — because you know that your worth is not contingent on whether this particular individual chooses you. You become someone who selects rather than someone who waits to be selected. That energy is fundamentally different. And people feel it.</p>
-
-      <p class="article-p">This does not mean you become detached or careless with love. It means you love with open hands rather than a closed fist. You are fully present in a relationship without being defined by it. You give generously — but from abundance rather than desperation. You stay because you choose to stay, not because leaving feels impossible. That is not less love. That is more of the right kind.</p>
-
-      <p class="article-p">Clear your head of everything you have been taught about soulmates. Not because love is not real — it is. But because the version of love the myth describes is a cage. The version that exists on the other side of it — chosen, conscious, and rooted in self-respect — is the one worth building toward.</p>
-
-      <p class="article-p">There is no One. There are many good ones. And you will only find them when you stop searching for a fairy tale and start becoming someone worth finding.</p>
+      <p class="article-p">Forget "The One." Instead, remember this simple truth: there are LOTS of good "Ones" out there. Some will be great, some will be bad, but none of them is your only chance at happiness. Real power comes from knowing you control your own life, not from chasing a fantasy soulmate. Drop the myth. You will be freer, happier, and able to grow.</p>
 
       <div class="article-closing">
-        <p>THERE IS NO <span>ONE</span>.<br>THERE ARE MANY GOOD ONES —<br>AND THAT'S ACTUALLY <span>MUCH BETTER NEWS.</span></p>
+        <p>THERE IS NO <span>ONE.</span><br>THERE ARE MANY GOOD ONES —<br>AND THAT'S ACTUALLY <span>MUCH BETTER NEWS.</span></p>
+      </div>
+
+      <!-- ══════════ ENGAGEMENT ══════════ -->
+
+      <!-- Author Card -->
+      <div class="article-author-card">
+        <div class="article-author-avatar">O</div>
+        <div class="article-author-info">
+          <div class="article-author-name">Osubula</div>
+          <div class="article-author-role">Writer &amp; Creator · OsubulatTalks</div>
+          <p class="article-author-bio">A truth-seeker and candid conversationalist exploring the complex realities of men, women, and intersexual dynamics. Not a psychologist. Not a coach. Just a regular guy who connected the dots.</p>
+        </div>
+      </div>
+
+      <!-- Engagement Row: Like · Views · Share -->
+      <div class="eng-row">
+        <button class="eng-row-like" id="likeBtn" onclick="toggleLike()">
+          <span id="likeHeart">♡</span>
+          <span id="likeCount">184</span>
+          <span class="eng-row-label">Likes</span>
+        </button>
+
+        <div class="eng-row-stat">
+          <span class="eng-row-icon">👁</span>
+          <span id="viewCount">2,847</span>
+          <span class="eng-row-label">Views</span>
+        </div>
+
+        <div class="eng-row-stat clickable" onclick="scrollToComments()">
+          <span class="eng-row-icon">💬</span>
+          <span id="commentCountBadge">0</span>
+          <span class="eng-row-label">Comments</span>
+        </div>
+
+        <div class="eng-row-stat clickable" onclick="scrollToRating()">
+          <span class="eng-row-icon">⭐</span>
+          <span id="avgRatingBadge">4.7</span>
+          <span class="eng-row-label">Rating</span>
+        </div>
+
+        <div class="eng-row-share-wrap">
+          <button class="eng-row-share-btn" id="shareToggleBtn" onclick="toggleShareDropdown(event)">
+            ↗ Share
+          </button>
+          <div class="share-dropdown" id="shareDropdown">
+            <button class="share-dropdown-item" onclick="engShare('twitter')"><span class="sdi-icon">𝕏</span> X / Twitter</button>
+            <button class="share-dropdown-item" onclick="engShare('whatsapp')"><span class="sdi-icon">💬</span> WhatsApp</button>
+            <button class="share-dropdown-item" onclick="engShare('facebook')"><span class="sdi-icon">📘</span> Facebook</button>
+            <button class="share-dropdown-item" onclick="engShare('copy')"><span class="sdi-icon">🔗</span> Copy Link</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Star Rating -->
+      <div class="rating-section" id="ratingSection">
+        <div class="rating-box">
+
+          <div class="rating-left">
+            <div class="rating-big-num" id="ratingBigNum">4.7</div>
+            <div class="rating-stars-display" id="ratingStarsDisplay">
+              <span class="rating-star-filled">★</span>
+              <span class="rating-star-filled">★</span>
+              <span class="rating-star-filled">★</span>
+              <span class="rating-star-filled">★</span>
+              <span class="rating-star-filled">★</span>
+            </div>
+            <div class="rating-count" id="ratingCountLabel">238 ratings</div>
+          </div>
+
+          <div class="rating-divider"></div>
+
+          <div class="rating-bars">
+            <div class="rating-bar-row"><span class="rating-bar-label">5</span><div class="rating-bar-track"><div class="rating-bar-fill" id="bar5" style="width:72%"></div></div><span class="rating-bar-pct" id="pct5">72%</span></div>
+            <div class="rating-bar-row"><span class="rating-bar-label">4</span><div class="rating-bar-track"><div class="rating-bar-fill" id="bar4" style="width:18%"></div></div><span class="rating-bar-pct" id="pct4">18%</span></div>
+            <div class="rating-bar-row"><span class="rating-bar-label">3</span><div class="rating-bar-track"><div class="rating-bar-fill" id="bar3" style="width:6%"></div></div><span class="rating-bar-pct" id="pct3">6%</span></div>
+            <div class="rating-bar-row"><span class="rating-bar-label">2</span><div class="rating-bar-track"><div class="rating-bar-fill" id="bar2" style="width:3%"></div></div><span class="rating-bar-pct" id="pct2">3%</span></div>
+            <div class="rating-bar-row"><span class="rating-bar-label">1</span><div class="rating-bar-track"><div class="rating-bar-fill" id="bar1" style="width:1%"></div></div><span class="rating-bar-pct" id="pct1">1%</span></div>
+          </div>
+
+          <div class="rating-divider"></div>
+
+          <div class="rating-right">
+            <div class="rating-right-label">RATE THIS ARTICLE</div>
+            <div class="rating-interactive" id="ratingInteractive">
+              <span class="ri-star" data-val="1" onmouseover="hoverStar(1)" onmouseout="unhoverStar()" onclick="submitRating(1)">★</span>
+              <span class="ri-star" data-val="2" onmouseover="hoverStar(2)" onmouseout="unhoverStar()" onclick="submitRating(2)">★</span>
+              <span class="ri-star" data-val="3" onmouseover="hoverStar(3)" onmouseout="unhoverStar()" onclick="submitRating(3)">★</span>
+              <span class="ri-star" data-val="4" onmouseover="hoverStar(4)" onmouseout="unhoverStar()" onclick="submitRating(4)">★</span>
+              <span class="ri-star" data-val="5" onmouseover="hoverStar(5)" onmouseout="unhoverStar()" onclick="submitRating(5)">★</span>
+            </div>
+            <div class="rating-feedback" id="ratingFeedback">Tap a star to rate</div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Comments -->
+      <div class="comments-section" id="commentsSection">
+
+        <div class="comments-header">
+          <div class="comments-title">DISCUSSION</div>
+          <div class="comments-count-badge" id="commentsCountHeader">0 Comments</div>
+        </div>
+
+        <div class="comment-form">
+          <div class="comment-form-title">Join the Conversation</div>
+          <div class="comment-form-row">
+            <input class="comment-input" id="commentName"  type="text"  placeholder="Your name *" maxlength="50">
+            <input class="comment-input" id="commentEmail" type="email" placeholder="Email (not published)" maxlength="80">
+          </div>
+          <textarea class="comment-textarea" id="commentText"
+            placeholder="Share your take. Agree, disagree, add your experience. Keep it real." maxlength="1000"></textarea>
+          <div class="comment-form-footer">
+            <span class="comment-char-count"><span id="charLeft">1000</span> characters left</span>
+            <button class="comment-submit-btn" id="commentSubmitBtn" onclick="submitComment()">POST COMMENT →</button>
+          </div>
+        </div>
+
+        <div class="comments-sort-bar" id="commentsSortBar" style="display:none;">
+          <span class="comments-sort-label">Sort by:</span>
+          <button class="sort-btn active" id="sortNewest" onclick="sortComments('newest')">Newest</button>
+          <button class="sort-btn"        id="sortOldest" onclick="sortComments('oldest')">Oldest</button>
+          <button class="sort-btn"        id="sortTop"    onclick="sortComments('top')">Top Liked</button>
+        </div>
+
+        <div class="comments-list" id="commentsList"></div>
+
+        <div class="comments-empty" id="commentsEmpty">
+          <div class="comments-empty-icon">✍🏾</div>
+          <div class="comments-empty-text">No comments yet. Be the first to say something real.</div>
+        </div>
+
+        <button class="load-more-comments" id="loadMoreComments" style="display:none;" onclick="loadMoreComments()">
+          LOAD MORE COMMENTS ↓
+        </button>
+
       </div>
 
     </div><!-- /article-content-main -->
 
-    <!-- Article Sidebar -->
-    <aside class="article-sidebar">
-
-      <!-- Table of Contents -->
-      <div class="article-toc">
-        <div class="article-toc-title">In This Article</div>
-        <ul class="article-toc-list">
-          <li><a href="#toc-oneitis" onclick="scrollToSection(event,'toc-oneitis')">What Is ONEitis?</a></li>
-          <li><a href="#toc-myth" onclick="scrollToSection(event,'toc-myth')">The Soulmate Myth</a></li>
-          <li><a href="#toc-why" onclick="scrollToSection(event,'toc-why')">Why It Messes People Up</a></li>
-          <li><a href="#toc-power" onclick="scrollToSection(event,'toc-power')">It Creates a Power Problem</a></li>
-          <li><a href="#toc-source" onclick="scrollToSection(event,'toc-source')">Where This Idea Comes From</a></li>
-          <li><a href="#toc-healthy" onclick="scrollToSection(event,'toc-healthy')">Healthy Love vs. ONEitis</a></li>
-          <li><a href="#toc-better" onclick="scrollToSection(event,'toc-better')">The Better Way to Think</a></li>
-        </ul>
-      </div>
-
-      <!-- Share Widget -->
-      <div class="article-share-widget">
-        <div class="article-share-title">Share Article</div>
-        <div class="article-share-btns">
-          <button class="article-share-btn" onclick="shareArticle('twitter')">𝕏 Share on X</button>
-          <button class="article-share-btn" onclick="shareArticle('whatsapp')">💬 Share on WhatsApp</button>
-          <button class="article-share-btn" onclick="shareArticle('copy')">🔗 Copy Link</button>
-        </div>
-      </div>
-
-      <!-- Category Widget -->
-      <div class="article-toc">
-        <div class="article-toc-title">More in This Topic</div>
-        <ul class="article-toc-list">
-          <li><a href="#" onclick="showHome(event)">The Hypergamy Trap</a></li>
-          <li><a href="#" onclick="showHome(event)">The Comfort Paradox</a></li>
-          <li><a href="#" onclick="showHome(event)">The Provider Trap</a></li>
-          <li><a href="#" onclick="showHome(event)">Female Communication Decoded</a></li>
-        </ul>
-      </div>
-
-    </aside>
-
   </div><!-- /article-content-wrap -->
 
-  <!-- ═══════════════════════ ENGAGEMENT BAR ═══════════════════════ -->
-  <div class="engagement-bar">
-    <div class="engagement-strip">
-
-      <!-- Views -->
-      <div class="eng-stat">
-        <span class="eng-stat-icon">👁</span>
-        <div>
-          <div class="eng-stat-num" id="viewCount">2,847</div>
-          <div class="eng-stat-label">Views</div>
-        </div>
-      </div>
-
-      <!-- Likes -->
-      <button class="eng-like-btn" id="likeBtn" onclick="toggleLike()">
-        <span class="like-heart" id="likeHeart">♡</span>
-        <div>
-          <div class="eng-stat-num" id="likeCount">184</div>
-          <div class="eng-stat-label">Likes</div>
-        </div>
-      </button>
-
-      <!-- Comments (scroll to section) -->
-      <div class="eng-stat" style="cursor:pointer;" onclick="scrollToComments()">
-        <span class="eng-stat-icon">💬</span>
-        <div>
-          <div class="eng-stat-num" id="commentCountBadge">0</div>
-          <div class="eng-stat-label">Comments</div>
-        </div>
-      </div>
-
-      <!-- Rating -->
-      <div class="eng-stat" style="cursor:pointer;" onclick="scrollToRating()">
-        <span class="eng-stat-icon">⭐️</span>
-        <div>
-          <div class="eng-stat-num" id="avgRatingBadge">4.7</div>
-          <div class="eng-stat-label">Rating</div>
-        </div>
-      </div>
-
-      <!-- Spacer -->
-      <div style="flex:1;"></div>
-
-      <!-- Share dropdown -->
-      <div style="position:relative;">
-        <button class="eng-share-btn" id="shareToggleBtn" onclick="toggleShareDropdown(event)">
-          <span>↗️</span> SHARE
-        </button>
-        <div class="share-dropdown" id="shareDropdown">
-          <button class="share-dropdown-item" onclick="engShare('twitter')">
-            <span class="sdi-icon">𝕏</span> Share on X / Twitter
-          </button>
-          <button class="share-dropdown-item" onclick="engShare('whatsapp')">
-            <span class="sdi-icon">💬</span> Share on WhatsApp
-          </button>
-          <button class="share-dropdown-item" onclick="engShare('facebook')">
-            <span class="sdi-icon">📘</span> Share on Facebook
-          </button>
-          <button class="share-dropdown-item" onclick="engShare('copy')">
-            <span class="sdi-icon">🔗</span> Copy Link
-          </button>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- ═══════════════════════ STAR RATING ═══════════════════════ -->
-  <div class="rating-section" id="ratingSection">
-    <div class="rating-box">
-
-      <!-- Left: aggregate score -->
-      <div class="rating-left">
-        <div class="rating-big-num" id="ratingBigNum">4.7</div>
-        <div class="rating-stars-display" id="ratingStarsDisplay">
-          <span class="rating-star-filled">★</span>
-          <span class="rating-star-filled">★</span>
-          <span class="rating-star-filled">★</span>
-          <span class="rating-star-filled">★</span>
-          <span class="rating-star-filled">★</span>
-        </div>
-        <div class="rating-count" id="ratingCountLabel">238 ratings</div>
-      </div>
-
-      <div class="rating-divider"></div>
-
-      <!-- Middle: bar breakdown -->
-      <div style="flex:1; min-width:160px;">
-        <div class="rating-bar-row"><span class="rating-bar-label">5</span><div class="rating-bar-track"><div class="rating-bar-fill" id="bar5" style="width:72%"></div></div><span class="rating-bar-pct" id="pct5">72%</span></div>
-        <div class="rating-bar-row"><span class="rating-bar-label">4</span><div class="rating-bar-track"><div class="rating-bar-fill" id="bar4" style="width:18%"></div></div><span class="rating-bar-pct" id="pct4">18%</span></div>
-        <div class="rating-bar-row"><span class="rating-bar-label">3</span><div class="rating-bar-track"><div class="rating-bar-fill" id="bar3" style="width:6%"></div></div><span class="rating-bar-pct" id="pct3">6%</span></div>
-        <div class="rating-bar-row"><span class="rating-bar-label">2</span><div class="rating-bar-track"><div class="rating-bar-fill" id="bar2" style="width:3%"></div></div><span class="rating-bar-pct" id="pct2">3%</span></div>
-        <div class="rating-bar-row"><span class="rating-bar-label">1</span><div class="rating-bar-track"><div class="rating-bar-fill" id="bar1" style="width:1%"></div></div><span class="rating-bar-pct" id="pct1">1%</span></div>
-      </div>
-
-      <div class="rating-divider"></div>
-
-      <!-- Right: interactive stars -->
-      <div class="rating-right">
-        <div class="rating-right-label">RATE THIS ARTICLE</div>
-        <div class="rating-interactive" id="ratingInteractive">
-          <span class="ri-star" data-val="1" onmouseover="hoverStar(1)" onmouseout="unhoverStar()" onclick="submitRating(1)">★</span>
-          <span class="ri-star" data-val="2" onmouseover="hoverStar(2)" onmouseout="unhoverStar()" onclick="submitRating(2)">★</span>
-          <span class="ri-star" data-val="3" onmouseover="hoverStar(3)" onmouseout="unhoverStar()" onclick="submitRating(3)">★</span>
-          <span class="ri-star" data-val="4" onmouseover="hoverStar(4)" onmouseout="unhoverStar()" onclick="submitRating(4)">★</span>
-          <span class="ri-star" data-val="5" onmouseover="hoverStar(5)" onmouseout="unhoverStar()" onclick="submitRating(5)">★</span>
-        </div>
-        <div class="rating-feedback" id="ratingFeedback">Tap a star to rate</div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- ═══════════════════════ COMMENTS SECTION ═══════════════════════ -->
-  <div class="comments-section" id="commentsSection">
-
-    <div class="comments-header">
-      <div class="comments-title">DISCUSSION</div>
-      <div class="comments-count-badge" id="commentsCountHeader">0 Comments</div>
-    </div>
-
-    <!-- Write a comment -->
-    <div class="comment-form">
-      <div class="comment-form-title">Join the Conversation</div>
-      <div class="comment-form-row">
-        <input class="comment-input" id="commentName"  type="text"  placeholder="Your name *" maxlength="50">
-        <input class="comment-input" id="commentEmail" type="email" placeholder="Email (not published)" maxlength="80">
-      </div>
-      <textarea class="comment-textarea" id="commentText" placeholder="Share your thoughts on this article... Be real." maxlength="1000"></textarea>
-      <div class="comment-form-footer">
-        <span class="comment-char-count"><span id="charLeft">1000</span> characters remaining</span>
-        <button class="comment-submit-btn" id="commentSubmitBtn" onclick="submitComment()">POST COMMENT →</button>
-      </div>
-    </div>
-
-    <!-- Sort bar -->
-    <div class="comments-sort-bar" id="commentsSortBar" style="display:none;">
-      <span class="comments-sort-label">Sort by:</span>
-      <button class="sort-btn active" id="sortNewest" onclick="sortComments('newest')">Newest</button>
-      <button class="sort-btn" id="sortOldest" onclick="sortComments('oldest')">Oldest</button>
-      <button class="sort-btn" id="sortTop"    onclick="sortComments('top')">Top Liked</button>
-    </div>
-
-    <!-- Comments list -->
-    <div class="comments-list" id="commentsList"></div>
-
-    <!-- Empty state (shown when no comments) -->
-    <div class="comments-empty" id="commentsEmpty">
-      <div class="comments-empty-icon">✍🏾</div>
-      <div class="comments-empty-text">No comments yet. Be the first to speak your truth.</div>
-    </div>
-
-    <!-- Load more -->
-    <button class="load-more-comments" id="loadMoreComments" style="display:none;" onclick="loadMoreComments()">
-      LOAD MORE COMMENTS ↓
-    </button>
-
-  </div>
-
-  <!-- Toast notification -->
+  <!-- Toast -->
   <div class="toast" id="toast"></div>
 
   <!-- Prev / Next Navigation -->
@@ -3688,7 +3867,7 @@ footer {
       <div class="article-related-title">READ NEXT</div>
       <div class="article-related-grid">
         <div class="article-related-card" onclick="showHome()">
-          <div class="article-related-tag">⚡️ Intersexual Dynamics</div>
+          <div class="article-related-tag">⚡ Intersexual Dynamics</div>
           <div class="article-related-h">Why She Lost Attraction After You "Won" Her: The Comfort Paradox</div>
           <div class="article-related-meta">9 min read · Apr 2024</div>
         </div>
@@ -3715,8 +3894,8 @@ footer {
         <div class="footer-socials">
           <a href="#" class="footer-social-btn">𝕏</a>
           <a href="#" class="footer-social-btn">📷</a>
-          <a href="#" class="footer-social-btn">▶️</a>
-          <a href="#" class="footer-social-btn">✉️</a>
+          <a href="#" class="footer-social-btn">▶</a>
+          <a href="#" class="footer-social-btn">✉</a>
         </div>
       </div>
       <div>
@@ -3761,9 +3940,58 @@ footer {
 </div><!-- /articlePage -->
 
 <script>
-// ═══════════════════════════════════════════
+// ═══════════════════════════════════════════════════════════════
+// CONSTANTS
+// ═══════════════════════════════════════════════════════════════
+const ARTICLE_ID = 'there-is-no-one';
+const STORAGE    = {
+  likes     : `osubula_likes_${ARTICLE_ID}`,
+  views     : `osubula_views_${ARTICLE_ID}`,
+  rating    : `osubula_rating_${ARTICLE_ID}`,
+  ratingData: `osubula_ratingdata_${ARTICLE_ID}`,
+  comments  : `osubula_comments_${ARTICLE_ID}`,
+  commentLikes: `osubula_clikes_${ARTICLE_ID}`,
+};
+
+// ═══════════════════════════════════════════════════════════════
+// HELPERS
+// ═══════════════════════════════════════════════════════════════
+function store(key, val) {
+  try { localStorage.setItem(key, JSON.stringify(val)); } catch(e) {}
+}
+function load(key, fallback) {
+  try {
+    const v = localStorage.getItem(key);
+    return v !== null ? JSON.parse(v) : fallback;
+  } catch(e) { return fallback; }
+}
+function fmt(n) {
+  return n >= 1000 ? (n/1000).toFixed(1).replace(/\.0$/,'') + 'K' : String(n);
+}
+function timeAgo(ts) {
+  const secs = Math.floor((Date.now() - ts) / 1000);
+  if (secs < 60)   return 'just now';
+  if (secs < 3600) return Math.floor(secs/60) + 'm ago';
+  if (secs < 86400)return Math.floor(secs/3600) + 'h ago';
+  if (secs < 604800) return Math.floor(secs/86400) + 'd ago';
+  return new Date(ts).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});
+}
+function avatarColor(name) {
+  const colors = ['#c0152a','#1a1a2e','#2d6a4f','#6a0572','#d4531a','#1a4a8a'];
+  let hash = 0;
+  for (let i = 0; i < name.length; i++) hash = name.charCodeAt(i) + ((hash<<5)-hash);
+  return colors[Math.abs(hash) % colors.length];
+}
+function showToast(msg, duration=2800) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), duration);
+}
+
+// ═══════════════════════════════════════════════════════════════
 // PAGE NAVIGATION (SPA)
-// ═══════════════════════════════════════════
+// ═══════════════════════════════════════════════════════════════
 const homePage    = document.getElementById('homePage');
 const articlePage = document.getElementById('articlePage');
 const progress    = document.getElementById('articleProgress');
@@ -3774,8 +4002,9 @@ function showArticle(e) {
   articlePage.classList.remove('hidden');
   window.scrollTo({ top: 0, behavior: 'instant' });
   document.title = 'There Is No One — OSUBULATALKS';
-  history.pushState({ page: 'article', id: 'there-is-no-one' }, '', '#there-is-no-one');
+  history.pushState({ page: 'article', id: ARTICLE_ID }, '', '#' + ARTICLE_ID);
   initReveal();
+  trackView();
 }
 
 function showHome(e) {
@@ -3786,70 +4015,73 @@ function showHome(e) {
   document.title = 'OSUBULATALKS — Forged in Pain, Sharpened in Solitude';
   history.pushState({ page: 'home' }, '', '#');
   progress.style.width = '0%';
+  closeShareDropdown();
 }
 
-// Browser back/forward
-window.addEventListener('popstate', (e) => {
-  if (location.hash === '#there-is-no-one') {
-    showArticle();
-  } else {
-    showHome();
-  }
+window.addEventListener('popstate', () => {
+  if (location.hash === '#' + ARTICLE_ID) showArticle();
+  else showHome();
 });
 
-// Handle initial load with hash
-if (location.hash === '#there-is-no-one') showArticle();
+if (location.hash === '#' + ARTICLE_ID) showArticle();
 
-// ── Scroll to TOC section inside article page
+// ── Scroll to TOC section
 function scrollToSection(e, id) {
   if (e && e.preventDefault) e.preventDefault();
   const el = document.getElementById(id);
-  if (el) {
-    const offset = 88;
-    const top = el.getBoundingClientRect().top + window.scrollY - offset;
-    window.scrollTo({ top, behavior: 'smooth' });
-  }
+  if (!el) return;
+  const top = el.getBoundingClientRect().top + window.scrollY - 96;
+  window.scrollTo({ top, behavior: 'smooth' });
+}
+function scrollToComments() {
+  const el = document.getElementById('commentsSection');
+  if (!el) return;
+  const top = el.getBoundingClientRect().top + window.scrollY - 88;
+  window.scrollTo({ top, behavior: 'smooth' });
+}
+function scrollToRating() {
+  const el = document.getElementById('ratingSection');
+  if (!el) return;
+  const top = el.getBoundingClientRect().top + window.scrollY - 88;
+  window.scrollTo({ top, behavior: 'smooth' });
 }
 
-// ── Reading progress bar (article page only)
+// ── Reading progress bar
 window.addEventListener('scroll', () => {
   if (!articlePage.classList.contains('hidden')) {
     const doc   = document.documentElement;
-    const body  = document.body;
-    const total = Math.max(doc.scrollHeight, body.scrollHeight) - window.innerHeight;
+    const total = doc.scrollHeight - window.innerHeight;
     const pct   = total > 0 ? (window.scrollY / total) * 100 : 0;
     progress.style.width = Math.min(pct, 100) + '%';
   } else {
     progress.style.width = '0%';
   }
-  // back to top
-  backTop.classList.toggle('visible', window.scrollY > 400);
+  const backTop = document.getElementById('backTop');
+  if (backTop) backTop.classList.toggle('visible', window.scrollY > 400);
+  closeShareDropdownOnScroll();
 });
 
-// ═══════════════════════════════════════════
+// ═══════════════════════════════════════════════════════════════
 // HAMBURGER / MOBILE MENU
-// ═══════════════════════════════════════════
+// ═══════════════════════════════════════════════════════════════
 const hamburger  = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
 const mobileClose= document.getElementById('mobileClose');
-
 hamburger.addEventListener('click', () => mobileMenu.classList.add('open'));
 mobileClose.addEventListener('click', () => mobileMenu.classList.remove('open'));
 function closeMobile() { mobileMenu.classList.remove('open'); }
 
-// ═══════════════════════════════════════════
-// BACK TO TOP
-// ═══════════════════════════════════════════
-const backTop = document.getElementById('backTop');
-backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+// ── Back to top
+const backTopBtn = document.getElementById('backTop');
+if (backTopBtn) backTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-// ═══════════════════════════════════════════
+// ═══════════════════════════════════════════════════════════════
 // SCROLL REVEAL
-// ═══════════════════════════════════════════
+// ═══════════════════════════════════════════════════════════════
 function initReveal() {
   const els = document.querySelectorAll('.reveal:not(.visible), .post-card:not(.visible)');
   const obs = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
+    entries.forEach(entry => {
       if (entry.isIntersecting) {
         setTimeout(() => entry.target.classList.add('visible'), 80);
         obs.unobserve(entry.target);
@@ -3859,15 +4091,13 @@ function initReveal() {
   els.forEach(el => obs.observe(el));
 }
 initReveal();
-
-// Stagger post cards
 document.querySelectorAll('.post-card').forEach((card, i) => {
   card.style.transitionDelay = `${i * 80}ms`;
 });
 
-// ═══════════════════════════════════════════
-// LOAD MORE
-// ═══════════════════════════════════════════
+// ═══════════════════════════════════════════════════════════════
+// LOAD MORE (home feed)
+// ═══════════════════════════════════════════════════════════════
 const loadMoreBtn = document.getElementById('loadMoreBtn');
 let loadMoreClicks = 0;
 loadMoreBtn.addEventListener('click', () => {
@@ -3886,9 +4116,9 @@ loadMoreBtn.addEventListener('click', () => {
   }, 1200);
 });
 
-// ═══════════════════════════════════════════
+// ═══════════════════════════════════════════════════════════════
 // NEWSLETTER
-// ═══════════════════════════════════════════
+// ═══════════════════════════════════════════════════════════════
 function sidebarSubscribe() {
   const email   = document.getElementById('sidebarEmail').value.trim();
   const success = document.getElementById('sidebarSuccess');
@@ -3901,7 +4131,6 @@ function sidebarSubscribe() {
   document.getElementById('sidebarEmail').style.display = 'none';
   document.querySelector('.nl-btn').style.display = 'none';
 }
-
 function bannerSubscribe() {
   const email   = document.getElementById('bannerEmail').value.trim();
   const success = document.getElementById('bannerSuccess');
@@ -3914,34 +4143,529 @@ function bannerSubscribe() {
   document.getElementById('bannerEmail').disabled = true;
 }
 
-// ═══════════════════════════════════════════
-// SHARE
-// ═══════════════════════════════════════════
-function shareArticle(platform) {
-  const url   = window.location.href.split('#')[0] + '#there-is-no-one';
+// ═══════════════════════════════════════════════════════════════
+// WIRE UP featured post card
+// ═══════════════════════════════════════════════════════════════
+document.addEventListener('DOMContentLoaded', () => {
+  const featCard = document.querySelector('.post-card--featured');
+  if (featCard) featCard.addEventListener('click', showArticle);
+  initEngagement();
+});
+
+// ═══════════════════════════════════════════════════════════════
+// ─────────────────── ENGAGEMENT ENGINE ───────────────────────
+// ═══════════════════════════════════════════════════════════════
+
+// ─── Seed data (baseline counts stored once) ─────────────────
+const SEED = { views: 2847, likes: 184, ratingCount: 238, ratingAvg: 4.7,
+               ratingDist: { 5:171, 4:43, 3:14, 2:7, 1:3 } };
+
+function initEngagement() {
+  initViews();
+  initLikes();
+  initRating();
+  initComments();
+}
+
+// ───────────────────────────────────────────
+// VIEWS — increment once per session
+// ───────────────────────────────────────────
+function trackView() {
+  const sessionKey = `osubula_viewed_session_${ARTICLE_ID}`;
+  if (sessionStorage.getItem(sessionKey)) return;
+  sessionStorage.setItem(sessionKey, '1');
+  const current = load(STORAGE.views, SEED.views);
+  const next    = current + 1;
+  store(STORAGE.views, next);
+  renderViewCount(next);
+}
+function initViews() {
+  const v = load(STORAGE.views, SEED.views);
+  renderViewCount(v);
+}
+function renderViewCount(n) {
+  const el = document.getElementById('viewCount');
+  if (el) el.textContent = fmt(n);
+}
+
+// ───────────────────────────────────────────
+// LIKES — toggle, persist, animate
+// ───────────────────────────────────────────
+function initLikes() {
+  const liked = load(STORAGE.likes, false);
+  const base  = SEED.likes;
+  const saved = load(STORAGE.likes + '_count', base);
+  renderLike(liked, saved);
+}
+function toggleLike() {
+  const wasLiked = load(STORAGE.likes, false);
+  const baseCount= load(STORAGE.likes + '_count', SEED.likes);
+  const nowLiked  = !wasLiked;
+  const newCount  = nowLiked ? baseCount + 1 : Math.max(0, baseCount - 1);
+  store(STORAGE.likes, nowLiked);
+  store(STORAGE.likes + '_count', newCount);
+  renderLike(nowLiked, newCount);
+  showToast(nowLiked ? '❤️  You liked this article' : 'Like removed');
+}
+function renderLike(liked, count) {
+  const btn   = document.getElementById('likeBtn');
+  const heart = document.getElementById('likeHeart');
+  const num   = document.getElementById('likeCount');
+  if (btn)   btn.classList.toggle('liked', liked);
+  if (heart) heart.textContent = liked ? '♥' : '♡';
+  if (num)   num.textContent   = fmt(count);
+}
+
+// ───────────────────────────────────────────
+// SHARE DROPDOWN
+// ───────────────────────────────────────────
+let shareOpen = false;
+function toggleShareDropdown(e) {
+  e.stopPropagation();
+  shareOpen = !shareOpen;
+  document.getElementById('shareDropdown').classList.toggle('open', shareOpen);
+}
+function closeShareDropdown() {
+  shareOpen = false;
+  const dd = document.getElementById('shareDropdown');
+  if (dd) dd.classList.remove('open');
+}
+let lastScrollY = 0;
+function closeShareDropdownOnScroll() {
+  if (Math.abs(window.scrollY - lastScrollY) > 40) {
+    closeShareDropdown();
+    lastScrollY = window.scrollY;
+  }
+}
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('#shareToggleBtn') && !e.target.closest('#shareDropdown')) {
+    closeShareDropdown();
+  }
+});
+function engShare(platform) {
+  const url   = window.location.href.split('#')[0] + '#' + ARTICLE_ID;
   const title = 'There Is No One — OSUBULATALKS';
+  const text  = encodeURIComponent(title);
+  const eurl  = encodeURIComponent(url);
+  closeShareDropdown();
   if (platform === 'twitter') {
-    window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`, '_blank');
+    window.open(`https://twitter.com/intent/tweet?text=${text}&url=${eurl}`, '_blank');
   } else if (platform === 'whatsapp') {
-    window.open(`https://wa.me/?text=${encodeURIComponent(title + ' ' + url)}`, '_blank');
+    window.open(`https://wa.me/?text=${encodeURIComponent(title + ' — ' + url)}`, '_blank');
+  } else if (platform === 'facebook') {
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${eurl}`, '_blank');
   } else if (platform === 'copy') {
-    navigator.clipboard.writeText(url).then(() => {
-      const btn = document.querySelector('.article-share-btn:last-child');
-      const orig = btn.textContent;
-      btn.textContent = '✓ Link Copied!';
-      setTimeout(() => btn.textContent = orig, 2000);
-    });
+    navigator.clipboard.writeText(url).then(() => showToast('🔗  Link copied to clipboard'));
+  }
+  // also keep sidebar share widget working
+}
+// Legacy sidebar share buttons
+function shareArticle(platform) { engShare(platform); }
+
+// ───────────────────────────────────────────
+// STAR RATING
+// ───────────────────────────────────────────
+let userRating = 0;
+function initRating() {
+  const saved = load(STORAGE.rating, 0);
+  userRating  = saved;
+  const data  = load(STORAGE.ratingData, null);
+  if (saved > 0) {
+    renderInteractiveStars(saved);
+    const fb = document.getElementById('ratingFeedback');
+    if (fb) fb.textContent = `You rated this ${saved} star${saved>1?'s':''}`;
+    lockRatingStars();
+  }
+  if (data) {
+    renderRatingAggregate(data);
+  } else {
+    renderRatingAggregate(SEED.ratingDist, SEED.ratingCount);
+  }
+}
+function hoverStar(val) {
+  if (userRating > 0) return;
+  document.querySelectorAll('.ri-star').forEach(s => {
+    s.classList.toggle('hovered', parseInt(s.dataset.val) <= val);
+  });
+  const labels = ['','Terrible','Poor','OK','Good','Excellent'];
+  const fb = document.getElementById('ratingFeedback');
+  if (fb) fb.textContent = labels[val] || '';
+}
+function unhoverStar() {
+  if (userRating > 0) return;
+  document.querySelectorAll('.ri-star').forEach(s => s.classList.remove('hovered'));
+  const fb = document.getElementById('ratingFeedback');
+  if (fb) fb.textContent = 'Tap a star to rate';
+}
+function submitRating(val) {
+  if (userRating > 0) return;
+  userRating = val;
+  store(STORAGE.rating, val);
+
+  // Add to distribution
+  const dist = load(STORAGE.ratingData, { ...SEED.ratingDist });
+  const cnt  = load(STORAGE.ratingData + '_count', SEED.ratingCount);
+  dist[val]  = (dist[val] || 0) + 1;
+  const newCnt = cnt + 1;
+  store(STORAGE.ratingData, dist);
+  store(STORAGE.ratingData + '_count', newCnt);
+
+  renderInteractiveStars(val);
+  renderRatingAggregate(dist, newCnt);
+  lockRatingStars();
+
+  const labels = ['','Terrible','Poor','OK','Good','Excellent! 🔥'];
+  const fb = document.getElementById('ratingFeedback');
+  if (fb) fb.textContent = `You rated this ${val} star${val>1?'s':''} — ${labels[val]}`;
+  showToast(`⭐  Thanks for your ${val}-star rating!`);
+}
+function renderInteractiveStars(val) {
+  document.querySelectorAll('.ri-star').forEach(s => {
+    const v = parseInt(s.dataset.val);
+    s.classList.toggle('selected', v <= val);
+    s.classList.remove('hovered');
+  });
+}
+function lockRatingStars() {
+  document.querySelectorAll('.ri-star').forEach(s => {
+    s.style.cursor = 'default';
+    s.onmouseover  = null;
+    s.onmouseout   = null;
+    s.onclick      = null;
+  });
+}
+function renderRatingAggregate(dist, count) {
+  if (!count) count = Object.values(dist).reduce((a,b)=>a+b,0);
+  const total = count || 1;
+  const sum   = Object.entries(dist).reduce((a,[k,v])=> a + parseInt(k)*v, 0);
+  const avg   = (sum / total).toFixed(1);
+
+  const bigNum = document.getElementById('ratingBigNum');
+  if (bigNum) bigNum.textContent = avg;
+  const badge  = document.getElementById('avgRatingBadge');
+  if (badge) badge.textContent = avg;
+  const label  = document.getElementById('ratingCountLabel');
+  if (label) label.textContent = fmt(total) + ' ratings';
+
+  // filled stars display
+  const filled = Math.round(parseFloat(avg));
+  const starsEl = document.getElementById('ratingStarsDisplay');
+  if (starsEl) {
+    starsEl.innerHTML = [1,2,3,4,5].map(i =>
+      `<span class="${i<=filled?'rating-star-filled':'rating-star-empty'}">★</span>`
+    ).join('');
+  }
+  // bars
+  for (let i=1; i<=5; i++) {
+    const pct = Math.round(((dist[i]||0)/total)*100);
+    const bar = document.getElementById('bar'+i);
+    const lbl = document.getElementById('pct'+i);
+    if (bar) bar.style.width = pct + '%';
+    if (lbl) lbl.textContent = pct + '%';
   }
 }
 
-// ═══════════════════════════════════════════
-// WIRE UP: featured card & post card → article
-// ═══════════════════════════════════════════
-document.addEventListener('DOMContentLoaded', () => {
-  // Featured card onclick hook
-  const featCard = document.querySelector('.post-card--featured');
-  if (featCard) featCard.addEventListener('click', showArticle);
-});
+// ───────────────────────────────────────────
+// COMMENTS
+// ───────────────────────────────────────────
+const COMMENTS_PER_PAGE = 5;
+let currentSort    = 'newest';
+let visibleCount   = COMMENTS_PER_PAGE;
+let openReplyForms = {};
+
+function initComments() {
+  // Char counter
+  const ta = document.getElementById('commentText');
+  if (ta) {
+    ta.addEventListener('input', () => {
+      const left = 1000 - ta.value.length;
+      const el   = document.getElementById('charLeft');
+      if (el) { el.textContent = left; el.style.color = left < 100 ? 'var(--crimson)' : '#aaa'; }
+    });
+  }
+  renderComments();
+}
+
+function getComments() { return load(STORAGE.comments, []); }
+function saveComments(arr) { store(STORAGE.comments, arr); }
+function getCommentLikes() { return load(STORAGE.commentLikes, {}); }
+function saveCommentLikes(obj) { store(STORAGE.commentLikes, obj); }
+
+function submitComment() {
+  const nameEl  = document.getElementById('commentName');
+  const emailEl = document.getElementById('commentEmail');
+  const textEl  = document.getElementById('commentText');
+  const btn     = document.getElementById('commentSubmitBtn');
+
+  const name = nameEl.value.trim();
+  const text = textEl.value.trim();
+
+  // Validate
+  if (!name) {
+    nameEl.style.borderColor = 'var(--crimson)';
+    nameEl.focus();
+    setTimeout(() => nameEl.style.borderColor='', 1500);
+    showToast('⚠  Please enter your name'); return;
+  }
+  if (text.length < 10) {
+    textEl.style.borderColor = 'var(--crimson)';
+    textEl.focus();
+    setTimeout(() => textEl.style.borderColor='', 1500);
+    showToast('⚠  Comment must be at least 10 characters'); return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = 'POSTING...';
+
+  setTimeout(() => {
+    const comments = getComments();
+    const comment  = {
+      id      : Date.now(),
+      name    : name,
+      email   : emailEl.value.trim(),
+      text    : text,
+      ts      : Date.now(),
+      likes   : 0,
+      replies : [],
+    };
+    comments.unshift(comment);
+    saveComments(comments);
+
+    // Reset form
+    nameEl.value  = '';
+    emailEl.value = '';
+    textEl.value  = '';
+    const charEl  = document.getElementById('charLeft');
+    if (charEl) charEl.textContent = '1000';
+    btn.disabled    = false;
+    btn.textContent = 'POST COMMENT →';
+
+    currentSort  = 'newest';
+    visibleCount = COMMENTS_PER_PAGE;
+    setActiveSortBtn('sortNewest');
+    renderComments();
+    showToast('✅  Comment posted — thanks for speaking up!');
+    scrollToComments();
+  }, 600);
+}
+
+function sortComments(type) {
+  currentSort  = type;
+  visibleCount = COMMENTS_PER_PAGE;
+  const btnMap = { newest:'sortNewest', oldest:'sortOldest', top:'sortTop' };
+  setActiveSortBtn(btnMap[type]);
+  renderComments();
+}
+function setActiveSortBtn(activeId) {
+  ['sortNewest','sortOldest','sortTop'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.classList.toggle('active', el.id === activeId);
+  });
+}
+
+function getSortedComments() {
+  const comments = getComments();
+  if (currentSort === 'newest') return [...comments].sort((a,b) => b.ts - a.ts);
+  if (currentSort === 'oldest') return [...comments].sort((a,b) => a.ts - b.ts);
+  if (currentSort === 'top')    return [...comments].sort((a,b) => (b.likes||0)-(a.likes||0));
+  return comments;
+}
+
+function renderComments() {
+  const list      = document.getElementById('commentsList');
+  const empty     = document.getElementById('commentsEmpty');
+  const sortBar   = document.getElementById('commentsSortBar');
+  const loadMore  = document.getElementById('loadMoreComments');
+  const badge     = document.getElementById('commentsCountHeader');
+  const engBadge  = document.getElementById('commentCountBadge');
+  const allCmts   = getComments();
+  const total     = allCmts.length;
+  const sorted    = getSortedComments();
+  const visible   = sorted.slice(0, visibleCount);
+  const cLikes    = getCommentLikes();
+
+  // Update badges
+  if (badge)    badge.textContent    = total + (total===1?' Comment':' Comments');
+  if (engBadge) engBadge.textContent = fmt(total);
+  // Toggle empty state / sort bar
+  if (empty)   empty.style.display   = total === 0 ? 'block' : 'none';
+  if (sortBar) sortBar.style.display = total > 1   ? 'flex'  : 'none';
+
+  if (!list) return;
+  list.innerHTML = '';
+
+  visible.forEach(c => {
+    const liked     = cLikes[c.id] || false;
+    const likeCount = (c.likes || 0);
+    const initials  = c.name.split(' ').map(w=>w[0]).join('').toUpperCase().slice(0,2);
+    const bg        = avatarColor(c.name);
+
+    const div = document.createElement('div');
+    div.className  = 'comment-item';
+    div.id         = 'comment-' + c.id;
+
+    // Build replies HTML
+    let repliesHTML = '';
+    if (c.replies && c.replies.length > 0) {
+      const repItems = c.replies.map(r => {
+        const ri     = r.name.split(' ').map(w=>w[0]).join('').toUpperCase().slice(0,2);
+        const rbg    = avatarColor(r.name);
+        const rliked = (cLikes['r_'+r.id]) || false;
+        return `
+          <div class="reply-item" id="reply-${r.id}">
+            <div class="reply-header">
+              <div class="reply-avatar" style="background:${rbg}; color:#fff;">${ri}</div>
+              <div class="comment-meta">
+                <div class="comment-author-name">${escHtml(r.name)}</div>
+                <div class="comment-timestamp">${timeAgo(r.ts)}</div>
+              </div>
+            </div>
+            <div class="reply-body">${escHtml(r.text)}</div>
+            <div class="reply-actions">
+              <button class="comment-action-btn ${rliked?'liked-comment':''}"
+                onclick="toggleReplyLike(${c.id}, ${r.id})">
+                ${rliked?'♥':'♡'} ${rliked?'Liked':'Like'} · ${r.likes||0}
+              </button>
+            </div>
+          </div>`;
+      }).join('');
+      repliesHTML = `<div class="comment-replies">${repItems}</div>`;
+    }
+
+    div.innerHTML = `
+      <div class="comment-header">
+        <div class="comment-avatar" style="background:${bg};">${initials}</div>
+        <div class="comment-meta">
+          <div class="comment-author-name">${escHtml(c.name)}</div>
+          <div class="comment-timestamp">${timeAgo(c.ts)}</div>
+        </div>
+      </div>
+      <div class="comment-body">${escHtml(c.text)}</div>
+      <div class="comment-actions">
+        <button class="comment-action-btn ${liked?'liked-comment':''}"
+          onclick="toggleCommentLike(${c.id})">
+          ${liked?'♥':'♡'} ${liked?'Liked':'Like'} · ${likeCount}
+        </button>
+        <span class="comment-action-sep">·</span>
+        <button class="comment-action-btn" onclick="toggleReplyForm(${c.id})">↩ Reply</button>
+        <span class="comment-action-sep">·</span>
+        <button class="comment-action-btn" onclick="flagComment(${c.id})">⚑ Report</button>
+      </div>
+      ${repliesHTML}
+      <div class="inline-reply-form" id="replyForm-${c.id}">
+        <textarea class="inline-reply-input" id="replyText-${c.id}"
+          placeholder="Write a reply to ${escHtml(c.name)}..." maxlength="600"></textarea>
+        <div class="inline-reply-actions">
+          <input class="comment-input" id="replyName-${c.id}"
+            type="text" placeholder="Your name *" maxlength="50"
+            style="width:180px; padding:8px 12px; font-size:13px;">
+          <button class="inline-reply-submit" onclick="submitReply(${c.id})">POST REPLY</button>
+          <button class="inline-reply-cancel"  onclick="toggleReplyForm(${c.id})">CANCEL</button>
+        </div>
+      </div>`;
+
+    list.appendChild(div);
+
+    // Re-open reply form if it was open
+    if (openReplyForms[c.id]) {
+      const form = document.getElementById('replyForm-' + c.id);
+      if (form) form.classList.add('open');
+    }
+  });
+
+  // Load more button
+  if (loadMore) {
+    loadMore.style.display = visibleCount < total ? 'block' : 'none';
+    loadMore.textContent   = `LOAD MORE COMMENTS (${total - visibleCount} remaining) ↓`;
+  }
+}
+
+function loadMoreComments() {
+  visibleCount += COMMENTS_PER_PAGE;
+  renderComments();
+}
+
+function escHtml(str) {
+  const d = document.createElement('div');
+  d.textContent = str;
+  return d.innerHTML;
+}
+
+function toggleCommentLike(id) {
+  const cLikes  = getCommentLikes();
+  const comments= getComments();
+  const idx     = comments.findIndex(c => c.id === id);
+  if (idx < 0) return;
+  const wasLiked = cLikes[id] || false;
+  cLikes[id]     = !wasLiked;
+  comments[idx].likes = Math.max(0, (comments[idx].likes||0) + (wasLiked ? -1 : 1));
+  saveCommentLikes(cLikes);
+  saveComments(comments);
+  renderComments();
+  showToast(wasLiked ? 'Like removed' : '♥  Comment liked');
+}
+
+function toggleReplyLike(commentId, replyId) {
+  const cLikes  = getCommentLikes();
+  const comments= getComments();
+  const cIdx    = comments.findIndex(c => c.id === commentId);
+  if (cIdx < 0) return;
+  const rIdx    = (comments[cIdx].replies||[]).findIndex(r => r.id === replyId);
+  if (rIdx < 0) return;
+  const key      = 'r_' + replyId;
+  const wasLiked = cLikes[key] || false;
+  cLikes[key]    = !wasLiked;
+  comments[cIdx].replies[rIdx].likes =
+    Math.max(0, (comments[cIdx].replies[rIdx].likes||0) + (wasLiked ? -1 : 1));
+  saveCommentLikes(cLikes);
+  saveComments(comments);
+  renderComments();
+  showToast(wasLiked ? 'Like removed' : '♥  Reply liked');
+}
+
+function toggleReplyForm(id) {
+  const form = document.getElementById('replyForm-' + id);
+  if (!form) return;
+  const isOpen = form.classList.toggle('open');
+  openReplyForms[id] = isOpen;
+  if (isOpen) {
+    setTimeout(() => {
+      const nameInput = document.getElementById('replyName-' + id);
+      if (nameInput) nameInput.focus();
+    }, 50);
+  }
+}
+
+function submitReply(commentId) {
+  const nameEl = document.getElementById('replyName-' + commentId);
+  const textEl = document.getElementById('replyText-' + commentId);
+  const name   = nameEl ? nameEl.value.trim() : '';
+  const text   = textEl ? textEl.value.trim() : '';
+
+  if (!name) {
+    if (nameEl) { nameEl.style.borderColor='var(--crimson)'; setTimeout(()=>nameEl.style.borderColor='',1500); }
+    showToast('⚠  Please enter your name'); return;
+  }
+  if (text.length < 5) {
+    if (textEl) { textEl.style.borderColor='var(--crimson)'; setTimeout(()=>textEl.style.borderColor='',1500); }
+    showToast('⚠  Reply is too short'); return;
+  }
+
+  const comments = getComments();
+  const idx      = comments.findIndex(c => c.id === commentId);
+  if (idx < 0) return;
+  if (!comments[idx].replies) comments[idx].replies = [];
+  comments[idx].replies.push({ id: Date.now(), name, text, ts: Date.now(), likes: 0 });
+  saveComments(comments);
+  openReplyForms[commentId] = false;
+  renderComments();
+  showToast('✅  Reply posted!');
+}
+
+function flagComment(id) {
+  showToast('⚑  Comment reported — we will review it shortly. Thank you.');
+}
+
 </script>
 </body>
 </html>
