@@ -2931,6 +2931,8 @@ footer {
 .post-tag--selfimprove   { color: #2a6a2a; border-color: rgba(42,106,42,0.3); }
 .post-card--marriage     { border-left-color: #8a4a1a; }
 .post-tag--marriage      { color: #8a4a1a; border-color: rgba(138,74,26,0.3); }
+.post-card--fempsy       { border-left-color: #6a1a6a; }
+.post-tag--fempsy        { color: #6a1a6a; border-color: rgba(106,26,106,0.3); }
 
 /* ──────────────────────────── REVEAL ANIMATIONS ─────────────────────────── */
 .reveal {
@@ -3046,13 +3048,13 @@ footer {
     <div class="hero-img-bg"></div>
     <div class="hero-pattern"></div>
     <div class="hero-vol">I</div>
-    <div class="hero-featured-card" onclick="showArticle()" style="cursor:pointer;">
-      <div class="card-tag">Latest Post</div>
-      <div class="card-title">The Woman Who Knew Her Son Was About to Make the Biggest Mistake of His Life</div>
+    <div class="hero-featured-card" onclick="showArticle3(event)" style="cursor:pointer;">
+      <div class="card-tag">Featured Article</div>
+      <div class="card-title">Socialized Hypergamy: How Modern Society Was Rewired to Remove Every Limit on Female Choice</div>
       <div class="card-meta">
         <span>Intersexual Dynamics</span>
         <span>·</span>
-        <span>8 min read</span>
+        <span>10 min read</span>
       </div>
     </div>
   </div>
@@ -3123,13 +3125,13 @@ footer {
           </div>
         </div>
       </a>
-      <a href="#blog" onclick="navScrollTo(event,'blog')" class="feat-card medium">
+      <a href="#female-psychology-lens" onclick="showArticle6(event)" class="feat-card medium">
         <div class="feat-bg feat-bg-5"></div>
         <div class="feat-pattern"></div>
         <div class="feat-number">05</div>
         <div class="feat-content">
           <span class="feat-tag">Female Psychology</span>
-          <h3 class="feat-title">What She Says vs. What She Means: Decoding Female Communication</h3>
+          <h3 class="feat-title">The Female Lens: How Women Experience the World Differently — and What It Means for Men</h3>
           <div class="feat-meta-row">
             <span>10 min read</span>
             <span class="feat-read-time">→</span>
@@ -3345,9 +3347,31 @@ footer {
           </div>
         </a>
 
+        <!-- ★ FEATURED ARTICLE: THE FEMALE LENS -->
+        <a href="#female-psychology-lens" class="post-card post-card--featured post-card--fempsy" onclick="showArticle6(event)">
+          <div class="post-body">
+            <span class="post-tag post-tag--fempsy">🧠 Female Psychology</span>
+            <h3 class="post-title">The Female Lens: How Women Experience the World Differently — and What It Means for Men</h3>
+            <p class="post-excerpt">Women are not broken or irrational. They are operating on a different social system. Once you understand how they see the world, everything — the drama, the silence, the mixed signals — starts to make sense.</p>
+            <div class="post-footer">
+              <span class="post-author">Osubula</span>
+              <span>·</span>
+              <span>Oct 2024</span>
+              <span class="post-read">10 min read</span>
+            </div>
+          </div>
+          <div class="post-card-img">
+            <div class="post-img-inner" style="padding:0;overflow:hidden;">
+              <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&q=80&fit=crop&crop=faces"
+                   alt="Black woman looking thoughtful and reflective"
+                   style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" />
+            </div>
+          </div>
+        </a>
+
         <a href="#blog" onclick="navScrollTo(event,'blog')" class="post-card">
           <div class="post-body">
-            <span class="post-tag">Masculinity & Identity</span>
+            <span class="post-tag">Masculinity &amp; Identity</span>
             <h3 class="post-title">The Provider Trap: How Good Men Get Used and Why They Let It Happen</h3>
             <p class="post-excerpt">Being a provider is noble — but being a provider without being valued is something else entirely. Men raised to give freely are often exploited by those who take freely. Here's the hard breakdown.</p>
             <div class="post-footer">
@@ -3453,25 +3477,25 @@ footer {
               <div class="trending-title">The Red Pill Path: A Tool, Not a Religion</div>
             </div>
           </a>
-          <a href="#blog" onclick="navScrollTo(event,'blog')" class="trending-item">
+          <a href="#socialized-hypergamy" onclick="showArticle3(event)" class="trending-item">
             <div class="trending-num">03</div>
             <div class="trending-info">
-              <div class="trending-tag">Female Psychology</div>
-              <div class="trending-title">The Solipsism Lens: A Different Operating System</div>
+              <div class="trending-tag">Intersexual Dynamics</div>
+              <div class="trending-title">Socialized Hypergamy: How Society Was Rewired</div>
             </div>
           </a>
-          <a href="#blog" onclick="navScrollTo(event,'blog')" class="trending-item">
+          <a href="#appreciation" onclick="showArticle5(event)" class="trending-item">
             <div class="trending-num">04</div>
             <div class="trending-info">
-              <div class="trending-tag">Marriage</div>
-              <div class="trending-title">5 Unspoken Rules No One Tells the Groom</div>
+              <div class="trending-tag">Marriage &amp; Commitment</div>
+              <div class="trending-title">Appreciation: What Men Really Give Up in Marriage</div>
             </div>
           </a>
-          <a href="#blog" onclick="navScrollTo(event,'blog')" class="trending-item">
+          <a href="#bitter-taste-red-pill" onclick="showArticle4(event)" class="trending-item">
             <div class="trending-num">05</div>
             <div class="trending-info">
               <div class="trending-tag">Self-Improvement</div>
-              <div class="trending-title">Discipline Is Not Motivation — It's Identity</div>
+              <div class="trending-title">The Bitter Taste of the Red Pill</div>
             </div>
           </a>
         </div>
@@ -5373,6 +5397,325 @@ footer {
 
 </div><!-- /articlePage5 -->
 
+<!-- ═══════════════════════════════════════════════════════════
+     ARTICLE PAGE 6 — THE FEMALE LENS
+     (Female Psychology · Featured)
+     ═══════════════════════════════════════════════════════════ -->
+<div id="articlePage6" class="page hidden article-page">
+
+  <div class="breadcrumb-bar">
+    <div class="breadcrumb-inner">
+      <a href="#" onclick="showHome(event)">Home</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="#" onclick="showHome(event)">Female Psychology</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>The Female Lens</span>
+    </div>
+  </div>
+
+  <div class="article-header" style="background:#1a0a1a;">
+    <div class="article-header-inner">
+      <div class="article-header-tag" style="background:#6a1a6a;">🧠 Female Psychology</div>
+      <h1 class="article-header-title">THE FEMALE LENS</h1>
+      <div class="article-header-meta">
+        <span class="meta-author">By Osubula</span>
+        <span class="meta-divider">·</span>
+        <span>October 2024</span>
+        <span class="meta-divider">·</span>
+        <span>10 min read</span>
+        <span class="meta-divider">·</span>
+        <span>Female Psychology · Featured</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-content-wrap article-content-single">
+    <div class="article-content-main">
+
+      <button class="back-to-blog-btn" onclick="showHome()">← Back to all articles</button>
+
+      <div class="article-img-wrap article-img-hero">
+        <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=900&q=80&fit=crop&crop=faces"
+             alt="Black woman looking thoughtful and reflective"
+             loading="lazy" />
+        <div class="article-img-caption">Women are not irrational. They are running a different operating system. Once you see it, you cannot unsee it.</div>
+      </div>
+
+      <!-- BODY -->
+      <p class="article-lead">Women are not broken. They are not irrational. They are not out to get you.</p>
+
+      <p class="article-p">They are operating on a fundamentally different social and emotional system. Once you understand how that system works, everything changes. The drama, the silence, the mixed signals, the tears over things that seem small — it all starts to make sense.</p>
+
+      <p class="article-p">I am not saying women are wrong. I am saying they are different. And most men have never been taught what that difference actually looks like.</p>
+
+      <div id="fp-toc-feels" class="article-section-title">Feelings Are the Data</div>
+
+      <p class="article-p">For most men, feelings are a signal. They point to something external — a problem to solve, a threat to address, an action to take.</p>
+
+      <p class="article-p">For most women, feelings ARE the data. The feeling is not pointing to something else. It IS the thing.</p>
+
+      <p class="article-p">This is why a man says "just tell me what the problem is" and a woman says "you're not listening." He is waiting for the information. She is giving it. They are both right — and completely talking past each other.</p>
+
+      <p class="article-p">When you understand this, you stop trying to solve the feeling. You start acknowledging it instead. That single shift fixes more relationship problems than most men realize.</p>
+
+      <div id="fp-toc-social" class="article-section-title">The Social Network Is Everything</div>
+
+      <p class="article-p">Women are wired for social connection at a level most men underestimate.</p>
+
+      <p class="article-p">Where a man often measures himself against external outcomes — what he built, what he earned, what he accomplished — a woman often measures herself against her relationships. Who loves her. Who respects her. Where she stands in her social circle.</p>
+
+      <p class="article-p">This is not vanity. It is survival wiring, built over hundreds of thousands of years when a woman's safety and resources depended entirely on her social position.</p>
+
+      <p class="article-p">That is why social rejection hits women harder. Why gossip exists. Why what other people think matters more to most women than most men understand. It is not shallow. It is ancient.</p>
+
+      <div id="fp-toc-solipsism" class="article-section-title">The Solipsism Factor</div>
+
+      <p class="article-p">Women experience the world through their own emotional reality more intensely than men do.</p>
+
+      <p class="article-p">What she feels becomes what is real. If she feels ignored, you were ignoring her — regardless of your intent. If she feels attacked, she was attacked. If she feels loved, she is loved.</p>
+
+      <p class="article-p">This is not manipulation. It is how her nervous system processes experience.</p>
+
+      <p class="article-p">The consequence for men: your intent matters far less than her experience of it. You can be perfectly reasonable and she will still be upset — because her reality is emotional first, factual second. This does not mean she is always wrong. It means you need to understand the order of operations before you try to reason your way through a conversation.</p>
+
+      <div id="fp-toc-testing" class="article-section-title">Why She Tests You</div>
+
+      <p class="article-p">Women test men. Not consciously, not maliciously. It is built in.</p>
+
+      <p class="article-p">She is checking whether you are who you appear to be. Whether your confidence is real or performance. Whether you will fold under pressure or hold your ground.</p>
+
+      <p class="article-p">When she starts an argument over something that seems pointless — she is not actually arguing about that thing. She is checking your emotional stability. A man who gets rattled, apologizes for things he did not do, or goes cold and silent — fails the test. Not because she planned it. Because her nervous system registered weakness and responded accordingly.</p>
+
+      <p class="article-p">A man who stays calm, holds his position without cruelty, and does not need her approval to feel okay about himself — passes. Every time.</p>
+
+      <div id="fp-toc-security" class="article-section-title">Security Is the Deepest Need</div>
+
+      <p class="article-p">Beneath all of it — the tests, the emotions, the social calculations — is one core need.</p>
+
+      <p class="article-p">Security.</p>
+
+      <p class="article-p">Not just financial security. Emotional security. The sense that she is with a man who is steady. Who will not fall apart. Who knows who he is and where he is going.</p>
+
+      <p class="article-p">When a woman loses respect for a man, it is almost always because she no longer feels that security. He became unpredictable. He became needy. He made her responsible for his emotional state. The love may still be there. But the attraction is gone. And attraction is what keeps the love alive.</p>
+
+      <div class="article-callout">
+        <p>None of this makes women difficult. It makes them human — in a particular way. Understanding the system does not mean you manipulate it. It means you stop being confused by it. That clarity alone will change more in your relationships than any tactic ever could.</p>
+      </div>
+
+      <div class="article-closing">
+        <p>UNDERSTAND <span>THE SYSTEM.</span><br>STOP BEING CONFUSED.<br>THAT IS WHERE <span>REAL POWER STARTS.</span></p>
+      </div>
+
+      <!-- AUTHOR CARD -->
+      <div class="article-author-card">
+        <div class="article-author-avatar">O</div>
+        <div class="article-author-info">
+          <div class="article-author-name">Osubula</div>
+          <div class="article-author-role">Writer &amp; Creator · OsubulatTalks</div>
+          <p class="article-author-bio">A truth-seeker and candid conversationalist exploring the complex realities of men, women, and intersexual dynamics. Not a psychologist. Not a coach. Just a regular guy who connected the dots.</p>
+        </div>
+      </div>
+
+      <!-- ENGAGEMENT ROW -->
+      <div class="eng-row">
+        <button class="eng-row-like" id="likeBtnA6" onclick="toggleLikeA6()">
+          <span id="likeHeartA6">♡</span>
+          <span id="likeCountA6">196</span>
+          <span class="eng-row-label">Likes</span>
+        </button>
+        <div class="eng-row-stat">
+          <span class="eng-row-icon">👁</span>
+          <span id="viewCountA6">2,943</span>
+          <span class="eng-row-label">Views</span>
+        </div>
+        <div class="eng-row-stat clickable" onclick="scrollToCommentsA6()">
+          <span class="eng-row-icon">💬</span>
+          <span id="commentCountBadgeA6">0</span>
+          <span class="eng-row-label">Comments</span>
+        </div>
+        <div class="eng-row-stat clickable" onclick="scrollToRatingA6()">
+          <span class="eng-row-icon">⭐</span>
+          <span id="avgRatingBadgeA6">4.7</span>
+          <span class="eng-row-label">Rating</span>
+        </div>
+        <div class="eng-row-share-wrap">
+          <button class="eng-row-share-btn" id="shareToggleBtnA6" onclick="toggleShareDropdownA6(event)">↗ Share</button>
+          <div class="share-dropdown" id="shareDropdownA6">
+            <button class="share-dropdown-item" onclick="engShareA6('twitter')"><span class="sdi-icon">𝕏</span> X / Twitter</button>
+            <button class="share-dropdown-item" onclick="engShareA6('whatsapp')"><span class="sdi-icon">💬</span> WhatsApp</button>
+            <button class="share-dropdown-item" onclick="engShareA6('facebook')"><span class="sdi-icon">📘</span> Facebook</button>
+            <button class="share-dropdown-item" onclick="engShareA6('copy')"><span class="sdi-icon">🔗</span> Copy Link</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- STAR RATING -->
+      <div class="rating-section" id="ratingSectionA6">
+        <div class="rating-box">
+          <div class="rating-left">
+            <div class="rating-big-num" id="ratingBigNumA6">4.7</div>
+            <div class="rating-stars-display" id="ratingStarsDisplayA6">
+              <span class="rating-star-filled">★</span><span class="rating-star-filled">★</span>
+              <span class="rating-star-filled">★</span><span class="rating-star-filled">★</span>
+              <span class="rating-star-empty">★</span>
+            </div>
+            <div class="rating-count" id="ratingCountLabelA6">271 ratings</div>
+          </div>
+          <div class="rating-divider"></div>
+          <div class="rating-bars">
+            <div class="rating-bar-row"><span class="rating-bar-label">5</span><div class="rating-bar-track"><div class="rating-bar-fill" id="a6bar5" style="width:68%"></div></div><span class="rating-bar-pct" id="a6pct5">68%</span></div>
+            <div class="rating-bar-row"><span class="rating-bar-label">4</span><div class="rating-bar-track"><div class="rating-bar-fill" id="a6bar4" style="width:20%"></div></div><span class="rating-bar-pct" id="a6pct4">20%</span></div>
+            <div class="rating-bar-row"><span class="rating-bar-label">3</span><div class="rating-bar-track"><div class="rating-bar-fill" id="a6bar3" style="width:7%"></div></div><span class="rating-bar-pct" id="a6pct3">7%</span></div>
+            <div class="rating-bar-row"><span class="rating-bar-label">2</span><div class="rating-bar-track"><div class="rating-bar-fill" id="a6bar2" style="width:3%"></div></div><span class="rating-bar-pct" id="a6pct4b">3%</span></div>
+            <div class="rating-bar-row"><span class="rating-bar-label">1</span><div class="rating-bar-track"><div class="rating-bar-fill" id="a6bar1" style="width:2%"></div></div><span class="rating-bar-pct" id="a6pct1">2%</span></div>
+          </div>
+          <div class="rating-divider"></div>
+          <div class="rating-right">
+            <div class="rating-right-label">RATE THIS ARTICLE</div>
+            <div class="rating-interactive" id="ratingInteractiveA6">
+              <span class="ri-star-a6" data-val="1" onmouseover="hoverStarA6(1)" onmouseout="unhoverStarA6()" onclick="submitRatingA6(1)">★</span>
+              <span class="ri-star-a6" data-val="2" onmouseover="hoverStarA6(2)" onmouseout="unhoverStarA6()" onclick="submitRatingA6(2)">★</span>
+              <span class="ri-star-a6" data-val="3" onmouseover="hoverStarA6(3)" onmouseout="unhoverStarA6()" onclick="submitRatingA6(3)">★</span>
+              <span class="ri-star-a6" data-val="4" onmouseover="hoverStarA6(4)" onmouseout="unhoverStarA6()" onclick="submitRatingA6(4)">★</span>
+              <span class="ri-star-a6" data-val="5" onmouseover="hoverStarA6(5)" onmouseout="unhoverStarA6()" onclick="submitRatingA6(5)">★</span>
+            </div>
+            <div class="rating-feedback" id="ratingFeedbackA6">Tap a star to rate</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- COMMENTS -->
+      <div class="comments-section" id="commentsSectionA6">
+        <div class="comments-header">
+          <div class="comments-title">DISCUSSION</div>
+          <div class="comments-count-badge" id="commentsCountHeaderA6">0 Comments</div>
+        </div>
+        <div class="comment-form">
+          <div class="comment-form-title">Join the Conversation</div>
+          <div class="comment-form-row">
+            <input class="comment-input" id="commentNameA6"  type="text"  placeholder="Your name *" maxlength="50">
+            <input class="comment-input" id="commentEmailA6" type="email" placeholder="Email (not published)" maxlength="80">
+          </div>
+          <textarea class="comment-textarea" id="commentTextA6"
+            placeholder="Share your take. Agree, disagree, add your experience. Keep it real." maxlength="1000"></textarea>
+          <div class="comment-form-footer">
+            <span class="comment-char-count"><span id="charLeftA6">1000</span> characters left</span>
+            <button class="comment-submit-btn" id="commentSubmitBtnA6" onclick="submitCommentA6()">POST COMMENT →</button>
+          </div>
+        </div>
+        <div class="comments-sort-bar" id="commentsSortBarA6" style="display:none;">
+          <span class="comments-sort-label">Sort by:</span>
+          <button class="sort-btn active" id="sortNewestA6" onclick="sortCommentsA6('newest')">Newest</button>
+          <button class="sort-btn"        id="sortOldestA6" onclick="sortCommentsA6('oldest')">Oldest</button>
+          <button class="sort-btn"        id="sortTopA6"    onclick="sortCommentsA6('top')">Top Liked</button>
+        </div>
+        <div class="comments-list" id="commentsListA6"></div>
+        <div class="comments-empty" id="commentsEmptyA6">
+          <div class="comments-empty-icon">✍🏾</div>
+          <div class="comments-empty-text">No comments yet. Be the first to say something real.</div>
+        </div>
+        <button class="load-more-comments" id="loadMoreCommentsA6" style="display:none;" onclick="loadMoreCommentsA6()">
+          LOAD MORE COMMENTS ↓
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Prev / Next -->
+  <div class="article-nav-strip">
+    <div class="article-nav-inner">
+      <div class="article-nav-item prev" onclick="showArticle5(event)">
+        <div class="article-nav-dir">← Previous</div>
+        <div class="article-nav-title">Appreciation: What Men Really Give Up in Marriage</div>
+        <div class="article-nav-cat">Marriage &amp; Commitment</div>
+      </div>
+      <div class="article-nav-item next" onclick="showArticle(event)">
+        <div class="article-nav-dir">Next Article →</div>
+        <div class="article-nav-title">There Is No One: The Soulmate Myth</div>
+        <div class="article-nav-cat">Intersexual Dynamics</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Related -->
+  <div class="article-related">
+    <div class="article-related-inner">
+      <div class="article-related-title">READ NEXT</div>
+      <div class="article-related-grid">
+        <div class="article-related-card" onclick="showArticle3(event)">
+          <div class="article-related-tag">⚡ Intersexual Dynamics</div>
+          <div class="article-related-h">Socialized Hypergamy: How Society Was Rewired</div>
+          <div class="article-related-meta">10 min read · Jul 2024</div>
+        </div>
+        <div class="article-related-card" onclick="showArticle5(event)">
+          <div class="article-related-tag">💍 Marriage &amp; Commitment</div>
+          <div class="article-related-h">Appreciation: What Men Really Give Up in Marriage</div>
+          <div class="article-related-meta">8 min read · Sep 2024</div>
+        </div>
+        <div class="article-related-card" onclick="showArticle(event)">
+          <div class="article-related-tag">⚡ Intersexual Dynamics</div>
+          <div class="article-related-h">There Is No One: The Soulmate Myth</div>
+          <div class="article-related-meta">7 min read · May 2024</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" onclick="showHome(event)" class="logo">OSUBULA<span>TALKS</span></a>
+        <p class="footer-desc">Not for motivation — for transformation. The straight talk about men, women, and how the world actually works.</p>
+        <div class="footer-socials">
+          <a href="https://twitter.com/osubulatalks"   target="_blank" rel="noopener" class="footer-social-btn">𝕏</a>
+          <a href="https://instagram.com/osubulatalks" target="_blank" rel="noopener" class="footer-social-btn">📷</a>
+          <a href="https://youtube.com/@osubulatalks"  target="_blank" rel="noopener" class="footer-social-btn">▶</a>
+          <a href="#newsletter" onclick="navScrollTo(event,'newsletter')" class="footer-social-btn">✉</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Topics</div>
+        <ul class="footer-links">
+          <li><a href="#" onclick="showHome(event)">Intersexual Dynamics</a></li>
+          <li><a href="#" onclick="showHome(event)">Masculinity &amp; Identity</a></li>
+          <li><a href="#" onclick="showHome(event)">Relationships &amp; Dating</a></li>
+          <li><a href="#" onclick="showHome(event)">Female Psychology</a></li>
+          <li><a href="#" onclick="showHome(event)">Marriage &amp; Commitment</a></li>
+          <li><a href="#" onclick="showHome(event)">Self-Improvement</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Navigate</div>
+        <ul class="footer-links">
+          <li><a href="#" onclick="showHome(event)">Home</a></li>
+          <li><a href="#" onclick="showHome(event)">All Articles</a></li>
+          <li><a href="#author" onclick="navScrollTo(event,'author')">About the Author</a></li>
+          <li><a href="#newsletter" onclick="navScrollTo(event,'newsletter')">Newsletter</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Connect</div>
+        <ul class="footer-links">
+          <li><a href="mailto:hello@osubulatalks.com">Contact</a></li>
+          <li><a href="mailto:hello@osubulatalks.com">Submit a Story</a></li>
+          <li><a href="https://open.spotify.com/show/osubulatalks" target="_blank" rel="noopener">Listen to Podcast</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 OSUBULATALKS — All rights reserved.</span>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Disclaimer</a>
+      </div>
+    </div>
+  </footer>
+
+</div><!-- /articlePage6 -->
+
 <script>
 // ═══════════════════════════════════════════════════════════════
 // CONSTANTS
@@ -6835,10 +7178,100 @@ function toggleReplyFormA5(id){const f=document.getElementById(`replyFormA5-${id
 function submitReplyA5(cid){const ne=document.getElementById(`replyNameA5-${cid}`),te=document.getElementById(`replyTextA5-${cid}`);const name=ne?ne.value.trim():'',text=te?te.value.trim():'';if(!name){if(ne){ne.style.borderColor='var(--crimson)';setTimeout(()=>ne.style.borderColor='',1500);}showToast('⚠  Please enter your name');return;}if(text.length<5){if(te){te.style.borderColor='var(--crimson)';setTimeout(()=>te.style.borderColor='',1500);}showToast('⚠  Reply is too short');return;}const cmts=getCommentsA5(),idx=cmts.findIndex(c=>c.id===cid);if(idx<0)return;if(!cmts[idx].replies)cmts[idx].replies=[];cmts[idx].replies.push({id:Date.now(),name,text,ts:Date.now(),likes:0});saveCommentsA5(cmts);openReplyFormsA5[cid]=false;renderCommentsA5();showToast('✅  Reply posted!');}
 function initEngagementA5(){initLikesA5();initRatingA5();initCommentsA5();renderViewA5(load(STORAGE5.views,SEED5.views));}
 
-// ri-star-a5 styles
-const styleA5=document.createElement('style');
-styleA5.textContent=`.ri-star-a5{font-size:28px;cursor:pointer;color:#ddd;transition:color .15s,transform .15s;user-select:none;line-height:1;display:inline-block}.ri-star-a5:hover,.ri-star-a5.hovered{color:#f0a500;transform:scale(1.15)}.ri-star-a5.selected{color:#f0a500}`;
-document.head.appendChild(styleA5);
+// ═══════════════════════════════════════════════════════════════
+// ARTICLE 6 — THE FEMALE LENS (Female Psychology)
+// ═══════════════════════════════════════════════════════════════
+const ARTICLE6_ID='female-psychology-lens';
+const STORAGE6={likes:`osubula_likes_${ARTICLE6_ID}`,likesCount:`osubula_likes_${ARTICLE6_ID}_count`,views:`osubula_views_${ARTICLE6_ID}`,rating:`osubula_rating_${ARTICLE6_ID}`,ratingData:`osubula_ratingdata_${ARTICLE6_ID}`,ratingCount:`osubula_ratingdata_${ARTICLE6_ID}_count`,comments:`osubula_comments_${ARTICLE6_ID}`,commentLikes:`osubula_clikes_${ARTICLE6_ID}`};
+const SEED6={views:2943,likes:196,ratingCount:271,ratingAvg:4.7,ratingDist:{5:184,4:54,3:19,2:8,1:6}};
+
+function showArticle6(e){
+  if(e&&e.preventDefault)e.preventDefault();
+  ['homePage','articlePage','articlePage2','articlePage3','articlePage4','articlePage5'].forEach(id=>{const el=document.getElementById(id);if(el)el.classList.add('hidden');});
+  document.getElementById('articlePage6').classList.remove('hidden');
+  window.scrollTo({top:0,behavior:'instant'});
+  document.title='The Female Lens — OSUBULATALKS';
+  history.pushState({page:'article6'},'','#'+ARTICLE6_ID);
+  initReveal();trackViewA6();initEngagementA6();
+}
+
+// ── FINAL MASTER popstate — all 6 articles
+window.removeEventListener('popstate',window._popHandler);
+window._popHandler=function(){
+  const h=location.hash;
+  if(h==='#'+ARTICLE_ID)showArticle();
+  else if(h==='#'+ARTICLE2_ID)showArticle2();
+  else if(h==='#'+ARTICLE3_ID)showArticle3();
+  else if(h==='#'+ARTICLE4_ID)showArticle4();
+  else if(h==='#'+ARTICLE5_ID)showArticle5();
+  else if(h==='#'+ARTICLE6_ID)showArticle6();
+  else showHome();
+};
+window.addEventListener('popstate',window._popHandler);
+if(location.hash==='#'+ARTICLE6_ID)showArticle6();
+
+// ── FINAL MASTER showHome — hides all 6 article pages
+window.showHome=function(e){
+  if(e&&e.preventDefault)e.preventDefault();
+  ['articlePage','articlePage2','articlePage3','articlePage4','articlePage5','articlePage6'].forEach(id=>{const el=document.getElementById(id);if(el)el.classList.add('hidden');});
+  homePage.classList.remove('hidden');
+  window.scrollTo({top:0,behavior:'instant'});
+  document.title='OSUBULATALKS — Forged in Pain, Sharpened in Solitude';
+  history.pushState({page:'home'},'','#');
+  progress.style.width='0%';
+  [closeShareDropdown,closeShareDropdownA2,closeShareDropdownA3,closeShareDropdownA4,closeShareDropdownA5,closeShareDropdownA6].forEach(fn=>{try{fn();}catch(ex){}});
+};
+
+// ── Views A6
+function trackViewA6(){const sk=`osubula_viewed_session_${ARTICLE6_ID}`;if(sessionStorage.getItem(sk)){renderViewA6(load(STORAGE6.views,SEED6.views));return;}sessionStorage.setItem(sk,'1');const n=load(STORAGE6.views,SEED6.views)+1;store(STORAGE6.views,n);renderViewA6(n);}
+function renderViewA6(n){const el=document.getElementById('viewCountA6');if(el)el.textContent=fmt(n);}
+
+// ── Likes A6
+function initLikesA6(){renderLikeA6(load(STORAGE6.likes,false),load(STORAGE6.likesCount,SEED6.likes));}
+function toggleLikeA6(){const was=load(STORAGE6.likes,false),cnt=load(STORAGE6.likesCount,SEED6.likes),now=!was,nc=now?cnt+1:Math.max(0,cnt-1);store(STORAGE6.likes,now);store(STORAGE6.likesCount,nc);renderLikeA6(now,nc);showToast(now?'❤️  You liked this article':'Like removed');}
+function renderLikeA6(liked,count){const btn=document.getElementById('likeBtnA6'),heart=document.getElementById('likeHeartA6'),num=document.getElementById('likeCountA6');if(btn)btn.classList.toggle('liked',liked);if(heart)heart.textContent=liked?'♥':'♡';if(num)num.textContent=fmt(count);}
+
+// ── Share A6
+let shareOpenA6=false;
+function toggleShareDropdownA6(e){e.stopPropagation();shareOpenA6=!shareOpenA6;document.getElementById('shareDropdownA6').classList.toggle('open',shareOpenA6);}
+function closeShareDropdownA6(){shareOpenA6=false;const dd=document.getElementById('shareDropdownA6');if(dd)dd.classList.remove('open');}
+document.addEventListener('click',e=>{if(!e.target.closest('#shareToggleBtnA6')&&!e.target.closest('#shareDropdownA6'))closeShareDropdownA6();});
+function engShareA6(platform){const url=window.location.href.split('#')[0]+'#'+ARTICLE6_ID,title='The Female Lens — OSUBULATALKS';closeShareDropdownA6();if(platform==='twitter')window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`,'_blank');else if(platform==='whatsapp')window.open(`https://wa.me/?text=${encodeURIComponent(title+' — '+url)}`,'_blank');else if(platform==='facebook')window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,'_blank');else if(platform==='copy')navigator.clipboard.writeText(url).then(()=>showToast('🔗  Link copied to clipboard'));}
+
+// ── Rating A6
+let userRatingA6=0;
+function initRatingA6(){const saved=load(STORAGE6.rating,0);userRatingA6=saved;if(saved>0){renderInteractiveStarsA6(saved);const fb=document.getElementById('ratingFeedbackA6');if(fb)fb.textContent=`You rated this ${saved} star${saved>1?'s':''}`;lockRatingStarsA6();}renderRatingAggregateA6(load(STORAGE6.ratingData,null)||SEED6.ratingDist,load(STORAGE6.ratingCount,SEED6.ratingCount));}
+function scrollToRatingA6(){const el=document.getElementById('ratingSectionA6');if(el)window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-88,behavior:'smooth'});}
+function scrollToCommentsA6(){const el=document.getElementById('commentsSectionA6');if(el)window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-88,behavior:'smooth'});}
+function hoverStarA6(v){if(userRatingA6>0)return;document.querySelectorAll('.ri-star-a6').forEach(s=>s.classList.toggle('hovered',parseInt(s.dataset.val)<=v));const fb=document.getElementById('ratingFeedbackA6');if(fb)fb.textContent=['','Terrible','Poor','OK','Good','Excellent'][v]||'';}
+function unhoverStarA6(){if(userRatingA6>0)return;document.querySelectorAll('.ri-star-a6').forEach(s=>s.classList.remove('hovered'));const fb=document.getElementById('ratingFeedbackA6');if(fb)fb.textContent='Tap a star to rate';}
+function submitRatingA6(val){if(userRatingA6>0)return;userRatingA6=val;store(STORAGE6.rating,val);const dist=load(STORAGE6.ratingData,{...SEED6.ratingDist}),cnt=load(STORAGE6.ratingCount,SEED6.ratingCount);dist[val]=(dist[val]||0)+1;const nc=cnt+1;store(STORAGE6.ratingData,dist);store(STORAGE6.ratingCount,nc);renderInteractiveStarsA6(val);renderRatingAggregateA6(dist,nc);lockRatingStarsA6();const fb=document.getElementById('ratingFeedbackA6');if(fb)fb.textContent=`You rated this ${val} star${val>1?'s':''} — ${['','Terrible','Poor','OK','Good','Excellent! 🔥'][val]}`;showToast(`⭐  Thanks for your ${val}-star rating!`);}
+function renderInteractiveStarsA6(val){document.querySelectorAll('.ri-star-a6').forEach(s=>{s.classList.toggle('selected',parseInt(s.dataset.val)<=val);s.classList.remove('hovered');});}
+function lockRatingStarsA6(){document.querySelectorAll('.ri-star-a6').forEach(s=>{s.style.cursor='default';s.onmouseover=null;s.onmouseout=null;s.onclick=null;});}
+function renderRatingAggregateA6(dist,count){const total=count||Object.values(dist).reduce((a,b)=>a+b,0)||1,sum=Object.entries(dist).reduce((a,[k,v])=>a+parseInt(k)*v,0),avg=(sum/total).toFixed(1);const el=id=>document.getElementById(id);if(el('ratingBigNumA6'))el('ratingBigNumA6').textContent=avg;if(el('avgRatingBadgeA6'))el('avgRatingBadgeA6').textContent=avg;if(el('ratingCountLabelA6'))el('ratingCountLabelA6').textContent=fmt(total)+' ratings';const filled=Math.round(parseFloat(avg)),sd=el('ratingStarsDisplayA6');if(sd)sd.innerHTML=[1,2,3,4,5].map(i=>`<span class="${i<=filled?'rating-star-filled':'rating-star-empty'}">★</span>`).join('');const bars=['a6bar5','a6bar4','a6bar3','a6bar2','a6bar1'],pcts=['a6pct5','a6pct4','a6pct3','a6pct4b','a6pct1'];[5,4,3,2,1].forEach((star,i)=>{const pct=Math.round(((dist[star]||0)/total)*100);const b=el(bars[i]),p=el(pcts[i]);if(b)b.style.width=pct+'%';if(p)p.textContent=pct+'%';});}
+
+// ── Comments A6
+let currentSortA6='newest',visibleCountA6=5,openReplyFormsA6={};
+function initCommentsA6(){const ta=document.getElementById('commentTextA6');if(ta)ta.addEventListener('input',()=>{const l=1000-ta.value.length;const el=document.getElementById('charLeftA6');if(el){el.textContent=l;el.style.color=l<100?'var(--crimson)':'#aaa';}});renderCommentsA6();}
+function getCommentsA6(){return load(STORAGE6.comments,[]);}
+function saveCommentsA6(a){store(STORAGE6.comments,a);}
+function getCommentLikesA6(){return load(STORAGE6.commentLikes,{});}
+function saveCommentLikesA6(o){store(STORAGE6.commentLikes,o);}
+function submitCommentA6(){const ne=document.getElementById('commentNameA6'),te=document.getElementById('commentTextA6'),btn=document.getElementById('commentSubmitBtnA6');const name=ne.value.trim(),text=te.value.trim();if(!name){ne.style.borderColor='var(--crimson)';setTimeout(()=>ne.style.borderColor='',1500);showToast('⚠  Please enter your name');return;}if(text.length<10){te.style.borderColor='var(--crimson)';setTimeout(()=>te.style.borderColor='',1500);showToast('⚠  Comment must be at least 10 characters');return;}btn.disabled=true;btn.textContent='POSTING...';setTimeout(()=>{const cmts=getCommentsA6();cmts.unshift({id:Date.now(),name,email:document.getElementById('commentEmailA6').value.trim(),text,ts:Date.now(),likes:0,replies:[]});saveCommentsA6(cmts);ne.value='';te.value='';document.getElementById('commentEmailA6').value='';const cl=document.getElementById('charLeftA6');if(cl)cl.textContent='1000';btn.disabled=false;btn.textContent='POST COMMENT →';currentSortA6='newest';visibleCountA6=5;setActiveSortBtnA6('sortNewestA6');renderCommentsA6();showToast('✅  Comment posted!');scrollToCommentsA6();},600);}
+function sortCommentsA6(t){currentSortA6=t;visibleCountA6=5;setActiveSortBtnA6({newest:'sortNewestA6',oldest:'sortOldestA6',top:'sortTopA6'}[t]);renderCommentsA6();}
+function setActiveSortBtnA6(id){['sortNewestA6','sortOldestA6','sortTopA6'].forEach(i=>{const el=document.getElementById(i);if(el)el.classList.toggle('active',el.id===id);});}
+function loadMoreCommentsA6(){visibleCountA6+=5;renderCommentsA6();}
+function renderCommentsA6(){const list=document.getElementById('commentsListA6'),empty=document.getElementById('commentsEmptyA6'),sortB=document.getElementById('commentsSortBarA6'),lmore=document.getElementById('loadMoreCommentsA6'),badge=document.getElementById('commentsCountHeaderA6'),engB=document.getElementById('commentCountBadgeA6');const all=getCommentsA6(),total=all.length;let sorted=[...all];if(currentSortA6==='newest')sorted.sort((a,b)=>b.ts-a.ts);else if(currentSortA6==='oldest')sorted.sort((a,b)=>a.ts-b.ts);else sorted.sort((a,b)=>(b.likes||0)-(a.likes||0));const visible=sorted.slice(0,visibleCountA6),cLikes=getCommentLikesA6();if(badge)badge.textContent=total+(total===1?' Comment':' Comments');if(engB)engB.textContent=fmt(total);if(empty)empty.style.display=total===0?'block':'none';if(sortB)sortB.style.display=total>1?'flex':'none';if(!list)return;list.innerHTML='';visible.forEach(c=>{const liked=cLikes[c.id]||false,inits=c.name.split(' ').map(w=>w[0]).join('').toUpperCase().slice(0,2),bg=avatarColor(c.name);let rHTML='';if(c.replies&&c.replies.length){rHTML='<div class="comment-replies">'+c.replies.map(r=>{const ri=r.name.split(' ').map(w=>w[0]).join('').toUpperCase().slice(0,2),rl=cLikes['r_'+r.id]||false;return`<div class="reply-item"><div class="reply-header"><div class="reply-avatar" style="background:${avatarColor(r.name)};color:#fff;">${ri}</div><div class="comment-meta"><div class="comment-author-name">${escHtml(r.name)}</div><div class="comment-timestamp">${timeAgo(r.ts)}</div></div></div><div class="reply-body">${escHtml(r.text)}</div><div class="reply-actions"><button class="comment-action-btn ${rl?'liked-comment':''}" onclick="toggleReplyLikeA6(${c.id},${r.id})">${rl?'♥':'♡'} ${rl?'Liked':'Like'} · ${r.likes||0}</button></div></div>`;}).join('')+'</div>';}const div=document.createElement('div');div.className='comment-item';div.innerHTML=`<div class="comment-header"><div class="comment-avatar" style="background:${bg};">${inits}</div><div class="comment-meta"><div class="comment-author-name">${escHtml(c.name)}</div><div class="comment-timestamp">${timeAgo(c.ts)}</div></div></div><div class="comment-body">${escHtml(c.text)}</div><div class="comment-actions"><button class="comment-action-btn ${liked?'liked-comment':''}" onclick="toggleCommentLikeA6(${c.id})">${liked?'♥':'♡'} ${liked?'Liked':'Like'} · ${c.likes||0}</button><span class="comment-action-sep">·</span><button class="comment-action-btn" onclick="toggleReplyFormA6(${c.id})">↩ Reply</button><span class="comment-action-sep">·</span><button class="comment-action-btn" onclick="showToast('⚑  Reported. Thank you.')">⚑ Report</button></div>${rHTML}<div class="inline-reply-form" id="replyFormA6-${c.id}"><textarea class="inline-reply-input" id="replyTextA6-${c.id}" placeholder="Reply to ${escHtml(c.name)}..." maxlength="600"></textarea><div class="inline-reply-actions"><input class="comment-input" id="replyNameA6-${c.id}" type="text" placeholder="Your name *" maxlength="50" style="width:180px;padding:8px 12px;font-size:13px;"><button class="inline-reply-submit" onclick="submitReplyA6(${c.id})">POST REPLY</button><button class="inline-reply-cancel" onclick="toggleReplyFormA6(${c.id})">CANCEL</button></div></div>`;list.appendChild(div);if(openReplyFormsA6[c.id]){const f=document.getElementById(`replyFormA6-${c.id}`);if(f)f.classList.add('open');}});if(lmore){lmore.style.display=visibleCountA6<total?'block':'none';lmore.textContent=`LOAD MORE COMMENTS (${total-visibleCountA6} remaining) ↓`;}}
+function toggleCommentLikeA6(id){const cL=getCommentLikesA6(),cmts=getCommentsA6(),idx=cmts.findIndex(c=>c.id===id);if(idx<0)return;const was=cL[id]||false;cL[id]=!was;cmts[idx].likes=Math.max(0,(cmts[idx].likes||0)+(was?-1:1));saveCommentLikesA6(cL);saveCommentsA6(cmts);renderCommentsA6();showToast(was?'Like removed':'♥  Comment liked');}
+function toggleReplyLikeA6(cid,rid){const cL=getCommentLikesA6(),cmts=getCommentsA6(),ci=cmts.findIndex(c=>c.id===cid);if(ci<0)return;const ri=(cmts[ci].replies||[]).findIndex(r=>r.id===rid);if(ri<0)return;const key='r_'+rid,was=cL[key]||false;cL[key]=!was;cmts[ci].replies[ri].likes=Math.max(0,(cmts[ci].replies[ri].likes||0)+(was?-1:1));saveCommentLikesA6(cL);saveCommentsA6(cmts);renderCommentsA6();showToast(was?'Like removed':'♥  Reply liked');}
+function toggleReplyFormA6(id){const f=document.getElementById(`replyFormA6-${id}`);if(!f)return;const isOpen=f.classList.toggle('open');openReplyFormsA6[id]=isOpen;if(isOpen)setTimeout(()=>{const n=document.getElementById(`replyNameA6-${id}`);if(n)n.focus();},50);}
+function submitReplyA6(cid){const ne=document.getElementById(`replyNameA6-${cid}`),te=document.getElementById(`replyTextA6-${cid}`);const name=ne?ne.value.trim():'',text=te?te.value.trim():'';if(!name){if(ne){ne.style.borderColor='var(--crimson)';setTimeout(()=>ne.style.borderColor='',1500);}showToast('⚠  Please enter your name');return;}if(text.length<5){if(te){te.style.borderColor='var(--crimson)';setTimeout(()=>te.style.borderColor='',1500);}showToast('⚠  Reply is too short');return;}const cmts=getCommentsA6(),idx=cmts.findIndex(c=>c.id===cid);if(idx<0)return;if(!cmts[idx].replies)cmts[idx].replies=[];cmts[idx].replies.push({id:Date.now(),name,text,ts:Date.now(),likes:0});saveCommentsA6(cmts);openReplyFormsA6[cid]=false;renderCommentsA6();showToast('✅  Reply posted!');}
+function initEngagementA6(){initLikesA6();initRatingA6();initCommentsA6();renderViewA6(load(STORAGE6.views,SEED6.views));}
+
+// ri-star-a6 styles
+const styleA6=document.createElement('style');
+styleA6.textContent=`.ri-star-a6{font-size:28px;cursor:pointer;color:#ddd;transition:color .15s,transform .15s;user-select:none;line-height:1;display:inline-block}.ri-star-a6:hover,.ri-star-a6.hovered{color:#f0a500;transform:scale(1.15)}.ri-star-a6.selected{color:#f0a500}`;
+document.head.appendChild(styleA6);
 
 </script>
 </body>
