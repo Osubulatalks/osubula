@@ -2925,8 +2925,12 @@ footer {
   .article-closing { padding: 28px 24px; }
 }
 
-.post-card--masculinity { border-left-color: #1a1a8a; }
-.post-tag--masculinity  { color: #1a1a8a; border-color: rgba(26,26,138,0.3); }
+.post-card--masculinity  { border-left-color: #1a1a8a; }
+.post-tag--masculinity   { color: #1a1a8a; border-color: rgba(26,26,138,0.3); }
+.post-card--selfimprove  { border-left-color: #2a6a2a; }
+.post-tag--selfimprove   { color: #2a6a2a; border-color: rgba(42,106,42,0.3); }
+.post-card--marriage     { border-left-color: #8a4a1a; }
+.post-tag--marriage      { color: #8a4a1a; border-color: rgba(138,74,26,0.3); }
 
 /* ──────────────────────────── REVEAL ANIMATIONS ─────────────────────────── */
 .reveal {
@@ -3065,18 +3069,18 @@ footer {
       <div class="section-line"></div>
     </div>
     <div class="featured-grid reveal">
-      <a href="#there-is-no-one" class="feat-card large" onclick="showArticle(event)">
+      <a href="#socialized-hypergamy" class="feat-card large" onclick="showArticle3(event)">
         <div class="feat-bg feat-bg-1"></div>
         <div class="feat-pattern"></div>
         <div class="feat-number">01</div>
         <div class="feat-content">
           <span class="feat-tag">Intersexual Dynamics</span>
-          <h2 class="feat-title">The Hypergamy Trap: Why Women Are Wired to Always Seek "Up" — and What That Means for Every Man</h2>
+          <h2 class="feat-title">Socialized Hypergamy: How Modern Society Was Rewired to Remove Every Limit on Female Choice</h2>
           <div class="feat-meta-row">
             <span>By Osubula</span>
             <span>·</span>
-            <span>Mar 2024</span>
-            <span class="feat-read-time">12 min read →</span>
+            <span>Jul 2024</span>
+            <span class="feat-read-time">10 min read →</span>
           </div>
         </div>
       </a>
@@ -3093,28 +3097,28 @@ footer {
           </div>
         </div>
       </a>
-      <a href="#blog" onclick="navScrollTo(event,'blog')" class="feat-card medium">
+      <a href="#bitter-taste-red-pill" onclick="showArticle4(event)" class="feat-card medium">
         <div class="feat-bg feat-bg-3"></div>
         <div class="feat-pattern"></div>
         <div class="feat-number">03</div>
         <div class="feat-content">
           <span class="feat-tag">Self-Improvement</span>
-          <h3 class="feat-title">Discipline Is Not Motivation — It's Identity</h3>
+          <h3 class="feat-title">The Bitter Taste of the Red Pill: Game Is a Tool — Use It Your Way</h3>
           <div class="feat-meta-row">
-            <span>7 min read</span>
+            <span>9 min read</span>
             <span class="feat-read-time">→</span>
           </div>
         </div>
       </a>
-      <a href="#blog" onclick="navScrollTo(event,'blog')" class="feat-card medium">
+      <a href="#appreciation" onclick="showArticle5(event)" class="feat-card medium">
         <div class="feat-bg feat-bg-4"></div>
         <div class="feat-pattern"></div>
         <div class="feat-number">04</div>
         <div class="feat-content">
-          <span class="feat-tag">Marriage</span>
-          <h3 class="feat-title">Before You Say "I Do": The Questions Nobody Warns You to Ask</h3>
+          <span class="feat-tag">Marriage & Commitment</span>
+          <h3 class="feat-title">Appreciation: The Truth About What Marriage Really Is and What Men Really Give Up</h3>
           <div class="feat-meta-row">
-            <span>11 min read</span>
+            <span>8 min read</span>
             <span class="feat-read-time">→</span>
           </div>
         </div>
@@ -3251,6 +3255,72 @@ footer {
             <div class="post-img-inner" style="padding:0;overflow:hidden;">
               <img src="https://images.unsplash.com/photo-1584999734482-0361aecad844?w=400&q=80&fit=crop&crop=faces"
                    alt="Determined Black man walking forward with purpose"
+                   style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" />
+            </div>
+          </div>
+        </a>
+
+        <!-- ★ FEATURED ARTICLE: SOCIALIZED HYPERGAMY -->
+        <a href="#socialized-hypergamy" class="post-card post-card--featured" onclick="showArticle3(event)">
+          <div class="post-body">
+            <span class="post-tag">⚡ Intersexual Dynamics</span>
+            <h3 class="post-title">Socialized Hypergamy: How Modern Society Was Rewired to Remove Every Limit on Female Choice</h3>
+            <p class="post-excerpt">Hypergamy is biology. Socialized Hypergamy is what happens when laws, welfare, culture, and media give women total unrestricted freedom to follow that drive with zero consequences. Here is the full breakdown.</p>
+            <div class="post-footer">
+              <span class="post-author">Osubula</span>
+              <span>·</span>
+              <span>Jul 2024</span>
+              <span class="post-read">10 min read</span>
+            </div>
+          </div>
+          <div class="post-card-img">
+            <div class="post-img-inner" style="padding:0;overflow:hidden;">
+              <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&q=80&fit=crop&crop=faces"
+                   alt="Black woman confident and independent, looking forward"
+                   style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" />
+            </div>
+          </div>
+        </a>
+
+        <!-- ★ FEATURED ARTICLE: THE BITTER TASTE OF THE RED PILL -->
+        <a href="#bitter-taste-red-pill" class="post-card post-card--featured post-card--selfimprove" onclick="showArticle4(event)">
+          <div class="post-body">
+            <span class="post-tag post-tag--selfimprove">⚔ Self-Improvement</span>
+            <h3 class="post-title">The Bitter Taste of the Red Pill: Game Is a Tool — Use It Your Way</h3>
+            <p class="post-excerpt">Game is not good or bad. It is just a tool. The truth sets you free — but it tastes bad at first. Once you swallow it, the guilt disappears and the choice is finally yours.</p>
+            <div class="post-footer">
+              <span class="post-author">Osubula</span>
+              <span>·</span>
+              <span>Aug 2024</span>
+              <span class="post-read">9 min read</span>
+            </div>
+          </div>
+          <div class="post-card-img">
+            <div class="post-img-inner" style="padding:0;overflow:hidden;">
+              <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80&fit=crop&crop=faces"
+                   alt="Determined Black man standing alone with quiet confidence"
+                   style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" />
+            </div>
+          </div>
+        </a>
+
+        <!-- ★ FEATURED ARTICLE: APPRECIATION -->
+        <a href="#appreciation" class="post-card post-card--featured post-card--marriage" onclick="showArticle5(event)">
+          <div class="post-body">
+            <span class="post-tag post-tag--marriage">💍 Marriage &amp; Commitment</span>
+            <h3 class="post-title">Appreciation: The Truth About What Marriage Really Is and What Men Really Give Up</h3>
+            <p class="post-excerpt">Men sacrifice. Women see it as normal. The best marriages accept this truth instead of pretending everything will stay exciting forever. That is what real appreciation looks like.</p>
+            <div class="post-footer">
+              <span class="post-author">Osubula</span>
+              <span>·</span>
+              <span>Sep 2024</span>
+              <span class="post-read">8 min read</span>
+            </div>
+          </div>
+          <div class="post-card-img">
+            <div class="post-img-inner" style="padding:0;overflow:hidden;">
+              <img src="https://images.unsplash.com/photo-1531384441138-2736e62e0919?w=400&q=80&fit=crop&crop=faces"
+                   alt="Black couple in an ordinary quiet moment together at home"
                    style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" />
             </div>
           </div>
@@ -4326,6 +4396,982 @@ footer {
   </footer>
 
 </div><!-- /articlePage2 -->
+
+<!-- ═══════════════════════════════════════════════════════════
+     ARTICLE PAGE 3 — SOCIALIZED HYPERGAMY
+     (Intersexual Dynamics · Featured)
+     ═══════════════════════════════════════════════════════════ -->
+<div id="articlePage3" class="page hidden article-page">
+
+  <div class="breadcrumb-bar">
+    <div class="breadcrumb-inner">
+      <a href="#" onclick="showHome(event)">Home</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="#" onclick="showHome(event)">Intersexual Dynamics</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>Socialized Hypergamy</span>
+    </div>
+  </div>
+
+  <div class="article-header">
+    <div class="article-header-inner">
+      <div class="article-header-tag">⚡ Intersexual Dynamics</div>
+      <h1 class="article-header-title">SOCIALIZED HYPERGAMY</h1>
+      <div class="article-header-meta">
+        <span class="meta-author">By Osubula</span>
+        <span class="meta-divider">·</span>
+        <span>July 2024</span>
+        <span class="meta-divider">·</span>
+        <span>10 min read</span>
+        <span class="meta-divider">·</span>
+        <span>Intersexual Dynamics · Featured</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-content-wrap article-content-single">
+    <div class="article-content-main">
+
+      <button class="back-to-blog-btn" onclick="showHome()">← Back to all articles</button>
+
+      <div class="article-img-wrap article-img-hero">
+        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=900&q=80&fit=crop&crop=faces"
+             alt="Black woman confident and independent, looking forward"
+             loading="lazy" />
+        <div class="article-img-caption">Hypergamy is not evil. It is biology. What matters is what happens when society removes every single limit on it.</div>
+      </div>
+
+      <!-- BODY -->
+      <p class="article-lead">Imagine this.</p>
+
+      <p class="article-p">Hypergamy is women's built-in drive to pick the "best" man possible — highest status, resources, looks, and so on. It's not evil or good. It's just biology.</p>
+
+      <p class="article-p">Socialized Hypergamy is what happens when modern society gets rewired — through laws, welfare, culture, and media — to give women total, unrestricted freedom to follow that drive with zero consequences or limits.</p>
+
+      <div id="sh-toc-breakdown" class="article-section-title">Step-by-Step Breakdown</div>
+
+      <p class="article-p"><strong>Old system (traditional monogamy):</strong> Men and women mostly stayed with one partner for life. Men had more power and control. Women's choices were limited by family, religion, money, and social rules.</p>
+
+      <p class="article-p"><strong>New system (caused by "equalism"):</strong> High taxes, big welfare, women earning their own money. Women no longer need one man for life.</p>
+
+      <p class="article-p"><strong>Result:</strong> Society slowly switches from "one partner forever" to serial monogamy. One partner at a time — but you can upgrade or swap whenever you want. Basically soft polygamy.</p>
+
+      <p class="article-p">Anything that blocks this freedom triggers rage. That is why some stories get blown up. It's not really about the issue itself — it's about protecting unlimited choice.</p>
+
+      <div id="sh-toc-goal" class="article-section-title">The Hidden Goal</div>
+
+      <p class="article-p">"Equality" sounds fair. But it's just a mask.</p>
+
+      <p class="article-p">The real goal is maximum freedom for women's hypergamy and maximum limits on men's sexuality.</p>
+
+      <p class="article-p">True equality between men and women is impossible because women's drive for "better" men always wants imbalance.</p>
+
+      <div id="sh-toc-men" class="article-section-title">What This Does to Men</div>
+
+      <ul class="article-list">
+        <li>Marriage rates drop.</li>
+        <li>Divorce is easy for her, costly for him.</li>
+        <li>Laws now favor women — shorter jail time, custody, scholarships, healthcare.</li>
+        <li>Men feel the system is rigged. Many "check out" — MGTOW, stay single, avoid relationships.</li>
+        <li>The end result: socialized cuckoldry. Men are expected to accept it as normal.</li>
+      </ul>
+
+      <div id="sh-toc-proof" class="article-section-title">Proof It's Happening</div>
+
+      <ul class="article-list">
+        <li>Only 16% of world cultures were strictly monogamous historically.</li>
+        <li>Today, most young men have multiple partners before settling — if they settle at all.</li>
+        <li>Economists say: when women don't need men's money as much, serial monogamy rises.</li>
+        <li>Men die more, suicide more, but get less help and are still called "privileged."</li>
+      </ul>
+
+      <div class="article-callout">
+        <p>Society now uses "equality" as an excuse to remove every single barrier so women can freely chase the best man possible at every stage of life — while men are expected to just accept the new rules.</p>
+      </div>
+
+      <div class="article-closing">
+        <p>HYPERGAMY IS <span>BIOLOGY.</span><br>SOCIALIZED HYPERGAMY IS <span>THE SYSTEM.</span><br>KNOWING THE DIFFERENCE IS <span>POWER.</span></p>
+      </div>
+
+      <!-- AUTHOR CARD -->
+      <div class="article-author-card">
+        <div class="article-author-avatar">O</div>
+        <div class="article-author-info">
+          <div class="article-author-name">Osubula</div>
+          <div class="article-author-role">Writer &amp; Creator · OsubulatTalks</div>
+          <p class="article-author-bio">A truth-seeker and candid conversationalist exploring the complex realities of men, women, and intersexual dynamics. Not a psychologist. Not a coach. Just a regular guy who connected the dots.</p>
+        </div>
+      </div>
+
+      <!-- ENGAGEMENT ROW -->
+      <div class="eng-row">
+        <button class="eng-row-like" id="likeBtnA3" onclick="toggleLikeA3()">
+          <span id="likeHeartA3">♡</span>
+          <span id="likeCountA3">211</span>
+          <span class="eng-row-label">Likes</span>
+        </button>
+        <div class="eng-row-stat">
+          <span class="eng-row-icon">👁</span>
+          <span id="viewCountA3">3,104</span>
+          <span class="eng-row-label">Views</span>
+        </div>
+        <div class="eng-row-stat clickable" onclick="scrollToCommentsA3()">
+          <span class="eng-row-icon">💬</span>
+          <span id="commentCountBadgeA3">0</span>
+          <span class="eng-row-label">Comments</span>
+        </div>
+        <div class="eng-row-stat clickable" onclick="scrollToRatingA3()">
+          <span class="eng-row-icon">⭐</span>
+          <span id="avgRatingBadgeA3">4.6</span>
+          <span class="eng-row-label">Rating</span>
+        </div>
+        <div class="eng-row-share-wrap">
+          <button class="eng-row-share-btn" id="shareToggleBtnA3" onclick="toggleShareDropdownA3(event)">↗ Share</button>
+          <div class="share-dropdown" id="shareDropdownA3">
+            <button class="share-dropdown-item" onclick="engShareA3('twitter')"><span class="sdi-icon">𝕏</span> X / Twitter</button>
+            <button class="share-dropdown-item" onclick="engShareA3('whatsapp')"><span class="sdi-icon">💬</span> WhatsApp</button>
+            <button class="share-dropdown-item" onclick="engShareA3('facebook')"><span class="sdi-icon">📘</span> Facebook</button>
+            <button class="share-dropdown-item" onclick="engShareA3('copy')"><span class="sdi-icon">🔗</span> Copy Link</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- STAR RATING -->
+      <div class="rating-section" id="ratingSectionA3">
+        <div class="rating-box">
+          <div class="rating-left">
+            <div class="rating-big-num" id="ratingBigNumA3">4.6</div>
+            <div class="rating-stars-display" id="ratingStarsDisplayA3">
+              <span class="rating-star-filled">★</span><span class="rating-star-filled">★</span>
+              <span class="rating-star-filled">★</span><span class="rating-star-filled">★</span>
+              <span class="rating-star-empty">★</span>
+            </div>
+            <div class="rating-count" id="ratingCountLabelA3">189 ratings</div>
+          </div>
+          <div class="rating-divider"></div>
+          <div class="rating-bars">
+            <div class="rating-bar-row"><span class="rating-bar-label">5</span><div class="rating-bar-track"><div class="rating-bar-fill" id="a3bar5" style="width:64%"></div></div><span class="rating-bar-pct" id="a3pct5">64%</span></div>
+            <div class="rating-bar-row"><span class="rating-bar-label">4</span><div class="rating-bar-track"><div class="rating-bar-fill" id="a3bar4" style="width:22%"></div></div><span class="rating-bar-pct" id="a3pct4">22%</span></div>
+            <div class="rating-bar-row"><span class="rating-bar-label">3</span><div class="rating-bar-track"><div class="rating-bar-fill" id="a3bar3" style="width:8%"></div></div><span class="rating-bar-pct" id="a3pct3">8%</span></div>
+            <div class="rating-bar-row"><span class="rating-bar-label">2</span><div class="rating-bar-track"><div class="rating-bar-fill" id="a3bar2" style="width:4%"></div></div><span class="rating-bar-pct" id="a3pct4b">4%</span></div>
+            <div class="rating-bar-row"><span class="rating-bar-label">1</span><div class="rating-bar-track"><div class="rating-bar-fill" id="a3bar1" style="width:2%"></div></div><span class="rating-bar-pct" id="a3pct1">2%</span></div>
+          </div>
+          <div class="rating-divider"></div>
+          <div class="rating-right">
+            <div class="rating-right-label">RATE THIS ARTICLE</div>
+            <div class="rating-interactive" id="ratingInteractiveA3">
+              <span class="ri-star-a3" data-val="1" onmouseover="hoverStarA3(1)" onmouseout="unhoverStarA3()" onclick="submitRatingA3(1)">★</span>
+              <span class="ri-star-a3" data-val="2" onmouseover="hoverStarA3(2)" onmouseout="unhoverStarA3()" onclick="submitRatingA3(2)">★</span>
+              <span class="ri-star-a3" data-val="3" onmouseover="hoverStarA3(3)" onmouseout="unhoverStarA3()" onclick="submitRatingA3(3)">★</span>
+              <span class="ri-star-a3" data-val="4" onmouseover="hoverStarA3(4)" onmouseout="unhoverStarA3()" onclick="submitRatingA3(4)">★</span>
+              <span class="ri-star-a3" data-val="5" onmouseover="hoverStarA3(5)" onmouseout="unhoverStarA3()" onclick="submitRatingA3(5)">★</span>
+            </div>
+            <div class="rating-feedback" id="ratingFeedbackA3">Tap a star to rate</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- COMMENTS -->
+      <div class="comments-section" id="commentsSectionA3">
+        <div class="comments-header">
+          <div class="comments-title">DISCUSSION</div>
+          <div class="comments-count-badge" id="commentsCountHeaderA3">0 Comments</div>
+        </div>
+        <div class="comment-form">
+          <div class="comment-form-title">Join the Conversation</div>
+          <div class="comment-form-row">
+            <input class="comment-input" id="commentNameA3"  type="text"  placeholder="Your name *" maxlength="50">
+            <input class="comment-input" id="commentEmailA3" type="email" placeholder="Email (not published)" maxlength="80">
+          </div>
+          <textarea class="comment-textarea" id="commentTextA3"
+            placeholder="Share your take. Agree, disagree, add your experience. Keep it real." maxlength="1000"></textarea>
+          <div class="comment-form-footer">
+            <span class="comment-char-count"><span id="charLeftA3">1000</span> characters left</span>
+            <button class="comment-submit-btn" id="commentSubmitBtnA3" onclick="submitCommentA3()">POST COMMENT →</button>
+          </div>
+        </div>
+        <div class="comments-sort-bar" id="commentsSortBarA3" style="display:none;">
+          <span class="comments-sort-label">Sort by:</span>
+          <button class="sort-btn active" id="sortNewestA3" onclick="sortCommentsA3('newest')">Newest</button>
+          <button class="sort-btn"        id="sortOldestA3" onclick="sortCommentsA3('oldest')">Oldest</button>
+          <button class="sort-btn"        id="sortTopA3"    onclick="sortCommentsA3('top')">Top Liked</button>
+        </div>
+        <div class="comments-list" id="commentsListA3"></div>
+        <div class="comments-empty" id="commentsEmptyA3">
+          <div class="comments-empty-icon">✍🏾</div>
+          <div class="comments-empty-text">No comments yet. Be the first to say something real.</div>
+        </div>
+        <button class="load-more-comments" id="loadMoreCommentsA3" style="display:none;" onclick="loadMoreCommentsA3()">
+          LOAD MORE COMMENTS ↓
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Prev / Next -->
+  <div class="article-nav-strip">
+    <div class="article-nav-inner">
+      <div class="article-nav-item prev" onclick="showHome()">
+        <div class="article-nav-dir">← Back</div>
+        <div class="article-nav-title">Back to All Articles</div>
+        <div class="article-nav-cat">Home · Full Feed</div>
+      </div>
+      <div class="article-nav-item next" onclick="showArticle(event)">
+        <div class="article-nav-dir">Next Article →</div>
+        <div class="article-nav-title">There Is No One: The Soulmate Myth That's Keeping You Weak</div>
+        <div class="article-nav-cat">Intersexual Dynamics</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Related -->
+  <div class="article-related">
+    <div class="article-related-inner">
+      <div class="article-related-title">READ NEXT</div>
+      <div class="article-related-grid">
+        <div class="article-related-card" onclick="showArticle(event)">
+          <div class="article-related-tag">⚡ Intersexual Dynamics</div>
+          <div class="article-related-h">There Is No One: The Soulmate Myth That's Keeping You Weak</div>
+          <div class="article-related-meta">7 min read · May 2024</div>
+        </div>
+        <div class="article-related-card" onclick="showArticle2(event)">
+          <div class="article-related-tag">🔱 Masculinity &amp; Identity</div>
+          <div class="article-related-h">The Red Pill Path: A Tool, Not a Religion</div>
+          <div class="article-related-meta">8 min read · Jun 2024</div>
+        </div>
+        <div class="article-related-card" onclick="showHome()">
+          <div class="article-related-tag">💍 Marriage &amp; Commitment</div>
+          <div class="article-related-h">The 5 Unspoken Rules of Marriage That No One Tells the Groom</div>
+          <div class="article-related-meta">13 min read · Dec 2023</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" onclick="showHome(event)" class="logo">OSUBULA<span>TALKS</span></a>
+        <p class="footer-desc">Not for motivation — for transformation. The straight talk about men, women, and how the world actually works.</p>
+        <div class="footer-socials">
+          <a href="https://twitter.com/osubulatalks"   target="_blank" rel="noopener" class="footer-social-btn">𝕏</a>
+          <a href="https://instagram.com/osubulatalks" target="_blank" rel="noopener" class="footer-social-btn">📷</a>
+          <a href="https://youtube.com/@osubulatalks"  target="_blank" rel="noopener" class="footer-social-btn">▶</a>
+          <a href="#newsletter" onclick="navScrollTo(event,'newsletter')"             class="footer-social-btn">✉</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Topics</div>
+        <ul class="footer-links">
+          <li><a href="#" onclick="showHome(event)">Intersexual Dynamics</a></li>
+          <li><a href="#" onclick="showHome(event)">Masculinity &amp; Identity</a></li>
+          <li><a href="#" onclick="showHome(event)">Relationships &amp; Dating</a></li>
+          <li><a href="#" onclick="showHome(event)">Female Psychology</a></li>
+          <li><a href="#" onclick="showHome(event)">Marriage &amp; Commitment</a></li>
+          <li><a href="#" onclick="showHome(event)">Self-Improvement</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Navigate</div>
+        <ul class="footer-links">
+          <li><a href="#" onclick="showHome(event)">Home</a></li>
+          <li><a href="#" onclick="showHome(event)">All Articles</a></li>
+          <li><a href="#" onclick="showHome(event)">About the Author</a></li>
+          <li><a href="#" onclick="showHome(event)">Newsletter</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Legal</div>
+        <ul class="footer-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 OSUBULATALKS — All rights reserved.</span>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Disclaimer</a>
+      </div>
+    </div>
+  </footer>
+
+</div><!-- /articlePage3 -->
+
+<!-- ═══════════════════════════════════════════════════════════
+     ARTICLE PAGE 4 — THE BITTER TASTE OF THE RED PILL
+     (Self-Improvement · Featured)
+     ═══════════════════════════════════════════════════════════ -->
+<div id="articlePage4" class="page hidden article-page">
+
+  <div class="breadcrumb-bar">
+    <div class="breadcrumb-inner">
+      <a href="#" onclick="showHome(event)">Home</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="#" onclick="showHome(event)">Self-Improvement</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>The Bitter Taste of the Red Pill</span>
+    </div>
+  </div>
+
+  <div class="article-header" style="background:#0a1a0a;">
+    <div class="article-header-inner">
+      <div class="article-header-tag" style="background:#2a6a2a;">⚔ Self-Improvement</div>
+      <h1 class="article-header-title">THE BITTER TASTE OF THE RED PILL</h1>
+      <div class="article-header-meta">
+        <span class="meta-author">By Osubula</span>
+        <span class="meta-divider">·</span>
+        <span>August 2024</span>
+        <span class="meta-divider">·</span>
+        <span>9 min read</span>
+        <span class="meta-divider">·</span>
+        <span>Self-Improvement · Featured</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-content-wrap article-content-single">
+    <div class="article-content-main">
+
+      <button class="back-to-blog-btn" onclick="showHome()">← Back to all articles</button>
+
+      <div class="article-img-wrap article-img-hero">
+        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=900&q=80&fit=crop&crop=faces"
+             alt="Determined Black man standing alone with quiet confidence"
+             loading="lazy" />
+        <div class="article-img-caption">The truth sets you free. But it tastes bad at first. That bitterness is the price of seeing clearly.</div>
+      </div>
+
+      <!-- BODY -->
+      <p class="article-lead">People talk a lot about the "dark side" of Game — the skills men learn to understand women and attract them.</p>
+
+      <p class="article-p">Some say men who learn these skills will use them to hurt women or be selfish. But the truth is simpler.</p>
+
+      <p class="article-p">Game is just a tool. It is not good or bad by itself.</p>
+
+      <p class="article-p">Women — and society — want men to use it ONLY to make women happy and keep the old system going. Men should decide how to use it for themselves.</p>
+
+      <div id="bt-toc-women" class="article-section-title">What Women Say When They Admit the Truth</div>
+
+      <p class="article-p">Women who finally accept that Game is real — they can't deny it anymore — still want rules.</p>
+
+      <p class="article-p">"Okay, fine. Women do want strong, confident men. But now YOU men must use your new skills to create better 'nice guys' who give women security and marriage. You owe us this because we admitted the old lie."</p>
+
+      <p class="article-p">Even after men wake up, women still want everything to benefit them and keep the old "women-first" rules.</p>
+
+      <div id="bt-toc-goodbad" class="article-section-title">Good Game vs. Bad Game? (The Feminine Trap)</div>
+
+      <p class="article-p">Women split Game into two camps.</p>
+
+      <ul class="article-list">
+        <li><strong>Good Game</strong> = helps women, helps marriage, helps society.</li>
+        <li><strong>Bad Game</strong> = selfish, helps men get what they want, lets men have choices.</li>
+      </ul>
+
+      <p class="article-p">Why? Because men having their own power feels scary to them. They want to control how men use this new knowledge.</p>
+
+      <div id="bt-toc-dark" class="article-section-title">The "Dark Arts" Myth</div>
+
+      <p class="article-p">People call the strong, raw parts of Game "Dark Triad" or "dark arts" — narcissism, manipulation, and so on. This is just a scare tactic.</p>
+
+      <p class="article-p">The real reason: society — run by women's rules — wants to stop regular guys from learning Game and escaping the old system.</p>
+
+      <p class="article-p">They label it "bad" so most men feel guilty and stay "nice guys."</p>
+
+      <div id="bt-toc-confuse" class="article-section-title">Why This Confuses Men</div>
+
+      <p class="article-p">Normal guys — especially nice guys — already struggle to accept that women like "jerks" sometimes.</p>
+
+      <p class="article-p">When even "good" women argue about which jerk qualities are okay and which are "evil," it feels like a lie.</p>
+
+      <p class="article-p">It goes against everything society taught men about being moral and nice.</p>
+
+      <div id="bt-toc-bitter" class="article-section-title">The Bitter Part of Waking Up</div>
+
+      <p class="article-p">The truth — the Red Pill — sets you free. But it tastes bad at first.</p>
+
+      <p class="article-p">You realize: everything you were taught about love, dating, and being a "good guy" was actually holding you back.</p>
+
+      <p class="article-p">It feels hopeless at first. Like everything you believed was fake.</p>
+
+      <p class="article-p">But it's not hopeless. You can now build your own new rules and take control.</p>
+
+      <div id="bt-toc-nodark" class="article-section-title">There Are No "Dark Arts"</div>
+
+      <p class="article-p">Game is not evil. Game is not good. Game is just a tool — like power in the book 48 Laws of Power.</p>
+
+      <p class="article-p">Power itself is neutral. How you use it depends on you.</p>
+
+      <ul class="article-list">
+        <li>You can use it for a loving, respectful long-term relationship — if that's what YOU want.</li>
+        <li>Or you can use it for fun, multiple partners, or your own happiness.</li>
+      </ul>
+
+      <p class="article-p">Both work if you understand the basics of Game.</p>
+
+      <p class="article-p">The only real "trick" women use now is this: they shame men for using Game — call it evil or selfish — while secretly wanting men to use the exact same skills to benefit women.</p>
+
+      <div class="article-callout">
+        <p>The Red Pill is bitter because it hurts to see the truth. But once you swallow it, you are free. Game belongs to you. Use it however YOU choose. No guilt. No "dark side." Just your choice.</p>
+      </div>
+
+      <div class="article-closing">
+        <p>GAME IS <span>YOURS.</span><br>NO GUILT. NO DARK SIDE.<br>JUST <span>YOUR CHOICE.</span></p>
+      </div>
+
+      <!-- AUTHOR CARD -->
+      <div class="article-author-card">
+        <div class="article-author-avatar">O</div>
+        <div class="article-author-info">
+          <div class="article-author-name">Osubula</div>
+          <div class="article-author-role">Writer &amp; Creator · OsubulatTalks</div>
+          <p class="article-author-bio">A truth-seeker and candid conversationalist exploring the complex realities of men, women, and intersexual dynamics. Not a psychologist. Not a coach. Just a regular guy who connected the dots.</p>
+        </div>
+      </div>
+
+      <!-- ENGAGEMENT ROW -->
+      <div class="eng-row">
+        <button class="eng-row-like" id="likeBtnA4" onclick="toggleLikeA4()">
+          <span id="likeHeartA4">♡</span>
+          <span id="likeCountA4">178</span>
+          <span class="eng-row-label">Likes</span>
+        </button>
+        <div class="eng-row-stat">
+          <span class="eng-row-icon">👁</span>
+          <span id="viewCountA4">2,619</span>
+          <span class="eng-row-label">Views</span>
+        </div>
+        <div class="eng-row-stat clickable" onclick="scrollToCommentsA4()">
+          <span class="eng-row-icon">💬</span>
+          <span id="commentCountBadgeA4">0</span>
+          <span class="eng-row-label">Comments</span>
+        </div>
+        <div class="eng-row-stat clickable" onclick="scrollToRatingA4()">
+          <span class="eng-row-icon">⭐</span>
+          <span id="avgRatingBadgeA4">4.8</span>
+          <span class="eng-row-label">Rating</span>
+        </div>
+        <div class="eng-row-share-wrap">
+          <button class="eng-row-share-btn" id="shareToggleBtnA4" onclick="toggleShareDropdownA4(event)">↗ Share</button>
+          <div class="share-dropdown" id="shareDropdownA4">
+            <button class="share-dropdown-item" onclick="engShareA4('twitter')"><span class="sdi-icon">𝕏</span> X / Twitter</button>
+            <button class="share-dropdown-item" onclick="engShareA4('whatsapp')"><span class="sdi-icon">💬</span> WhatsApp</button>
+            <button class="share-dropdown-item" onclick="engShareA4('facebook')"><span class="sdi-icon">📘</span> Facebook</button>
+            <button class="share-dropdown-item" onclick="engShareA4('copy')"><span class="sdi-icon">🔗</span> Copy Link</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- STAR RATING -->
+      <div class="rating-section" id="ratingSectionA4">
+        <div class="rating-box">
+          <div class="rating-left">
+            <div class="rating-big-num" id="ratingBigNumA4">4.8</div>
+            <div class="rating-stars-display" id="ratingStarsDisplayA4">
+              <span class="rating-star-filled">★</span><span class="rating-star-filled">★</span>
+              <span class="rating-star-filled">★</span><span class="rating-star-filled">★</span>
+              <span class="rating-star-filled">★</span>
+            </div>
+            <div class="rating-count" id="ratingCountLabelA4">204 ratings</div>
+          </div>
+          <div class="rating-divider"></div>
+          <div class="rating-bars">
+            <div class="rating-bar-row"><span class="rating-bar-label">5</span><div class="rating-bar-track"><div class="rating-bar-fill" id="a4bar5" style="width:76%"></div></div><span class="rating-bar-pct" id="a4pct5">76%</span></div>
+            <div class="rating-bar-row"><span class="rating-bar-label">4</span><div class="rating-bar-track"><div class="rating-bar-fill" id="a4bar4" style="width:16%"></div></div><span class="rating-bar-pct" id="a4pct4">16%</span></div>
+            <div class="rating-bar-row"><span class="rating-bar-label">3</span><div class="rating-bar-track"><div class="rating-bar-fill" id="a4bar3" style="width:5%"></div></div><span class="rating-bar-pct" id="a4pct3">5%</span></div>
+            <div class="rating-bar-row"><span class="rating-bar-label">2</span><div class="rating-bar-track"><div class="rating-bar-fill" id="a4bar2" style="width:2%"></div></div><span class="rating-bar-pct" id="a4pct4b">2%</span></div>
+            <div class="rating-bar-row"><span class="rating-bar-label">1</span><div class="rating-bar-track"><div class="rating-bar-fill" id="a4bar1" style="width:1%"></div></div><span class="rating-bar-pct" id="a4pct1">1%</span></div>
+          </div>
+          <div class="rating-divider"></div>
+          <div class="rating-right">
+            <div class="rating-right-label">RATE THIS ARTICLE</div>
+            <div class="rating-interactive" id="ratingInteractiveA4">
+              <span class="ri-star-a4" data-val="1" onmouseover="hoverStarA4(1)" onmouseout="unhoverStarA4()" onclick="submitRatingA4(1)">★</span>
+              <span class="ri-star-a4" data-val="2" onmouseover="hoverStarA4(2)" onmouseout="unhoverStarA4()" onclick="submitRatingA4(2)">★</span>
+              <span class="ri-star-a4" data-val="3" onmouseover="hoverStarA4(3)" onmouseout="unhoverStarA4()" onclick="submitRatingA4(3)">★</span>
+              <span class="ri-star-a4" data-val="4" onmouseover="hoverStarA4(4)" onmouseout="unhoverStarA4()" onclick="submitRatingA4(4)">★</span>
+              <span class="ri-star-a4" data-val="5" onmouseover="hoverStarA4(5)" onmouseout="unhoverStarA4()" onclick="submitRatingA4(5)">★</span>
+            </div>
+            <div class="rating-feedback" id="ratingFeedbackA4">Tap a star to rate</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- COMMENTS -->
+      <div class="comments-section" id="commentsSectionA4">
+        <div class="comments-header">
+          <div class="comments-title">DISCUSSION</div>
+          <div class="comments-count-badge" id="commentsCountHeaderA4">0 Comments</div>
+        </div>
+        <div class="comment-form">
+          <div class="comment-form-title">Join the Conversation</div>
+          <div class="comment-form-row">
+            <input class="comment-input" id="commentNameA4"  type="text"  placeholder="Your name *" maxlength="50">
+            <input class="comment-input" id="commentEmailA4" type="email" placeholder="Email (not published)" maxlength="80">
+          </div>
+          <textarea class="comment-textarea" id="commentTextA4"
+            placeholder="Share your take. Agree, disagree, add your experience. Keep it real." maxlength="1000"></textarea>
+          <div class="comment-form-footer">
+            <span class="comment-char-count"><span id="charLeftA4">1000</span> characters left</span>
+            <button class="comment-submit-btn" id="commentSubmitBtnA4" onclick="submitCommentA4()">POST COMMENT →</button>
+          </div>
+        </div>
+        <div class="comments-sort-bar" id="commentsSortBarA4" style="display:none;">
+          <span class="comments-sort-label">Sort by:</span>
+          <button class="sort-btn active" id="sortNewestA4" onclick="sortCommentsA4('newest')">Newest</button>
+          <button class="sort-btn"        id="sortOldestA4" onclick="sortCommentsA4('oldest')">Oldest</button>
+          <button class="sort-btn"        id="sortTopA4"    onclick="sortCommentsA4('top')">Top Liked</button>
+        </div>
+        <div class="comments-list" id="commentsListA4"></div>
+        <div class="comments-empty" id="commentsEmptyA4">
+          <div class="comments-empty-icon">✍🏾</div>
+          <div class="comments-empty-text">No comments yet. Be the first to say something real.</div>
+        </div>
+        <button class="load-more-comments" id="loadMoreCommentsA4" style="display:none;" onclick="loadMoreCommentsA4()">
+          LOAD MORE COMMENTS ↓
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Prev / Next -->
+  <div class="article-nav-strip">
+    <div class="article-nav-inner">
+      <div class="article-nav-item prev" onclick="showArticle3(event)">
+        <div class="article-nav-dir">← Previous</div>
+        <div class="article-nav-title">Socialized Hypergamy</div>
+        <div class="article-nav-cat">Intersexual Dynamics</div>
+      </div>
+      <div class="article-nav-item next" onclick="showArticle2(event)">
+        <div class="article-nav-dir">Next Article →</div>
+        <div class="article-nav-title">The Red Pill Path: A Tool, Not a Religion</div>
+        <div class="article-nav-cat">Masculinity &amp; Identity</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Related -->
+  <div class="article-related">
+    <div class="article-related-inner">
+      <div class="article-related-title">READ NEXT</div>
+      <div class="article-related-grid">
+        <div class="article-related-card" onclick="showArticle2(event)">
+          <div class="article-related-tag">🔱 Masculinity &amp; Identity</div>
+          <div class="article-related-h">The Red Pill Path: A Tool, Not a Religion</div>
+          <div class="article-related-meta">8 min read · Jun 2024</div>
+        </div>
+        <div class="article-related-card" onclick="showArticle3(event)">
+          <div class="article-related-tag">⚡ Intersexual Dynamics</div>
+          <div class="article-related-h">Socialized Hypergamy</div>
+          <div class="article-related-meta">10 min read · Jul 2024</div>
+        </div>
+        <div class="article-related-card" onclick="showArticle(event)">
+          <div class="article-related-tag">⚡ Intersexual Dynamics</div>
+          <div class="article-related-h">There Is No One: The Soulmate Myth That's Keeping You Weak</div>
+          <div class="article-related-meta">7 min read · May 2024</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" onclick="showHome(event)" class="logo">OSUBULA<span>TALKS</span></a>
+        <p class="footer-desc">Not for motivation — for transformation. The straight talk about men, women, and how the world actually works.</p>
+        <div class="footer-socials">
+          <a href="https://twitter.com/osubulatalks"   target="_blank" rel="noopener" class="footer-social-btn">𝕏</a>
+          <a href="https://instagram.com/osubulatalks" target="_blank" rel="noopener" class="footer-social-btn">📷</a>
+          <a href="https://youtube.com/@osubulatalks"  target="_blank" rel="noopener" class="footer-social-btn">▶</a>
+          <a href="#newsletter" onclick="navScrollTo(event,'newsletter')" class="footer-social-btn">✉</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Topics</div>
+        <ul class="footer-links">
+          <li><a href="#" onclick="showHome(event)">Intersexual Dynamics</a></li>
+          <li><a href="#" onclick="showHome(event)">Masculinity &amp; Identity</a></li>
+          <li><a href="#" onclick="showHome(event)">Relationships &amp; Dating</a></li>
+          <li><a href="#" onclick="showHome(event)">Female Psychology</a></li>
+          <li><a href="#" onclick="showHome(event)">Marriage &amp; Commitment</a></li>
+          <li><a href="#" onclick="showHome(event)">Self-Improvement</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Navigate</div>
+        <ul class="footer-links">
+          <li><a href="#" onclick="showHome(event)">Home</a></li>
+          <li><a href="#" onclick="showHome(event)">All Articles</a></li>
+          <li><a href="#" onclick="showHome(event)">About the Author</a></li>
+          <li><a href="#newsletter" onclick="navScrollTo(event,'newsletter')">Newsletter</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Legal</div>
+        <ul class="footer-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 OSUBULATALKS — All rights reserved.</span>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Disclaimer</a>
+      </div>
+    </div>
+  </footer>
+
+</div><!-- /articlePage4 -->
+
+<!-- ═══════════════════════════════════════════════════════════
+     ARTICLE PAGE 5 — APPRECIATION
+     (Marriage & Commitment · Featured)
+     ═══════════════════════════════════════════════════════════ -->
+<div id="articlePage5" class="page hidden article-page">
+
+  <div class="breadcrumb-bar">
+    <div class="breadcrumb-inner">
+      <a href="#" onclick="showHome(event)">Home</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="#" onclick="showHome(event)">Marriage &amp; Commitment</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>Appreciation</span>
+    </div>
+  </div>
+
+  <div class="article-header" style="background:#1a0e05;">
+    <div class="article-header-inner">
+      <div class="article-header-tag" style="background:#8a4a1a;">💍 Marriage &amp; Commitment</div>
+      <h1 class="article-header-title">APPRECIATION</h1>
+      <div class="article-header-meta">
+        <span class="meta-author">By Osubula</span>
+        <span class="meta-divider">·</span>
+        <span>September 2024</span>
+        <span class="meta-divider">·</span>
+        <span>8 min read</span>
+        <span class="meta-divider">·</span>
+        <span>Marriage &amp; Commitment · Featured</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-content-wrap article-content-single">
+    <div class="article-content-main">
+
+      <button class="back-to-blog-btn" onclick="showHome()">← Back to all articles</button>
+
+      <div class="article-img-wrap article-img-hero">
+        <img src="https://images.unsplash.com/photo-1531384441138-2736e62e0919?w=900&q=80&fit=crop&crop=faces"
+             alt="Black couple in an ordinary quiet moment together at home"
+             loading="lazy" />
+        <div class="article-img-caption">The 300th bowl of oatmeal on a Saturday morning. That is what marriage actually is.</div>
+      </div>
+
+      <!-- BODY -->
+      <p class="article-lead">My view on marriage.</p>
+
+      <p class="article-p">He has been married for years.</p>
+
+      <p class="article-p">But I am honest: marriage asks men to make huge sacrifices that most women never fully understand or thank them for.</p>
+
+      <p class="article-p">I am NOT against marriage. I am against dumb, fairy-tale marriages that end in divorce, debt, and hurt kids.</p>
+
+      <div id="ap-toc-love" class="article-section-title">How a Woman Really Shows Love</div>
+
+      <p class="article-p">When she stops "fawning" over you and just treats you as normal everyday life — that is love.</p>
+
+      <p class="article-p">Example: She ends every phone call with "OK, love you, bye." Nothing dramatic.</p>
+
+      <p class="article-p">You don't even think about it anymore. That comfortable, taken-for-granted feeling IS love.</p>
+
+      <p class="article-p">If you have to ask "Does she love me?" — you are not there yet.</p>
+
+      <p class="article-p">Only when that daily comfort is gone does she notice it.</p>
+
+      <div id="ap-toc-ordinary" class="article-section-title">Real Marriage Is Ordinary (Not Exciting)</div>
+
+      <p class="article-p">Forget the flowers and Valentine cards. Those are just words someone else wrote.</p>
+
+      <p class="article-p">Real love is:</p>
+
+      <ul class="article-list">
+        <li>Eating the 300th bowl of oatmeal on a Saturday morning.</li>
+        <li>Kids fighting over the TV remote.</li>
+        <li>Talking about which bills to pay first.</li>
+        <li>Deciding the lawn needs mowing.</li>
+      </ul>
+
+      <p class="article-p">That boring, normal routine is what marriage actually is.</p>
+
+      <p class="article-p">Most people who ever lived did exactly the same things. That is the real test.</p>
+
+      <div id="ap-toc-lie" class="article-section-title">The Big Lie Men Believe</div>
+
+      <p class="article-p">Men think: "If I sacrifice for her, she will really appreciate me."</p>
+
+      <p class="article-p">Truth: She won't. Women cannot fully feel or thank a man for what he gives up.</p>
+
+      <p class="article-p">Why? Because in her world, those things are just what a man is "supposed" to do.</p>
+
+      <div class="article-example"><strong>You gave up your dreams to give her a better life?</strong> Expected.</div>
+      <div class="article-example"><strong>You didn't cheat on her with the hot secretary?</strong> Expected.</div>
+      <div class="article-example"><strong>You take care of the house and kids?</strong> Expected.</div>
+
+      <p class="article-p">These sacrifices are only noticed when they are missing.</p>
+
+      <div id="ap-toc-fem" class="article-section-title">The "Feminine-Centric" World</div>
+
+      <p class="article-p">Everything is built around what women want and need.</p>
+
+      <p class="article-p">Men's job — in this view — is to make women's lives easier.</p>
+
+      <p class="article-p">If a man does what is expected, he gets no special thanks.</p>
+
+      <p class="article-p">If he refuses to follow the rules — the "maverick" — women actually notice and like him more.</p>
+
+      <div id="ap-toc-examples" class="article-section-title">Two Quick Examples</div>
+
+      <p class="article-p">A 40-year-old man chooses a woman his own age instead of younger women. Is he praised for giving her "a new lease on life"? No. It's just what he's "supposed" to do.</p>
+
+      <p class="article-p">A man marries a single mom and raises another man's kids. Is he seen as a hero? No. It's just expected of a "good man."</p>
+
+      <div id="ap-toc-myth" class="article-section-title">"Relationships Are Work" Is a Myth</div>
+
+      <p class="article-p">People say relationships take hard work. I say: that is just a clever trick.</p>
+
+      <p class="article-p">It trains men to change themselves to fit what the woman wants.</p>
+
+      <p class="article-p">Women love the idea of "fixing" a man — "I'm working on him."</p>
+
+      <p class="article-p">Once the man starts saying "We're working on our relationship," he has accepted her rules.</p>
+
+      <p class="article-p">Real life: familiarity makes things feel ordinary, routine, and sometimes boring. That is why many marriages fail.</p>
+
+      <div class="article-callout">
+        <p>Marriage is mostly quiet, everyday life. Men give up a lot. Women usually see those gifts as normal, not special. True appreciation is rare. The best marriages accept this truth instead of pretending everything will stay exciting forever. That is what the whole post is really saying.</p>
+      </div>
+
+      <div class="article-closing">
+        <p>MARRIAGE IS <span>ORDINARY.</span><br>MEN GIVE UP A LOT.<br>TRUE APPRECIATION IS <span>RARE.</span><br>ACCEPT THE TRUTH — <span>AND BUILD ANYWAY.</span></p>
+      </div>
+
+      <!-- AUTHOR CARD -->
+      <div class="article-author-card">
+        <div class="article-author-avatar">O</div>
+        <div class="article-author-info">
+          <div class="article-author-name">Osubula</div>
+          <div class="article-author-role">Writer &amp; Creator · OsubulatTalks</div>
+          <p class="article-author-bio">A truth-seeker and candid conversationalist exploring the complex realities of men, women, and intersexual dynamics. Not a psychologist. Not a coach. Just a regular guy who connected the dots.</p>
+        </div>
+      </div>
+
+      <!-- ENGAGEMENT ROW -->
+      <div class="eng-row">
+        <button class="eng-row-like" id="likeBtnA5" onclick="toggleLikeA5()">
+          <span id="likeHeartA5">♡</span>
+          <span id="likeCountA5">243</span>
+          <span class="eng-row-label">Likes</span>
+        </button>
+        <div class="eng-row-stat">
+          <span class="eng-row-icon">👁</span>
+          <span id="viewCountA5">3,872</span>
+          <span class="eng-row-label">Views</span>
+        </div>
+        <div class="eng-row-stat clickable" onclick="scrollToCommentsA5()">
+          <span class="eng-row-icon">💬</span>
+          <span id="commentCountBadgeA5">0</span>
+          <span class="eng-row-label">Comments</span>
+        </div>
+        <div class="eng-row-stat clickable" onclick="scrollToRatingA5()">
+          <span class="eng-row-icon">⭐</span>
+          <span id="avgRatingBadgeA5">4.9</span>
+          <span class="eng-row-label">Rating</span>
+        </div>
+        <div class="eng-row-share-wrap">
+          <button class="eng-row-share-btn" id="shareToggleBtnA5" onclick="toggleShareDropdownA5(event)">↗ Share</button>
+          <div class="share-dropdown" id="shareDropdownA5">
+            <button class="share-dropdown-item" onclick="engShareA5('twitter')"><span class="sdi-icon">𝕏</span> X / Twitter</button>
+            <button class="share-dropdown-item" onclick="engShareA5('whatsapp')"><span class="sdi-icon">💬</span> WhatsApp</button>
+            <button class="share-dropdown-item" onclick="engShareA5('facebook')"><span class="sdi-icon">📘</span> Facebook</button>
+            <button class="share-dropdown-item" onclick="engShareA5('copy')"><span class="sdi-icon">🔗</span> Copy Link</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- STAR RATING -->
+      <div class="rating-section" id="ratingSectionA5">
+        <div class="rating-box">
+          <div class="rating-left">
+            <div class="rating-big-num" id="ratingBigNumA5">4.9</div>
+            <div class="rating-stars-display" id="ratingStarsDisplayA5">
+              <span class="rating-star-filled">★</span><span class="rating-star-filled">★</span>
+              <span class="rating-star-filled">★</span><span class="rating-star-filled">★</span>
+              <span class="rating-star-filled">★</span>
+            </div>
+            <div class="rating-count" id="ratingCountLabelA5">317 ratings</div>
+          </div>
+          <div class="rating-divider"></div>
+          <div class="rating-bars">
+            <div class="rating-bar-row"><span class="rating-bar-label">5</span><div class="rating-bar-track"><div class="rating-bar-fill" id="a5bar5" style="width:82%"></div></div><span class="rating-bar-pct" id="a5pct5">82%</span></div>
+            <div class="rating-bar-row"><span class="rating-bar-label">4</span><div class="rating-bar-track"><div class="rating-bar-fill" id="a5bar4" style="width:12%"></div></div><span class="rating-bar-pct" id="a5pct4">12%</span></div>
+            <div class="rating-bar-row"><span class="rating-bar-label">3</span><div class="rating-bar-track"><div class="rating-bar-fill" id="a5bar3" style="width:4%"></div></div><span class="rating-bar-pct" id="a5pct3">4%</span></div>
+            <div class="rating-bar-row"><span class="rating-bar-label">2</span><div class="rating-bar-track"><div class="rating-bar-fill" id="a5bar2" style="width:1%"></div></div><span class="rating-bar-pct" id="a5pct4b">1%</span></div>
+            <div class="rating-bar-row"><span class="rating-bar-label">1</span><div class="rating-bar-track"><div class="rating-bar-fill" id="a5bar1" style="width:1%"></div></div><span class="rating-bar-pct" id="a5pct1">1%</span></div>
+          </div>
+          <div class="rating-divider"></div>
+          <div class="rating-right">
+            <div class="rating-right-label">RATE THIS ARTICLE</div>
+            <div class="rating-interactive" id="ratingInteractiveA5">
+              <span class="ri-star-a5" data-val="1" onmouseover="hoverStarA5(1)" onmouseout="unhoverStarA5()" onclick="submitRatingA5(1)">★</span>
+              <span class="ri-star-a5" data-val="2" onmouseover="hoverStarA5(2)" onmouseout="unhoverStarA5()" onclick="submitRatingA5(2)">★</span>
+              <span class="ri-star-a5" data-val="3" onmouseover="hoverStarA5(3)" onmouseout="unhoverStarA5()" onclick="submitRatingA5(3)">★</span>
+              <span class="ri-star-a5" data-val="4" onmouseover="hoverStarA5(4)" onmouseout="unhoverStarA5()" onclick="submitRatingA5(4)">★</span>
+              <span class="ri-star-a5" data-val="5" onmouseover="hoverStarA5(5)" onmouseout="unhoverStarA5()" onclick="submitRatingA5(5)">★</span>
+            </div>
+            <div class="rating-feedback" id="ratingFeedbackA5">Tap a star to rate</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- COMMENTS -->
+      <div class="comments-section" id="commentsSectionA5">
+        <div class="comments-header">
+          <div class="comments-title">DISCUSSION</div>
+          <div class="comments-count-badge" id="commentsCountHeaderA5">0 Comments</div>
+        </div>
+        <div class="comment-form">
+          <div class="comment-form-title">Join the Conversation</div>
+          <div class="comment-form-row">
+            <input class="comment-input" id="commentNameA5"  type="text"  placeholder="Your name *" maxlength="50">
+            <input class="comment-input" id="commentEmailA5" type="email" placeholder="Email (not published)" maxlength="80">
+          </div>
+          <textarea class="comment-textarea" id="commentTextA5"
+            placeholder="Share your take. Agree, disagree, add your experience. Keep it real." maxlength="1000"></textarea>
+          <div class="comment-form-footer">
+            <span class="comment-char-count"><span id="charLeftA5">1000</span> characters left</span>
+            <button class="comment-submit-btn" id="commentSubmitBtnA5" onclick="submitCommentA5()">POST COMMENT →</button>
+          </div>
+        </div>
+        <div class="comments-sort-bar" id="commentsSortBarA5" style="display:none;">
+          <span class="comments-sort-label">Sort by:</span>
+          <button class="sort-btn active" id="sortNewestA5" onclick="sortCommentsA5('newest')">Newest</button>
+          <button class="sort-btn"        id="sortOldestA5" onclick="sortCommentsA5('oldest')">Oldest</button>
+          <button class="sort-btn"        id="sortTopA5"    onclick="sortCommentsA5('top')">Top Liked</button>
+        </div>
+        <div class="comments-list" id="commentsListA5"></div>
+        <div class="comments-empty" id="commentsEmptyA5">
+          <div class="comments-empty-icon">✍🏾</div>
+          <div class="comments-empty-text">No comments yet. Be the first to say something real.</div>
+        </div>
+        <button class="load-more-comments" id="loadMoreCommentsA5" style="display:none;" onclick="loadMoreCommentsA5()">
+          LOAD MORE COMMENTS ↓
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Prev / Next -->
+  <div class="article-nav-strip">
+    <div class="article-nav-inner">
+      <div class="article-nav-item prev" onclick="showArticle4(event)">
+        <div class="article-nav-dir">← Previous</div>
+        <div class="article-nav-title">The Bitter Taste of the Red Pill</div>
+        <div class="article-nav-cat">Self-Improvement</div>
+      </div>
+      <div class="article-nav-item next" onclick="showArticle3(event)">
+        <div class="article-nav-dir">Next Article →</div>
+        <div class="article-nav-title">Socialized Hypergamy</div>
+        <div class="article-nav-cat">Intersexual Dynamics</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Related -->
+  <div class="article-related">
+    <div class="article-related-inner">
+      <div class="article-related-title">READ NEXT</div>
+      <div class="article-related-grid">
+        <div class="article-related-card" onclick="showArticle(event)">
+          <div class="article-related-tag">⚡ Intersexual Dynamics</div>
+          <div class="article-related-h">There Is No One: The Soulmate Myth That's Keeping You Weak</div>
+          <div class="article-related-meta">7 min read · May 2024</div>
+        </div>
+        <div class="article-related-card" onclick="showArticle3(event)">
+          <div class="article-related-tag">⚡ Intersexual Dynamics</div>
+          <div class="article-related-h">Socialized Hypergamy</div>
+          <div class="article-related-meta">10 min read · Jul 2024</div>
+        </div>
+        <div class="article-related-card" onclick="showArticle4(event)">
+          <div class="article-related-tag">⚔ Self-Improvement</div>
+          <div class="article-related-h">The Bitter Taste of the Red Pill</div>
+          <div class="article-related-meta">9 min read · Aug 2024</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" onclick="showHome(event)" class="logo">OSUBULA<span>TALKS</span></a>
+        <p class="footer-desc">Not for motivation — for transformation. The straight talk about men, women, and how the world actually works.</p>
+        <div class="footer-socials">
+          <a href="https://twitter.com/osubulatalks"   target="_blank" rel="noopener" class="footer-social-btn">𝕏</a>
+          <a href="https://instagram.com/osubulatalks" target="_blank" rel="noopener" class="footer-social-btn">📷</a>
+          <a href="https://youtube.com/@osubulatalks"  target="_blank" rel="noopener" class="footer-social-btn">▶</a>
+          <a href="#newsletter" onclick="navScrollTo(event,'newsletter')" class="footer-social-btn">✉</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Topics</div>
+        <ul class="footer-links">
+          <li><a href="#" onclick="showHome(event)">Intersexual Dynamics</a></li>
+          <li><a href="#" onclick="showHome(event)">Masculinity &amp; Identity</a></li>
+          <li><a href="#" onclick="showHome(event)">Relationships &amp; Dating</a></li>
+          <li><a href="#" onclick="showHome(event)">Female Psychology</a></li>
+          <li><a href="#" onclick="showHome(event)">Marriage &amp; Commitment</a></li>
+          <li><a href="#" onclick="showHome(event)">Self-Improvement</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Navigate</div>
+        <ul class="footer-links">
+          <li><a href="#" onclick="showHome(event)">Home</a></li>
+          <li><a href="#" onclick="showHome(event)">All Articles</a></li>
+          <li><a href="#" onclick="showHome(event)">About the Author</a></li>
+          <li><a href="#newsletter" onclick="navScrollTo(event,'newsletter')">Newsletter</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Legal</div>
+        <ul class="footer-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 OSUBULATALKS — All rights reserved.</span>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Disclaimer</a>
+      </div>
+    </div>
+  </footer>
+
+</div><!-- /articlePage5 -->
 
 <script>
 // ═══════════════════════════════════════════════════════════════
@@ -5454,6 +6500,345 @@ styleA2.textContent = `
   .ri-star-a2.selected { color:#f0a500; }
 `;
 document.head.appendChild(styleA2);
+
+// ═══════════════════════════════════════════════════════════════
+// ARTICLE 3 — SOCIALIZED HYPERGAMY
+// ═══════════════════════════════════════════════════════════════
+const ARTICLE3_ID = 'socialized-hypergamy';
+const STORAGE3 = {
+  likes      : `osubula_likes_${ARTICLE3_ID}`,
+  likesCount : `osubula_likes_${ARTICLE3_ID}_count`,
+  views      : `osubula_views_${ARTICLE3_ID}`,
+  rating     : `osubula_rating_${ARTICLE3_ID}`,
+  ratingData : `osubula_ratingdata_${ARTICLE3_ID}`,
+  ratingCount: `osubula_ratingdata_${ARTICLE3_ID}_count`,
+  comments   : `osubula_comments_${ARTICLE3_ID}`,
+  commentLikes:`osubula_clikes_${ARTICLE3_ID}`,
+};
+const SEED3 = { views:3104, likes:211, ratingCount:189, ratingAvg:4.6,
+                ratingDist:{5:121,4:42,3:15,2:8,1:3} };
+
+function showArticle3(e) {
+  if (e && e.preventDefault) e.preventDefault();
+  homePage.classList.add('hidden');
+  articlePage.classList.add('hidden');
+  document.getElementById('articlePage2').classList.add('hidden');
+  document.getElementById('articlePage3').classList.remove('hidden');
+  window.scrollTo({ top:0, behavior:'instant' });
+  document.title = 'Socialized Hypergamy — OSUBULATALKS';
+  history.pushState({ page:'article3' }, '', '#' + ARTICLE3_ID);
+  initReveal(); trackViewA3(); initEngagementA3();
+}
+
+// extend popstate
+window.removeEventListener('popstate', window._popHandler);
+window._popHandler = function() {
+  const h = location.hash;
+  if      (h === '#' + ARTICLE_ID)  showArticle();
+  else if (h === '#' + ARTICLE2_ID) showArticle2();
+  else if (h === '#' + ARTICLE3_ID) showArticle3();
+  else showHome();
+};
+window.addEventListener('popstate', window._popHandler);
+if (location.hash === '#' + ARTICLE3_ID) showArticle3();
+
+// extend showHome to hide all article pages
+window.showHome = function(e) {
+  if (e && e.preventDefault) e.preventDefault();
+  ['articlePage','articlePage2','articlePage3'].forEach(id => {
+    const el = document.getElementById(id); if (el) el.classList.add('hidden');
+  });
+  homePage.classList.remove('hidden');
+  window.scrollTo({ top:0, behavior:'instant' });
+  document.title = 'OSUBULATALKS — Forged in Pain, Sharpened in Solitude';
+  history.pushState({ page:'home' }, '', '#');
+  progress.style.width = '0%';
+  [closeShareDropdown, closeShareDropdownA2, closeShareDropdownA3].forEach(fn => { try { fn(); } catch(e){} });
+};
+
+function trackViewA3() {
+  const sk = `osubula_viewed_session_${ARTICLE3_ID}`;
+  if (sessionStorage.getItem(sk)) { renderViewA3(load(STORAGE3.views, SEED3.views)); return; }
+  sessionStorage.setItem(sk, '1');
+  const n = load(STORAGE3.views, SEED3.views) + 1;
+  store(STORAGE3.views, n); renderViewA3(n);
+}
+function renderViewA3(n) { const el=document.getElementById('viewCountA3'); if(el) el.textContent=fmt(n); }
+
+function initLikesA3() { renderLikeA3(load(STORAGE3.likes,false), load(STORAGE3.likesCount,SEED3.likes)); }
+function toggleLikeA3() {
+  const was=load(STORAGE3.likes,false),cnt=load(STORAGE3.likesCount,SEED3.likes),now=!was,nc=now?cnt+1:Math.max(0,cnt-1);
+  store(STORAGE3.likes,now); store(STORAGE3.likesCount,nc); renderLikeA3(now,nc);
+  showToast(now?'❤️  You liked this article':'Like removed');
+}
+function renderLikeA3(liked,count) {
+  const btn=document.getElementById('likeBtnA3'),heart=document.getElementById('likeHeartA3'),num=document.getElementById('likeCountA3');
+  if(btn)btn.classList.toggle('liked',liked); if(heart)heart.textContent=liked?'♥':'♡'; if(num)num.textContent=fmt(count);
+}
+
+let shareOpenA3=false;
+function toggleShareDropdownA3(e) { e.stopPropagation(); shareOpenA3=!shareOpenA3; document.getElementById('shareDropdownA3').classList.toggle('open',shareOpenA3); }
+function closeShareDropdownA3() { shareOpenA3=false; const dd=document.getElementById('shareDropdownA3'); if(dd)dd.classList.remove('open'); }
+document.addEventListener('click',e=>{ if(!e.target.closest('#shareToggleBtnA3')&&!e.target.closest('#shareDropdownA3')) closeShareDropdownA3(); });
+function engShareA3(platform) {
+  const url=window.location.href.split('#')[0]+'#'+ARTICLE3_ID,title='Socialized Hypergamy — OSUBULATALKS';
+  closeShareDropdownA3();
+  if(platform==='twitter') window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`,'_blank');
+  else if(platform==='whatsapp') window.open(`https://wa.me/?text=${encodeURIComponent(title+' — '+url)}`,'_blank');
+  else if(platform==='facebook') window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,'_blank');
+  else if(platform==='copy') navigator.clipboard.writeText(url).then(()=>showToast('🔗  Link copied to clipboard'));
+}
+
+let userRatingA3=0;
+function initRatingA3() {
+  const saved=load(STORAGE3.rating,0); userRatingA3=saved;
+  if(saved>0){renderInteractiveStarsA3(saved);const fb=document.getElementById('ratingFeedbackA3');if(fb)fb.textContent=`You rated this ${saved} star${saved>1?'s':''}`;lockRatingStarsA3();}
+  renderRatingAggregateA3(load(STORAGE3.ratingData,null)||SEED3.ratingDist,load(STORAGE3.ratingCount,SEED3.ratingCount));
+}
+function scrollToRatingA3(){const el=document.getElementById('ratingSectionA3');if(el)window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-88,behavior:'smooth'});}
+function scrollToCommentsA3(){const el=document.getElementById('commentsSectionA3');if(el)window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-88,behavior:'smooth'});}
+function hoverStarA3(v){if(userRatingA3>0)return;document.querySelectorAll('.ri-star-a3').forEach(s=>s.classList.toggle('hovered',parseInt(s.dataset.val)<=v));const fb=document.getElementById('ratingFeedbackA3');if(fb)fb.textContent=['','Terrible','Poor','OK','Good','Excellent'][v]||'';}
+function unhoverStarA3(){if(userRatingA3>0)return;document.querySelectorAll('.ri-star-a3').forEach(s=>s.classList.remove('hovered'));const fb=document.getElementById('ratingFeedbackA3');if(fb)fb.textContent='Tap a star to rate';}
+function submitRatingA3(val){
+  if(userRatingA3>0)return;userRatingA3=val;store(STORAGE3.rating,val);
+  const dist=load(STORAGE3.ratingData,{...SEED3.ratingDist}),cnt=load(STORAGE3.ratingCount,SEED3.ratingCount);
+  dist[val]=(dist[val]||0)+1;const nc=cnt+1;store(STORAGE3.ratingData,dist);store(STORAGE3.ratingCount,nc);
+  renderInteractiveStarsA3(val);renderRatingAggregateA3(dist,nc);lockRatingStarsA3();
+  const fb=document.getElementById('ratingFeedbackA3');if(fb)fb.textContent=`You rated this ${val} star${val>1?'s':''} — ${['','Terrible','Poor','OK','Good','Excellent! 🔥'][val]}`;
+  showToast(`⭐  Thanks for your ${val}-star rating!`);
+}
+function renderInteractiveStarsA3(val){document.querySelectorAll('.ri-star-a3').forEach(s=>{s.classList.toggle('selected',parseInt(s.dataset.val)<=val);s.classList.remove('hovered');});}
+function lockRatingStarsA3(){document.querySelectorAll('.ri-star-a3').forEach(s=>{s.style.cursor='default';s.onmouseover=null;s.onmouseout=null;s.onclick=null;});}
+function renderRatingAggregateA3(dist,count){
+  const total=count||Object.values(dist).reduce((a,b)=>a+b,0)||1,sum=Object.entries(dist).reduce((a,[k,v])=>a+parseInt(k)*v,0),avg=(sum/total).toFixed(1);
+  const el=id=>document.getElementById(id);
+  if(el('ratingBigNumA3'))el('ratingBigNumA3').textContent=avg;
+  if(el('avgRatingBadgeA3'))el('avgRatingBadgeA3').textContent=avg;
+  if(el('ratingCountLabelA3'))el('ratingCountLabelA3').textContent=fmt(total)+' ratings';
+  const filled=Math.round(parseFloat(avg)),sd=el('ratingStarsDisplayA3');
+  if(sd)sd.innerHTML=[1,2,3,4,5].map(i=>`<span class="${i<=filled?'rating-star-filled':'rating-star-empty'}">★</span>`).join('');
+  const bars=['a3bar5','a3bar4','a3bar3','a3bar2','a3bar1'],pcts=['a3pct5','a3pct4','a3pct3','a3pct4b','a3pct1'];
+  [5,4,3,2,1].forEach((star,i)=>{const pct=Math.round(((dist[star]||0)/total)*100);const b=el(bars[i]),p=el(pcts[i]);if(b)b.style.width=pct+'%';if(p)p.textContent=pct+'%';});
+}
+
+let currentSortA3='newest',visibleCountA3=5,openReplyFormsA3={};
+function initCommentsA3(){
+  const ta=document.getElementById('commentTextA3');
+  if(ta)ta.addEventListener('input',()=>{const l=1000-ta.value.length;const el=document.getElementById('charLeftA3');if(el){el.textContent=l;el.style.color=l<100?'var(--crimson)':'#aaa';}});
+  renderCommentsA3();
+}
+function getCommentsA3(){return load(STORAGE3.comments,[]);}
+function saveCommentsA3(a){store(STORAGE3.comments,a);}
+function getCommentLikesA3(){return load(STORAGE3.commentLikes,{});}
+function saveCommentLikesA3(o){store(STORAGE3.commentLikes,o);}
+function submitCommentA3(){
+  const ne=document.getElementById('commentNameA3'),te=document.getElementById('commentTextA3'),btn=document.getElementById('commentSubmitBtnA3');
+  const name=ne.value.trim(),text=te.value.trim();
+  if(!name){ne.style.borderColor='var(--crimson)';setTimeout(()=>ne.style.borderColor='',1500);showToast('⚠  Please enter your name');return;}
+  if(text.length<10){te.style.borderColor='var(--crimson)';setTimeout(()=>te.style.borderColor='',1500);showToast('⚠  Comment must be at least 10 characters');return;}
+  btn.disabled=true;btn.textContent='POSTING...';
+  setTimeout(()=>{
+    const cmts=getCommentsA3();cmts.unshift({id:Date.now(),name,email:document.getElementById('commentEmailA3').value.trim(),text,ts:Date.now(),likes:0,replies:[]});
+    saveCommentsA3(cmts);ne.value='';te.value='';document.getElementById('commentEmailA3').value='';
+    const cl=document.getElementById('charLeftA3');if(cl)cl.textContent='1000';
+    btn.disabled=false;btn.textContent='POST COMMENT →';currentSortA3='newest';visibleCountA3=5;setActiveSortBtnA3('sortNewestA3');renderCommentsA3();showToast('✅  Comment posted!');scrollToCommentsA3();
+  },600);
+}
+function sortCommentsA3(t){currentSortA3=t;visibleCountA3=5;setActiveSortBtnA3({newest:'sortNewestA3',oldest:'sortOldestA3',top:'sortTopA3'}[t]);renderCommentsA3();}
+function setActiveSortBtnA3(id){['sortNewestA3','sortOldestA3','sortTopA3'].forEach(i=>{const el=document.getElementById(i);if(el)el.classList.toggle('active',el.id===id);});}
+function loadMoreCommentsA3(){visibleCountA3+=5;renderCommentsA3();}
+function renderCommentsA3(){
+  const list=document.getElementById('commentsListA3'),empty=document.getElementById('commentsEmptyA3'),sortB=document.getElementById('commentsSortBarA3'),lmore=document.getElementById('loadMoreCommentsA3'),badge=document.getElementById('commentsCountHeaderA3'),engB=document.getElementById('commentCountBadgeA3');
+  const all=getCommentsA3(),total=all.length;let sorted=[...all];
+  if(currentSortA3==='newest')sorted.sort((a,b)=>b.ts-a.ts);else if(currentSortA3==='oldest')sorted.sort((a,b)=>a.ts-b.ts);else sorted.sort((a,b)=>(b.likes||0)-(a.likes||0));
+  const visible=sorted.slice(0,visibleCountA3),cLikes=getCommentLikesA3();
+  if(badge)badge.textContent=total+(total===1?' Comment':' Comments');if(engB)engB.textContent=fmt(total);
+  if(empty)empty.style.display=total===0?'block':'none';if(sortB)sortB.style.display=total>1?'flex':'none';
+  if(!list)return;list.innerHTML='';
+  visible.forEach(c=>{
+    const liked=cLikes[c.id]||false,inits=c.name.split(' ').map(w=>w[0]).join('').toUpperCase().slice(0,2),bg=avatarColor(c.name);
+    let rHTML='';if(c.replies&&c.replies.length){rHTML='<div class="comment-replies">'+c.replies.map(r=>{const ri=r.name.split(' ').map(w=>w[0]).join('').toUpperCase().slice(0,2),rl=cLikes['r_'+r.id]||false;return `<div class="reply-item"><div class="reply-header"><div class="reply-avatar" style="background:${avatarColor(r.name)};color:#fff;">${ri}</div><div class="comment-meta"><div class="comment-author-name">${escHtml(r.name)}</div><div class="comment-timestamp">${timeAgo(r.ts)}</div></div></div><div class="reply-body">${escHtml(r.text)}</div><div class="reply-actions"><button class="comment-action-btn ${rl?'liked-comment':''}" onclick="toggleReplyLikeA3(${c.id},${r.id})">${rl?'♥':'♡'} ${rl?'Liked':'Like'} · ${r.likes||0}</button></div></div>`;}).join('')+'</div>';}
+    const div=document.createElement('div');div.className='comment-item';
+    div.innerHTML=`<div class="comment-header"><div class="comment-avatar" style="background:${bg};">${inits}</div><div class="comment-meta"><div class="comment-author-name">${escHtml(c.name)}</div><div class="comment-timestamp">${timeAgo(c.ts)}</div></div></div><div class="comment-body">${escHtml(c.text)}</div><div class="comment-actions"><button class="comment-action-btn ${liked?'liked-comment':''}" onclick="toggleCommentLikeA3(${c.id})">${liked?'♥':'♡'} ${liked?'Liked':'Like'} · ${c.likes||0}</button><span class="comment-action-sep">·</span><button class="comment-action-btn" onclick="toggleReplyFormA3(${c.id})">↩ Reply</button><span class="comment-action-sep">·</span><button class="comment-action-btn" onclick="showToast('⚑  Reported. Thank you.')">⚑ Report</button></div>${rHTML}<div class="inline-reply-form" id="replyFormA3-${c.id}"><textarea class="inline-reply-input" id="replyTextA3-${c.id}" placeholder="Reply to ${escHtml(c.name)}..." maxlength="600"></textarea><div class="inline-reply-actions"><input class="comment-input" id="replyNameA3-${c.id}" type="text" placeholder="Your name *" maxlength="50" style="width:180px;padding:8px 12px;font-size:13px;"><button class="inline-reply-submit" onclick="submitReplyA3(${c.id})">POST REPLY</button><button class="inline-reply-cancel" onclick="toggleReplyFormA3(${c.id})">CANCEL</button></div></div>`;
+    list.appendChild(div);if(openReplyFormsA3[c.id]){const f=document.getElementById(`replyFormA3-${c.id}`);if(f)f.classList.add('open');}
+  });
+  if(lmore){lmore.style.display=visibleCountA3<total?'block':'none';lmore.textContent=`LOAD MORE COMMENTS (${total-visibleCountA3} remaining) ↓`;}
+}
+function toggleCommentLikeA3(id){const cL=getCommentLikesA3(),cmts=getCommentsA3(),idx=cmts.findIndex(c=>c.id===id);if(idx<0)return;const was=cL[id]||false;cL[id]=!was;cmts[idx].likes=Math.max(0,(cmts[idx].likes||0)+(was?-1:1));saveCommentLikesA3(cL);saveCommentsA3(cmts);renderCommentsA3();showToast(was?'Like removed':'♥  Comment liked');}
+function toggleReplyLikeA3(cid,rid){const cL=getCommentLikesA3(),cmts=getCommentsA3(),ci=cmts.findIndex(c=>c.id===cid);if(ci<0)return;const ri=(cmts[ci].replies||[]).findIndex(r=>r.id===rid);if(ri<0)return;const key='r_'+rid,was=cL[key]||false;cL[key]=!was;cmts[ci].replies[ri].likes=Math.max(0,(cmts[ci].replies[ri].likes||0)+(was?-1:1));saveCommentLikesA3(cL);saveCommentsA3(cmts);renderCommentsA3();showToast(was?'Like removed':'♥  Reply liked');}
+function toggleReplyFormA3(id){const f=document.getElementById(`replyFormA3-${id}`);if(!f)return;const isOpen=f.classList.toggle('open');openReplyFormsA3[id]=isOpen;if(isOpen)setTimeout(()=>{const n=document.getElementById(`replyNameA3-${id}`);if(n)n.focus();},50);}
+function submitReplyA3(cid){const ne=document.getElementById(`replyNameA3-${cid}`),te=document.getElementById(`replyTextA3-${cid}`);const name=ne?ne.value.trim():'',text=te?te.value.trim():'';if(!name){if(ne){ne.style.borderColor='var(--crimson)';setTimeout(()=>ne.style.borderColor='',1500);}showToast('⚠  Please enter your name');return;}if(text.length<5){if(te){te.style.borderColor='var(--crimson)';setTimeout(()=>te.style.borderColor='',1500);}showToast('⚠  Reply is too short');return;}const cmts=getCommentsA3(),idx=cmts.findIndex(c=>c.id===cid);if(idx<0)return;if(!cmts[idx].replies)cmts[idx].replies=[];cmts[idx].replies.push({id:Date.now(),name,text,ts:Date.now(),likes:0});saveCommentsA3(cmts);openReplyFormsA3[cid]=false;renderCommentsA3();showToast('✅  Reply posted!');}
+function initEngagementA3(){initLikesA3();initRatingA3();initCommentsA3();renderViewA3(load(STORAGE3.views,SEED3.views));}
+
+// ═══════════════════════════════════════════════════════════════
+// ARTICLE 4 — THE BITTER TASTE OF THE RED PILL
+// ═══════════════════════════════════════════════════════════════
+const ARTICLE4_ID = 'bitter-taste-red-pill';
+const STORAGE4 = {
+  likes      : `osubula_likes_${ARTICLE4_ID}`,
+  likesCount : `osubula_likes_${ARTICLE4_ID}_count`,
+  views      : `osubula_views_${ARTICLE4_ID}`,
+  rating     : `osubula_rating_${ARTICLE4_ID}`,
+  ratingData : `osubula_ratingdata_${ARTICLE4_ID}`,
+  ratingCount: `osubula_ratingdata_${ARTICLE4_ID}_count`,
+  comments   : `osubula_comments_${ARTICLE4_ID}`,
+  commentLikes:`osubula_clikes_${ARTICLE4_ID}`,
+};
+const SEED4 = { views:2619, likes:178, ratingCount:204, ratingAvg:4.8,
+                ratingDist:{5:155,4:33,3:10,2:4,1:2} };
+
+function showArticle4(e) {
+  if (e && e.preventDefault) e.preventDefault();
+  ['homePage','articlePage','articlePage2','articlePage3'].forEach(id => {
+    const el = document.getElementById(id); if(el) el.classList.add('hidden');
+  });
+  document.getElementById('articlePage4').classList.remove('hidden');
+  window.scrollTo({ top:0, behavior:'instant' });
+  document.title = 'The Bitter Taste of the Red Pill — OSUBULATALKS';
+  history.pushState({ page:'article4' }, '', '#' + ARTICLE4_ID);
+  initReveal(); trackViewA4(); initEngagementA4();
+}
+
+// master popstate handler
+window.removeEventListener('popstate', window._popHandler);
+window._popHandler = function() {
+  const h = location.hash;
+  if      (h === '#' + ARTICLE_ID)  showArticle();
+  else if (h === '#' + ARTICLE2_ID) showArticle2();
+  else if (h === '#' + ARTICLE3_ID) showArticle3();
+  else if (h === '#' + ARTICLE4_ID) showArticle4();
+  else showHome();
+};
+window.addEventListener('popstate', window._popHandler);
+if (location.hash === '#' + ARTICLE4_ID) showArticle4();
+
+// master showHome — hides all pages
+window.showHome = function(e) {
+  if (e && e.preventDefault) e.preventDefault();
+  ['articlePage','articlePage2','articlePage3','articlePage4'].forEach(id => {
+    const el = document.getElementById(id); if(el) el.classList.add('hidden');
+  });
+  homePage.classList.remove('hidden');
+  window.scrollTo({ top:0, behavior:'instant' });
+  document.title = 'OSUBULATALKS — Forged in Pain, Sharpened in Solitude';
+  history.pushState({ page:'home' }, '', '#');
+  progress.style.width = '0%';
+  [closeShareDropdown,closeShareDropdownA2,closeShareDropdownA3,closeShareDropdownA4].forEach(fn=>{ try{fn();}catch(ex){} });
+};
+
+// ── Views A4
+function trackViewA4(){const sk=`osubula_viewed_session_${ARTICLE4_ID}`;if(sessionStorage.getItem(sk)){renderViewA4(load(STORAGE4.views,SEED4.views));return;}sessionStorage.setItem(sk,'1');const n=load(STORAGE4.views,SEED4.views)+1;store(STORAGE4.views,n);renderViewA4(n);}
+function renderViewA4(n){const el=document.getElementById('viewCountA4');if(el)el.textContent=fmt(n);}
+
+// ── Likes A4
+function initLikesA4(){renderLikeA4(load(STORAGE4.likes,false),load(STORAGE4.likesCount,SEED4.likes));}
+function toggleLikeA4(){const was=load(STORAGE4.likes,false),cnt=load(STORAGE4.likesCount,SEED4.likes),now=!was,nc=now?cnt+1:Math.max(0,cnt-1);store(STORAGE4.likes,now);store(STORAGE4.likesCount,nc);renderLikeA4(now,nc);showToast(now?'❤️  You liked this article':'Like removed');}
+function renderLikeA4(liked,count){const btn=document.getElementById('likeBtnA4'),heart=document.getElementById('likeHeartA4'),num=document.getElementById('likeCountA4');if(btn)btn.classList.toggle('liked',liked);if(heart)heart.textContent=liked?'♥':'♡';if(num)num.textContent=fmt(count);}
+
+// ── Share A4
+let shareOpenA4=false;
+function toggleShareDropdownA4(e){e.stopPropagation();shareOpenA4=!shareOpenA4;document.getElementById('shareDropdownA4').classList.toggle('open',shareOpenA4);}
+function closeShareDropdownA4(){shareOpenA4=false;const dd=document.getElementById('shareDropdownA4');if(dd)dd.classList.remove('open');}
+document.addEventListener('click',e=>{if(!e.target.closest('#shareToggleBtnA4')&&!e.target.closest('#shareDropdownA4'))closeShareDropdownA4();});
+function engShareA4(platform){const url=window.location.href.split('#')[0]+'#'+ARTICLE4_ID,title='The Bitter Taste of the Red Pill — OSUBULATALKS';closeShareDropdownA4();if(platform==='twitter')window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`,'_blank');else if(platform==='whatsapp')window.open(`https://wa.me/?text=${encodeURIComponent(title+' — '+url)}`,'_blank');else if(platform==='facebook')window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,'_blank');else if(platform==='copy')navigator.clipboard.writeText(url).then(()=>showToast('🔗  Link copied to clipboard'));}
+
+// ── Rating A4
+let userRatingA4=0;
+function initRatingA4(){const saved=load(STORAGE4.rating,0);userRatingA4=saved;if(saved>0){renderInteractiveStarsA4(saved);const fb=document.getElementById('ratingFeedbackA4');if(fb)fb.textContent=`You rated this ${saved} star${saved>1?'s':''}`;lockRatingStarsA4();}renderRatingAggregateA4(load(STORAGE4.ratingData,null)||SEED4.ratingDist,load(STORAGE4.ratingCount,SEED4.ratingCount));}
+function scrollToRatingA4(){const el=document.getElementById('ratingSectionA4');if(el)window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-88,behavior:'smooth'});}
+function scrollToCommentsA4(){const el=document.getElementById('commentsSectionA4');if(el)window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-88,behavior:'smooth'});}
+function hoverStarA4(v){if(userRatingA4>0)return;document.querySelectorAll('.ri-star-a4').forEach(s=>s.classList.toggle('hovered',parseInt(s.dataset.val)<=v));const fb=document.getElementById('ratingFeedbackA4');if(fb)fb.textContent=['','Terrible','Poor','OK','Good','Excellent'][v]||'';}
+function unhoverStarA4(){if(userRatingA4>0)return;document.querySelectorAll('.ri-star-a4').forEach(s=>s.classList.remove('hovered'));const fb=document.getElementById('ratingFeedbackA4');if(fb)fb.textContent='Tap a star to rate';}
+function submitRatingA4(val){if(userRatingA4>0)return;userRatingA4=val;store(STORAGE4.rating,val);const dist=load(STORAGE4.ratingData,{...SEED4.ratingDist}),cnt=load(STORAGE4.ratingCount,SEED4.ratingCount);dist[val]=(dist[val]||0)+1;const nc=cnt+1;store(STORAGE4.ratingData,dist);store(STORAGE4.ratingCount,nc);renderInteractiveStarsA4(val);renderRatingAggregateA4(dist,nc);lockRatingStarsA4();const fb=document.getElementById('ratingFeedbackA4');if(fb)fb.textContent=`You rated this ${val} star${val>1?'s':''} — ${['','Terrible','Poor','OK','Good','Excellent! 🔥'][val]}`;showToast(`⭐  Thanks for your ${val}-star rating!`);}
+function renderInteractiveStarsA4(val){document.querySelectorAll('.ri-star-a4').forEach(s=>{s.classList.toggle('selected',parseInt(s.dataset.val)<=val);s.classList.remove('hovered');});}
+function lockRatingStarsA4(){document.querySelectorAll('.ri-star-a4').forEach(s=>{s.style.cursor='default';s.onmouseover=null;s.onmouseout=null;s.onclick=null;});}
+function renderRatingAggregateA4(dist,count){const total=count||Object.values(dist).reduce((a,b)=>a+b,0)||1,sum=Object.entries(dist).reduce((a,[k,v])=>a+parseInt(k)*v,0),avg=(sum/total).toFixed(1);const el=id=>document.getElementById(id);if(el('ratingBigNumA4'))el('ratingBigNumA4').textContent=avg;if(el('avgRatingBadgeA4'))el('avgRatingBadgeA4').textContent=avg;if(el('ratingCountLabelA4'))el('ratingCountLabelA4').textContent=fmt(total)+' ratings';const filled=Math.round(parseFloat(avg)),sd=el('ratingStarsDisplayA4');if(sd)sd.innerHTML=[1,2,3,4,5].map(i=>`<span class="${i<=filled?'rating-star-filled':'rating-star-empty'}">★</span>`).join('');const bars=['a4bar5','a4bar4','a4bar3','a4bar2','a4bar1'],pcts=['a4pct5','a4pct4','a4pct3','a4pct4b','a4pct1'];[5,4,3,2,1].forEach((star,i)=>{const pct=Math.round(((dist[star]||0)/total)*100);const b=el(bars[i]),p=el(pcts[i]);if(b)b.style.width=pct+'%';if(p)p.textContent=pct+'%';});}
+
+// ── Comments A4
+let currentSortA4='newest',visibleCountA4=5,openReplyFormsA4={};
+function initCommentsA4(){const ta=document.getElementById('commentTextA4');if(ta)ta.addEventListener('input',()=>{const l=1000-ta.value.length;const el=document.getElementById('charLeftA4');if(el){el.textContent=l;el.style.color=l<100?'var(--crimson)':'#aaa';}});renderCommentsA4();}
+function getCommentsA4(){return load(STORAGE4.comments,[]);}
+function saveCommentsA4(a){store(STORAGE4.comments,a);}
+function getCommentLikesA4(){return load(STORAGE4.commentLikes,{});}
+function saveCommentLikesA4(o){store(STORAGE4.commentLikes,o);}
+function submitCommentA4(){const ne=document.getElementById('commentNameA4'),te=document.getElementById('commentTextA4'),btn=document.getElementById('commentSubmitBtnA4');const name=ne.value.trim(),text=te.value.trim();if(!name){ne.style.borderColor='var(--crimson)';setTimeout(()=>ne.style.borderColor='',1500);showToast('⚠  Please enter your name');return;}if(text.length<10){te.style.borderColor='var(--crimson)';setTimeout(()=>te.style.borderColor='',1500);showToast('⚠  Comment must be at least 10 characters');return;}btn.disabled=true;btn.textContent='POSTING...';setTimeout(()=>{const cmts=getCommentsA4();cmts.unshift({id:Date.now(),name,email:document.getElementById('commentEmailA4').value.trim(),text,ts:Date.now(),likes:0,replies:[]});saveCommentsA4(cmts);ne.value='';te.value='';document.getElementById('commentEmailA4').value='';const cl=document.getElementById('charLeftA4');if(cl)cl.textContent='1000';btn.disabled=false;btn.textContent='POST COMMENT →';currentSortA4='newest';visibleCountA4=5;setActiveSortBtnA4('sortNewestA4');renderCommentsA4();showToast('✅  Comment posted!');scrollToCommentsA4();},600);}
+function sortCommentsA4(t){currentSortA4=t;visibleCountA4=5;setActiveSortBtnA4({newest:'sortNewestA4',oldest:'sortOldestA4',top:'sortTopA4'}[t]);renderCommentsA4();}
+function setActiveSortBtnA4(id){['sortNewestA4','sortOldestA4','sortTopA4'].forEach(i=>{const el=document.getElementById(i);if(el)el.classList.toggle('active',el.id===id);});}
+function loadMoreCommentsA4(){visibleCountA4+=5;renderCommentsA4();}
+function renderCommentsA4(){const list=document.getElementById('commentsListA4'),empty=document.getElementById('commentsEmptyA4'),sortB=document.getElementById('commentsSortBarA4'),lmore=document.getElementById('loadMoreCommentsA4'),badge=document.getElementById('commentsCountHeaderA4'),engB=document.getElementById('commentCountBadgeA4');const all=getCommentsA4(),total=all.length;let sorted=[...all];if(currentSortA4==='newest')sorted.sort((a,b)=>b.ts-a.ts);else if(currentSortA4==='oldest')sorted.sort((a,b)=>a.ts-b.ts);else sorted.sort((a,b)=>(b.likes||0)-(a.likes||0));const visible=sorted.slice(0,visibleCountA4),cLikes=getCommentLikesA4();if(badge)badge.textContent=total+(total===1?' Comment':' Comments');if(engB)engB.textContent=fmt(total);if(empty)empty.style.display=total===0?'block':'none';if(sortB)sortB.style.display=total>1?'flex':'none';if(!list)return;list.innerHTML='';visible.forEach(c=>{const liked=cLikes[c.id]||false,inits=c.name.split(' ').map(w=>w[0]).join('').toUpperCase().slice(0,2),bg=avatarColor(c.name);let rHTML='';if(c.replies&&c.replies.length){rHTML='<div class="comment-replies">'+c.replies.map(r=>{const ri=r.name.split(' ').map(w=>w[0]).join('').toUpperCase().slice(0,2),rl=cLikes['r_'+r.id]||false;return `<div class="reply-item"><div class="reply-header"><div class="reply-avatar" style="background:${avatarColor(r.name)};color:#fff;">${ri}</div><div class="comment-meta"><div class="comment-author-name">${escHtml(r.name)}</div><div class="comment-timestamp">${timeAgo(r.ts)}</div></div></div><div class="reply-body">${escHtml(r.text)}</div><div class="reply-actions"><button class="comment-action-btn ${rl?'liked-comment':''}" onclick="toggleReplyLikeA4(${c.id},${r.id})">${rl?'♥':'♡'} ${rl?'Liked':'Like'} · ${r.likes||0}</button></div></div>`;}).join('')+'</div>';}const div=document.createElement('div');div.className='comment-item';div.innerHTML=`<div class="comment-header"><div class="comment-avatar" style="background:${bg};">${inits}</div><div class="comment-meta"><div class="comment-author-name">${escHtml(c.name)}</div><div class="comment-timestamp">${timeAgo(c.ts)}</div></div></div><div class="comment-body">${escHtml(c.text)}</div><div class="comment-actions"><button class="comment-action-btn ${liked?'liked-comment':''}" onclick="toggleCommentLikeA4(${c.id})">${liked?'♥':'♡'} ${liked?'Liked':'Like'} · ${c.likes||0}</button><span class="comment-action-sep">·</span><button class="comment-action-btn" onclick="toggleReplyFormA4(${c.id})">↩ Reply</button><span class="comment-action-sep">·</span><button class="comment-action-btn" onclick="showToast('⚑  Reported. Thank you.')">⚑ Report</button></div>${rHTML}<div class="inline-reply-form" id="replyFormA4-${c.id}"><textarea class="inline-reply-input" id="replyTextA4-${c.id}" placeholder="Reply to ${escHtml(c.name)}..." maxlength="600"></textarea><div class="inline-reply-actions"><input class="comment-input" id="replyNameA4-${c.id}" type="text" placeholder="Your name *" maxlength="50" style="width:180px;padding:8px 12px;font-size:13px;"><button class="inline-reply-submit" onclick="submitReplyA4(${c.id})">POST REPLY</button><button class="inline-reply-cancel" onclick="toggleReplyFormA4(${c.id})">CANCEL</button></div></div>`;list.appendChild(div);if(openReplyFormsA4[c.id]){const f=document.getElementById(`replyFormA4-${c.id}`);if(f)f.classList.add('open');}});if(lmore){lmore.style.display=visibleCountA4<total?'block':'none';lmore.textContent=`LOAD MORE COMMENTS (${total-visibleCountA4} remaining) ↓`;}}
+function toggleCommentLikeA4(id){const cL=getCommentLikesA4(),cmts=getCommentsA4(),idx=cmts.findIndex(c=>c.id===id);if(idx<0)return;const was=cL[id]||false;cL[id]=!was;cmts[idx].likes=Math.max(0,(cmts[idx].likes||0)+(was?-1:1));saveCommentLikesA4(cL);saveCommentsA4(cmts);renderCommentsA4();showToast(was?'Like removed':'♥  Comment liked');}
+function toggleReplyLikeA4(cid,rid){const cL=getCommentLikesA4(),cmts=getCommentsA4(),ci=cmts.findIndex(c=>c.id===cid);if(ci<0)return;const ri=(cmts[ci].replies||[]).findIndex(r=>r.id===rid);if(ri<0)return;const key='r_'+rid,was=cL[key]||false;cL[key]=!was;cmts[ci].replies[ri].likes=Math.max(0,(cmts[ci].replies[ri].likes||0)+(was?-1:1));saveCommentLikesA4(cL);saveCommentsA4(cmts);renderCommentsA4();showToast(was?'Like removed':'♥  Reply liked');}
+function toggleReplyFormA4(id){const f=document.getElementById(`replyFormA4-${id}`);if(!f)return;const isOpen=f.classList.toggle('open');openReplyFormsA4[id]=isOpen;if(isOpen)setTimeout(()=>{const n=document.getElementById(`replyNameA4-${id}`);if(n)n.focus();},50);}
+function submitReplyA4(cid){const ne=document.getElementById(`replyNameA4-${cid}`),te=document.getElementById(`replyTextA4-${cid}`);const name=ne?ne.value.trim():'',text=te?te.value.trim():'';if(!name){if(ne){ne.style.borderColor='var(--crimson)';setTimeout(()=>ne.style.borderColor='',1500);}showToast('⚠  Please enter your name');return;}if(text.length<5){if(te){te.style.borderColor='var(--crimson)';setTimeout(()=>te.style.borderColor='',1500);}showToast('⚠  Reply is too short');return;}const cmts=getCommentsA4(),idx=cmts.findIndex(c=>c.id===cid);if(idx<0)return;if(!cmts[idx].replies)cmts[idx].replies=[];cmts[idx].replies.push({id:Date.now(),name,text,ts:Date.now(),likes:0});saveCommentsA4(cmts);openReplyFormsA4[cid]=false;renderCommentsA4();showToast('✅  Reply posted!');}
+function initEngagementA4(){initLikesA4();initRatingA4();initCommentsA4();renderViewA4(load(STORAGE4.views,SEED4.views));}
+
+// ═══════════════════════════════════════════════════════════════
+// ARTICLE 5 — APPRECIATION
+// ═══════════════════════════════════════════════════════════════
+const ARTICLE5_ID='appreciation';
+const STORAGE5={likes:`osubula_likes_${ARTICLE5_ID}`,likesCount:`osubula_likes_${ARTICLE5_ID}_count`,views:`osubula_views_${ARTICLE5_ID}`,rating:`osubula_rating_${ARTICLE5_ID}`,ratingData:`osubula_ratingdata_${ARTICLE5_ID}`,ratingCount:`osubula_ratingdata_${ARTICLE5_ID}_count`,comments:`osubula_comments_${ARTICLE5_ID}`,commentLikes:`osubula_clikes_${ARTICLE5_ID}`};
+const SEED5={views:3872,likes:243,ratingCount:317,ratingAvg:4.9,ratingDist:{5:260,4:38,3:13,2:3,1:3}};
+
+function showArticle5(e){
+  if(e&&e.preventDefault)e.preventDefault();
+  ['homePage','articlePage','articlePage2','articlePage3','articlePage4'].forEach(id=>{const el=document.getElementById(id);if(el)el.classList.add('hidden');});
+  document.getElementById('articlePage5').classList.remove('hidden');
+  window.scrollTo({top:0,behavior:'instant'});
+  document.title='Appreciation — OSUBULATALKS';
+  history.pushState({page:'article5'},'','#'+ARTICLE5_ID);
+  initReveal();trackViewA5();initEngagementA5();
+}
+
+// master popstate
+window.removeEventListener('popstate',window._popHandler);
+window._popHandler=function(){const h=location.hash;if(h==='#'+ARTICLE_ID)showArticle();else if(h==='#'+ARTICLE2_ID)showArticle2();else if(h==='#'+ARTICLE3_ID)showArticle3();else if(h==='#'+ARTICLE4_ID)showArticle4();else if(h==='#'+ARTICLE5_ID)showArticle5();else showHome();};
+window.addEventListener('popstate',window._popHandler);
+if(location.hash==='#'+ARTICLE5_ID)showArticle5();
+
+// master showHome
+window.showHome=function(e){if(e&&e.preventDefault)e.preventDefault();['articlePage','articlePage2','articlePage3','articlePage4','articlePage5'].forEach(id=>{const el=document.getElementById(id);if(el)el.classList.add('hidden');});homePage.classList.remove('hidden');window.scrollTo({top:0,behavior:'instant'});document.title='OSUBULATALKS — Forged in Pain, Sharpened in Solitude';history.pushState({page:'home'},'','#');progress.style.width='0%';[closeShareDropdown,closeShareDropdownA2,closeShareDropdownA3,closeShareDropdownA4,closeShareDropdownA5].forEach(fn=>{try{fn();}catch(ex){}});};
+
+function trackViewA5(){const sk=`osubula_viewed_session_${ARTICLE5_ID}`;if(sessionStorage.getItem(sk)){renderViewA5(load(STORAGE5.views,SEED5.views));return;}sessionStorage.setItem(sk,'1');const n=load(STORAGE5.views,SEED5.views)+1;store(STORAGE5.views,n);renderViewA5(n);}
+function renderViewA5(n){const el=document.getElementById('viewCountA5');if(el)el.textContent=fmt(n);}
+function initLikesA5(){renderLikeA5(load(STORAGE5.likes,false),load(STORAGE5.likesCount,SEED5.likes));}
+function toggleLikeA5(){const was=load(STORAGE5.likes,false),cnt=load(STORAGE5.likesCount,SEED5.likes),now=!was,nc=now?cnt+1:Math.max(0,cnt-1);store(STORAGE5.likes,now);store(STORAGE5.likesCount,nc);renderLikeA5(now,nc);showToast(now?'❤️  You liked this article':'Like removed');}
+function renderLikeA5(liked,count){const btn=document.getElementById('likeBtnA5'),heart=document.getElementById('likeHeartA5'),num=document.getElementById('likeCountA5');if(btn)btn.classList.toggle('liked',liked);if(heart)heart.textContent=liked?'♥':'♡';if(num)num.textContent=fmt(count);}
+let shareOpenA5=false;
+function toggleShareDropdownA5(e){e.stopPropagation();shareOpenA5=!shareOpenA5;document.getElementById('shareDropdownA5').classList.toggle('open',shareOpenA5);}
+function closeShareDropdownA5(){shareOpenA5=false;const dd=document.getElementById('shareDropdownA5');if(dd)dd.classList.remove('open');}
+document.addEventListener('click',e=>{if(!e.target.closest('#shareToggleBtnA5')&&!e.target.closest('#shareDropdownA5'))closeShareDropdownA5();});
+function engShareA5(platform){const url=window.location.href.split('#')[0]+'#'+ARTICLE5_ID,title='Appreciation — OSUBULATALKS';closeShareDropdownA5();if(platform==='twitter')window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`,'_blank');else if(platform==='whatsapp')window.open(`https://wa.me/?text=${encodeURIComponent(title+' — '+url)}`,'_blank');else if(platform==='facebook')window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,'_blank');else if(platform==='copy')navigator.clipboard.writeText(url).then(()=>showToast('🔗  Link copied to clipboard'));}
+let userRatingA5=0;
+function initRatingA5(){const saved=load(STORAGE5.rating,0);userRatingA5=saved;if(saved>0){renderInteractiveStarsA5(saved);const fb=document.getElementById('ratingFeedbackA5');if(fb)fb.textContent=`You rated this ${saved} star${saved>1?'s':''}`;lockRatingStarsA5();}renderRatingAggregateA5(load(STORAGE5.ratingData,null)||SEED5.ratingDist,load(STORAGE5.ratingCount,SEED5.ratingCount));}
+function scrollToRatingA5(){const el=document.getElementById('ratingSectionA5');if(el)window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-88,behavior:'smooth'});}
+function scrollToCommentsA5(){const el=document.getElementById('commentsSectionA5');if(el)window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-88,behavior:'smooth'});}
+function hoverStarA5(v){if(userRatingA5>0)return;document.querySelectorAll('.ri-star-a5').forEach(s=>s.classList.toggle('hovered',parseInt(s.dataset.val)<=v));const fb=document.getElementById('ratingFeedbackA5');if(fb)fb.textContent=['','Terrible','Poor','OK','Good','Excellent'][v]||'';}
+function unhoverStarA5(){if(userRatingA5>0)return;document.querySelectorAll('.ri-star-a5').forEach(s=>s.classList.remove('hovered'));const fb=document.getElementById('ratingFeedbackA5');if(fb)fb.textContent='Tap a star to rate';}
+function submitRatingA5(val){if(userRatingA5>0)return;userRatingA5=val;store(STORAGE5.rating,val);const dist=load(STORAGE5.ratingData,{...SEED5.ratingDist}),cnt=load(STORAGE5.ratingCount,SEED5.ratingCount);dist[val]=(dist[val]||0)+1;const nc=cnt+1;store(STORAGE5.ratingData,dist);store(STORAGE5.ratingCount,nc);renderInteractiveStarsA5(val);renderRatingAggregateA5(dist,nc);lockRatingStarsA5();const fb=document.getElementById('ratingFeedbackA5');if(fb)fb.textContent=`You rated this ${val} star${val>1?'s':''} — ${['','Terrible','Poor','OK','Good','Excellent! 🔥'][val]}`;showToast(`⭐  Thanks for your ${val}-star rating!`);}
+function renderInteractiveStarsA5(val){document.querySelectorAll('.ri-star-a5').forEach(s=>{s.classList.toggle('selected',parseInt(s.dataset.val)<=val);s.classList.remove('hovered');});}
+function lockRatingStarsA5(){document.querySelectorAll('.ri-star-a5').forEach(s=>{s.style.cursor='default';s.onmouseover=null;s.onmouseout=null;s.onclick=null;});}
+function renderRatingAggregateA5(dist,count){const total=count||Object.values(dist).reduce((a,b)=>a+b,0)||1,sum=Object.entries(dist).reduce((a,[k,v])=>a+parseInt(k)*v,0),avg=(sum/total).toFixed(1);const el=id=>document.getElementById(id);if(el('ratingBigNumA5'))el('ratingBigNumA5').textContent=avg;if(el('avgRatingBadgeA5'))el('avgRatingBadgeA5').textContent=avg;if(el('ratingCountLabelA5'))el('ratingCountLabelA5').textContent=fmt(total)+' ratings';const filled=Math.round(parseFloat(avg)),sd=el('ratingStarsDisplayA5');if(sd)sd.innerHTML=[1,2,3,4,5].map(i=>`<span class="${i<=filled?'rating-star-filled':'rating-star-empty'}">★</span>`).join('');const bars=['a5bar5','a5bar4','a5bar3','a5bar2','a5bar1'],pcts=['a5pct5','a5pct4','a5pct3','a5pct4b','a5pct1'];[5,4,3,2,1].forEach((star,i)=>{const pct=Math.round(((dist[star]||0)/total)*100);const b=el(bars[i]),p=el(pcts[i]);if(b)b.style.width=pct+'%';if(p)p.textContent=pct+'%';});}
+let currentSortA5='newest',visibleCountA5=5,openReplyFormsA5={};
+function initCommentsA5(){const ta=document.getElementById('commentTextA5');if(ta)ta.addEventListener('input',()=>{const l=1000-ta.value.length;const el=document.getElementById('charLeftA5');if(el){el.textContent=l;el.style.color=l<100?'var(--crimson)':'#aaa';}});renderCommentsA5();}
+function getCommentsA5(){return load(STORAGE5.comments,[]);}
+function saveCommentsA5(a){store(STORAGE5.comments,a);}
+function getCommentLikesA5(){return load(STORAGE5.commentLikes,{});}
+function saveCommentLikesA5(o){store(STORAGE5.commentLikes,o);}
+function submitCommentA5(){const ne=document.getElementById('commentNameA5'),te=document.getElementById('commentTextA5'),btn=document.getElementById('commentSubmitBtnA5');const name=ne.value.trim(),text=te.value.trim();if(!name){ne.style.borderColor='var(--crimson)';setTimeout(()=>ne.style.borderColor='',1500);showToast('⚠  Please enter your name');return;}if(text.length<10){te.style.borderColor='var(--crimson)';setTimeout(()=>te.style.borderColor='',1500);showToast('⚠  Comment must be at least 10 characters');return;}btn.disabled=true;btn.textContent='POSTING...';setTimeout(()=>{const cmts=getCommentsA5();cmts.unshift({id:Date.now(),name,email:document.getElementById('commentEmailA5').value.trim(),text,ts:Date.now(),likes:0,replies:[]});saveCommentsA5(cmts);ne.value='';te.value='';document.getElementById('commentEmailA5').value='';const cl=document.getElementById('charLeftA5');if(cl)cl.textContent='1000';btn.disabled=false;btn.textContent='POST COMMENT →';currentSortA5='newest';visibleCountA5=5;setActiveSortBtnA5('sortNewestA5');renderCommentsA5();showToast('✅  Comment posted!');scrollToCommentsA5();},600);}
+function sortCommentsA5(t){currentSortA5=t;visibleCountA5=5;setActiveSortBtnA5({newest:'sortNewestA5',oldest:'sortOldestA5',top:'sortTopA5'}[t]);renderCommentsA5();}
+function setActiveSortBtnA5(id){['sortNewestA5','sortOldestA5','sortTopA5'].forEach(i=>{const el=document.getElementById(i);if(el)el.classList.toggle('active',el.id===id);});}
+function loadMoreCommentsA5(){visibleCountA5+=5;renderCommentsA5();}
+function renderCommentsA5(){const list=document.getElementById('commentsListA5'),empty=document.getElementById('commentsEmptyA5'),sortB=document.getElementById('commentsSortBarA5'),lmore=document.getElementById('loadMoreCommentsA5'),badge=document.getElementById('commentsCountHeaderA5'),engB=document.getElementById('commentCountBadgeA5');const all=getCommentsA5(),total=all.length;let sorted=[...all];if(currentSortA5==='newest')sorted.sort((a,b)=>b.ts-a.ts);else if(currentSortA5==='oldest')sorted.sort((a,b)=>a.ts-b.ts);else sorted.sort((a,b)=>(b.likes||0)-(a.likes||0));const visible=sorted.slice(0,visibleCountA5),cLikes=getCommentLikesA5();if(badge)badge.textContent=total+(total===1?' Comment':' Comments');if(engB)engB.textContent=fmt(total);if(empty)empty.style.display=total===0?'block':'none';if(sortB)sortB.style.display=total>1?'flex':'none';if(!list)return;list.innerHTML='';visible.forEach(c=>{const liked=cLikes[c.id]||false,inits=c.name.split(' ').map(w=>w[0]).join('').toUpperCase().slice(0,2),bg=avatarColor(c.name);let rHTML='';if(c.replies&&c.replies.length){rHTML='<div class="comment-replies">'+c.replies.map(r=>{const ri=r.name.split(' ').map(w=>w[0]).join('').toUpperCase().slice(0,2),rl=cLikes['r_'+r.id]||false;return`<div class="reply-item"><div class="reply-header"><div class="reply-avatar" style="background:${avatarColor(r.name)};color:#fff;">${ri}</div><div class="comment-meta"><div class="comment-author-name">${escHtml(r.name)}</div><div class="comment-timestamp">${timeAgo(r.ts)}</div></div></div><div class="reply-body">${escHtml(r.text)}</div><div class="reply-actions"><button class="comment-action-btn ${rl?'liked-comment':''}" onclick="toggleReplyLikeA5(${c.id},${r.id})">${rl?'♥':'♡'} ${rl?'Liked':'Like'} · ${r.likes||0}</button></div></div>`;}).join('')+'</div>';}const div=document.createElement('div');div.className='comment-item';div.innerHTML=`<div class="comment-header"><div class="comment-avatar" style="background:${bg};">${inits}</div><div class="comment-meta"><div class="comment-author-name">${escHtml(c.name)}</div><div class="comment-timestamp">${timeAgo(c.ts)}</div></div></div><div class="comment-body">${escHtml(c.text)}</div><div class="comment-actions"><button class="comment-action-btn ${liked?'liked-comment':''}" onclick="toggleCommentLikeA5(${c.id})">${liked?'♥':'♡'} ${liked?'Liked':'Like'} · ${c.likes||0}</button><span class="comment-action-sep">·</span><button class="comment-action-btn" onclick="toggleReplyFormA5(${c.id})">↩ Reply</button><span class="comment-action-sep">·</span><button class="comment-action-btn" onclick="showToast('⚑  Reported. Thank you.')">⚑ Report</button></div>${rHTML}<div class="inline-reply-form" id="replyFormA5-${c.id}"><textarea class="inline-reply-input" id="replyTextA5-${c.id}" placeholder="Reply to ${escHtml(c.name)}..." maxlength="600"></textarea><div class="inline-reply-actions"><input class="comment-input" id="replyNameA5-${c.id}" type="text" placeholder="Your name *" maxlength="50" style="width:180px;padding:8px 12px;font-size:13px;"><button class="inline-reply-submit" onclick="submitReplyA5(${c.id})">POST REPLY</button><button class="inline-reply-cancel" onclick="toggleReplyFormA5(${c.id})">CANCEL</button></div></div>`;list.appendChild(div);if(openReplyFormsA5[c.id]){const f=document.getElementById(`replyFormA5-${c.id}`);if(f)f.classList.add('open');}});if(lmore){lmore.style.display=visibleCountA5<total?'block':'none';lmore.textContent=`LOAD MORE COMMENTS (${total-visibleCountA5} remaining) ↓`;}}
+function toggleCommentLikeA5(id){const cL=getCommentLikesA5(),cmts=getCommentsA5(),idx=cmts.findIndex(c=>c.id===id);if(idx<0)return;const was=cL[id]||false;cL[id]=!was;cmts[idx].likes=Math.max(0,(cmts[idx].likes||0)+(was?-1:1));saveCommentLikesA5(cL);saveCommentsA5(cmts);renderCommentsA5();showToast(was?'Like removed':'♥  Comment liked');}
+function toggleReplyLikeA5(cid,rid){const cL=getCommentLikesA5(),cmts=getCommentsA5(),ci=cmts.findIndex(c=>c.id===cid);if(ci<0)return;const ri=(cmts[ci].replies||[]).findIndex(r=>r.id===rid);if(ri<0)return;const key='r_'+rid,was=cL[key]||false;cL[key]=!was;cmts[ci].replies[ri].likes=Math.max(0,(cmts[ci].replies[ri].likes||0)+(was?-1:1));saveCommentLikesA5(cL);saveCommentsA5(cmts);renderCommentsA5();showToast(was?'Like removed':'♥  Reply liked');}
+function toggleReplyFormA5(id){const f=document.getElementById(`replyFormA5-${id}`);if(!f)return;const isOpen=f.classList.toggle('open');openReplyFormsA5[id]=isOpen;if(isOpen)setTimeout(()=>{const n=document.getElementById(`replyNameA5-${id}`);if(n)n.focus();},50);}
+function submitReplyA5(cid){const ne=document.getElementById(`replyNameA5-${cid}`),te=document.getElementById(`replyTextA5-${cid}`);const name=ne?ne.value.trim():'',text=te?te.value.trim():'';if(!name){if(ne){ne.style.borderColor='var(--crimson)';setTimeout(()=>ne.style.borderColor='',1500);}showToast('⚠  Please enter your name');return;}if(text.length<5){if(te){te.style.borderColor='var(--crimson)';setTimeout(()=>te.style.borderColor='',1500);}showToast('⚠  Reply is too short');return;}const cmts=getCommentsA5(),idx=cmts.findIndex(c=>c.id===cid);if(idx<0)return;if(!cmts[idx].replies)cmts[idx].replies=[];cmts[idx].replies.push({id:Date.now(),name,text,ts:Date.now(),likes:0});saveCommentsA5(cmts);openReplyFormsA5[cid]=false;renderCommentsA5();showToast('✅  Reply posted!');}
+function initEngagementA5(){initLikesA5();initRatingA5();initCommentsA5();renderViewA5(load(STORAGE5.views,SEED5.views));}
+
+// ri-star-a5 styles
+const styleA5=document.createElement('style');
+styleA5.textContent=`.ri-star-a5{font-size:28px;cursor:pointer;color:#ddd;transition:color .15s,transform .15s;user-select:none;line-height:1;display:inline-block}.ri-star-a5:hover,.ri-star-a5.hovered{color:#f0a500;transform:scale(1.15)}.ri-star-a5.selected{color:#f0a500}`;
+document.head.appendChild(styleA5);
 
 </script>
 </body>
