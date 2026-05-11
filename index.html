@@ -2969,13 +2969,13 @@ footer {
 <!-- NAV -->
 <nav class="nav">
   <div class="nav-inner">
-    <a href="#" class="logo">OSUBULA<span>TALKS</span></a>
+    <a href="#" onclick="showHome(event)" class="logo">OSUBULA<span>TALKS</span></a>
     <ul class="nav-links">
-      <li><a href="#featured">Featured</a></li>
-      <li><a href="#categories">Topics</a></li>
-      <li><a href="#blog">Articles</a></li>
-      <li><a href="#opinions">Opinions</a></li>
-      <li><a href="#author">About</a></li>
+      <li><a href="#featured"   onclick="navScrollTo(event,'featured')">Featured</a></li>
+      <li><a href="#categories" onclick="navScrollTo(event,'categories')">Topics</a></li>
+      <li><a href="#blog"       onclick="navScrollTo(event,'blog')">Articles</a></li>
+      <li><a href="#opinions"   onclick="navScrollTo(event,'opinions')">Opinions</a></li>
+      <li><a href="#author"     onclick="navScrollTo(event,'author')">About</a></li>
     </ul>
     <div class="nav-right">
       <input class="nav-search" type="text" placeholder="Search the blog...">
@@ -3020,8 +3020,8 @@ footer {
       This blog is not for motivation — it is for transformation. A rebellion against weakness, comfort, and mediocrity. The truth about how men and women really work.
     </p>
     <div class="hero-cta-group">
-      <a href="#blog" class="btn-primary">Read the Blog</a>
-      <a href="#about" class="btn-outline">Our Mission</a>
+      <a href="#blog"   onclick="navScrollTo(event,'blog')"   class="btn-primary">Read the Blog</a>
+      <a href="#author" onclick="navScrollTo(event,'author')" class="btn-outline">Our Mission</a>
     </div>
     <div class="hero-stats">
       <div>
@@ -3065,7 +3065,7 @@ footer {
       <div class="section-line"></div>
     </div>
     <div class="featured-grid reveal">
-      <a href="#" class="feat-card large">
+      <a href="#there-is-no-one" class="feat-card large" onclick="showArticle(event)">
         <div class="feat-bg feat-bg-1"></div>
         <div class="feat-pattern"></div>
         <div class="feat-number">01</div>
@@ -3093,7 +3093,7 @@ footer {
           </div>
         </div>
       </a>
-      <a href="#" class="feat-card medium">
+      <a href="#blog" onclick="navScrollTo(event,'blog')" class="feat-card medium">
         <div class="feat-bg feat-bg-3"></div>
         <div class="feat-pattern"></div>
         <div class="feat-number">03</div>
@@ -3106,7 +3106,7 @@ footer {
           </div>
         </div>
       </a>
-      <a href="#" class="feat-card medium">
+      <a href="#blog" onclick="navScrollTo(event,'blog')" class="feat-card medium">
         <div class="feat-bg feat-bg-4"></div>
         <div class="feat-pattern"></div>
         <div class="feat-number">04</div>
@@ -3119,7 +3119,7 @@ footer {
           </div>
         </div>
       </a>
-      <a href="#" class="feat-card medium">
+      <a href="#blog" onclick="navScrollTo(event,'blog')" class="feat-card medium">
         <div class="feat-bg feat-bg-5"></div>
         <div class="feat-pattern"></div>
         <div class="feat-number">05</div>
@@ -3139,32 +3139,32 @@ footer {
 <!-- CATEGORY STRIP -->
 <div class="cat-strip" id="categories">
   <div class="cat-strip-inner">
-    <a href="#" class="cat-item">
+    <a href="#blog" onclick="navScrollTo(event,'blog')" class="cat-item">
       <span class="cat-icon">⚡</span>
       <span class="cat-name">Intersexual Dynamics</span>
       <span class="cat-count">14 articles</span>
     </a>
-    <a href="#" class="cat-item">
+    <a href="#blog" onclick="navScrollTo(event,'blog')" class="cat-item">
       <span class="cat-icon">🔱</span>
       <span class="cat-name">Masculinity & Identity</span>
       <span class="cat-count">11 articles</span>
     </a>
-    <a href="#" class="cat-item">
+    <a href="#blog" onclick="navScrollTo(event,'blog')" class="cat-item">
       <span class="cat-icon">🔥</span>
       <span class="cat-name">Relationships & Dating</span>
       <span class="cat-count">9 articles</span>
     </a>
-    <a href="#" class="cat-item">
+    <a href="#blog" onclick="navScrollTo(event,'blog')" class="cat-item">
       <span class="cat-icon">🧠</span>
       <span class="cat-name">Female Psychology</span>
       <span class="cat-count">8 articles</span>
     </a>
-    <a href="#" class="cat-item">
+    <a href="#blog" onclick="navScrollTo(event,'blog')" class="cat-item">
       <span class="cat-icon">💍</span>
       <span class="cat-name">Marriage & Commitment</span>
       <span class="cat-count">7 articles</span>
     </a>
-    <a href="#" class="cat-item">
+    <a href="#blog" onclick="navScrollTo(event,'blog')" class="cat-item">
       <span class="cat-icon">⚔</span>
       <span class="cat-name">Self-Improvement</span>
       <span class="cat-count">12 articles</span>
@@ -3256,7 +3256,7 @@ footer {
           </div>
         </a>
 
-        <a href="#" class="post-card">
+        <a href="#blog" onclick="navScrollTo(event,'blog')" class="post-card">
           <div class="post-body">
             <span class="post-tag">Intersexual Dynamics</span>
             <h3 class="post-title">Why She Lost Attraction After You "Won" Her: The Comfort Paradox</h3>
@@ -3275,7 +3275,7 @@ footer {
           </div>
         </a>
 
-        <a href="#" class="post-card">
+        <a href="#blog" onclick="navScrollTo(event,'blog')" class="post-card">
           <div class="post-body">
             <span class="post-tag">Masculinity & Identity</span>
             <h3 class="post-title">The Provider Trap: How Good Men Get Used and Why They Let It Happen</h3>
@@ -3294,7 +3294,7 @@ footer {
           </div>
         </a>
 
-        <a href="#" class="post-card">
+        <a href="#blog" onclick="navScrollTo(event,'blog')" class="post-card">
           <div class="post-body">
             <span class="post-tag">Female Psychology</span>
             <h3 class="post-title">The Solipsism Lens: Understanding Why Women Experience the World Differently</h3>
@@ -3313,7 +3313,7 @@ footer {
           </div>
         </a>
 
-        <a href="#" class="post-card">
+        <a href="#blog" onclick="navScrollTo(event,'blog')" class="post-card">
           <div class="post-body">
             <span class="post-tag">Relationships & Dating</span>
             <h3 class="post-title">Red Pill or Blue Pill? Why Most Relationship Advice Is Designed to Keep You Confused</h3>
@@ -3332,7 +3332,7 @@ footer {
           </div>
         </a>
 
-        <a href="#" class="post-card">
+        <a href="#blog" onclick="navScrollTo(event,'blog')" class="post-card">
           <div class="post-body">
             <span class="post-tag">Marriage & Commitment</span>
             <h3 class="post-title">The 5 Unspoken Rules of Marriage That No One Tells the Groom</h3>
@@ -3369,35 +3369,35 @@ footer {
         <!-- Trending Widget -->
         <div class="widget">
           <div class="widget-title">Trending</div>
-          <a href="#" class="trending-item">
+          <a href="#there-is-no-one" onclick="showArticle(event)" class="trending-item">
             <div class="trending-num">01</div>
             <div class="trending-info">
               <div class="trending-tag">Intersexual Dynamics</div>
               <div class="trending-title">The Hypergamy Trap: Why Women Are Always Seeking "Up"</div>
             </div>
           </a>
-          <a href="#" class="trending-item">
+          <a href="#the-red-pill-path" onclick="showArticle2(event)" class="trending-item">
             <div class="trending-num">02</div>
             <div class="trending-info">
               <div class="trending-tag">Masculinity</div>
-              <div class="trending-title">How Modern Society Manufactures Weak Men</div>
+              <div class="trending-title">The Red Pill Path: A Tool, Not a Religion</div>
             </div>
           </a>
-          <a href="#" class="trending-item">
+          <a href="#blog" onclick="navScrollTo(event,'blog')" class="trending-item">
             <div class="trending-num">03</div>
             <div class="trending-info">
               <div class="trending-tag">Female Psychology</div>
               <div class="trending-title">The Solipsism Lens: A Different Operating System</div>
             </div>
           </a>
-          <a href="#" class="trending-item">
+          <a href="#blog" onclick="navScrollTo(event,'blog')" class="trending-item">
             <div class="trending-num">04</div>
             <div class="trending-info">
               <div class="trending-tag">Marriage</div>
               <div class="trending-title">5 Unspoken Rules No One Tells the Groom</div>
             </div>
           </a>
-          <a href="#" class="trending-item">
+          <a href="#blog" onclick="navScrollTo(event,'blog')" class="trending-item">
             <div class="trending-num">05</div>
             <div class="trending-info">
               <div class="trending-tag">Self-Improvement</div>
@@ -3410,21 +3410,21 @@ footer {
         <div class="widget">
           <div class="widget-title">Popular Tags</div>
           <div class="tags-cloud">
-            <a href="#" class="tag-pill">Hypergamy</a>
-            <a href="#" class="tag-pill">Alpha</a>
-            <a href="#" class="tag-pill">Beta</a>
-            <a href="#" class="tag-pill">Discipline</a>
-            <a href="#" class="tag-pill">Purpose</a>
-            <a href="#" class="tag-pill">Attraction</a>
-            <a href="#" class="tag-pill">Frame</a>
-            <a href="#" class="tag-pill">Power</a>
-            <a href="#" class="tag-pill">Commitment</a>
-            <a href="#" class="tag-pill">Red Flags</a>
-            <a href="#" class="tag-pill">Masculine</a>
-            <a href="#" class="tag-pill">Marriage</a>
-            <a href="#" class="tag-pill">Solipsism</a>
-            <a href="#" class="tag-pill">Freedom</a>
-            <a href="#" class="tag-pill">Truth</a>
+            <a href="#blog" onclick="navScrollTo(event,'blog')" class="tag-pill">Hypergamy</a>
+            <a href="#blog" onclick="navScrollTo(event,'blog')" class="tag-pill">Alpha</a>
+            <a href="#blog" onclick="navScrollTo(event,'blog')" class="tag-pill">Beta</a>
+            <a href="#blog" onclick="navScrollTo(event,'blog')" class="tag-pill">Discipline</a>
+            <a href="#blog" onclick="navScrollTo(event,'blog')" class="tag-pill">Purpose</a>
+            <a href="#blog" onclick="navScrollTo(event,'blog')" class="tag-pill">Attraction</a>
+            <a href="#blog" onclick="navScrollTo(event,'blog')" class="tag-pill">Frame</a>
+            <a href="#blog" onclick="navScrollTo(event,'blog')" class="tag-pill">Power</a>
+            <a href="#blog" onclick="navScrollTo(event,'blog')" class="tag-pill">Commitment</a>
+            <a href="#blog" onclick="navScrollTo(event,'blog')" class="tag-pill">Red Flags</a>
+            <a href="#blog" onclick="navScrollTo(event,'blog')" class="tag-pill">Masculine</a>
+            <a href="#blog" onclick="navScrollTo(event,'blog')" class="tag-pill">Marriage</a>
+            <a href="#blog" onclick="navScrollTo(event,'blog')" class="tag-pill">Solipsism</a>
+            <a href="#blog" onclick="navScrollTo(event,'blog')" class="tag-pill">Freedom</a>
+            <a href="#blog" onclick="navScrollTo(event,'blog')" class="tag-pill">Truth</a>
           </div>
         </div>
 
@@ -3432,22 +3432,22 @@ footer {
         <div class="widget">
           <div class="widget-title">Follow Along</div>
           <div class="social-grid">
-            <a href="#" class="social-item">
+            <a href="https://twitter.com/osubulatalks" target="_blank" rel="noopener" class="social-item">
               <div class="social-platform">𝕏</div>
               <div class="social-count">12.4K</div>
               <div class="social-label">Followers</div>
             </a>
-            <a href="#" class="social-item">
+            <a href="https://instagram.com/osubulatalks" target="_blank" rel="noopener" class="social-item">
               <div class="social-platform">📷</div>
               <div class="social-count">8.1K</div>
               <div class="social-label">Followers</div>
             </a>
-            <a href="#" class="social-item">
+            <a href="https://youtube.com/@osubulatalks" target="_blank" rel="noopener" class="social-item">
               <div class="social-platform">▶</div>
               <div class="social-count">5.3K</div>
               <div class="social-label">Subscribers</div>
             </a>
-            <a href="#" class="social-item">
+            <a href="#newsletter" onclick="navScrollTo(event,'newsletter')" class="social-item">
               <div class="social-platform">✉</div>
               <div class="social-count">3.8K</div>
               <div class="social-label">Subscribers</div>
@@ -3469,17 +3469,17 @@ footer {
       <div class="section-line"></div>
     </div>
     <div class="opinion-grid reveal">
-      <a href="#" class="opinion-card">
+      <a href="#there-is-no-one" onclick="showArticle(event)" class="opinion-card">
         <div class="opinion-tag">Intersexual Dynamics</div>
         <p class="opinion-quote">A man who needs a woman's validation in order to act is already defeated. The cage was built from the inside.</p>
         <div class="opinion-author">By <strong>Osubula</strong> — on male frame</div>
       </a>
-      <a href="#" class="opinion-card">
+      <a href="#the-red-pill-path" onclick="showArticle2(event)" class="opinion-card">
         <div class="opinion-tag">Female Psychology</div>
         <p class="opinion-quote">She didn't change. You finally stopped performing long enough to see who she always was. The performance was the problem.</p>
         <div class="opinion-author">By <strong>Osubula</strong> — on attraction dynamics</div>
       </a>
-      <a href="#" class="opinion-card">
+      <a href="#blog" onclick="navScrollTo(event,'blog')" class="opinion-card">
         <div class="opinion-tag">Self-Improvement</div>
         <p class="opinion-quote">Pain is not a problem to solve. It is the material from which capable men are built. Stop medicating the forge.</p>
         <div class="opinion-author">By <strong>Osubula</strong> — on discipline</div>
@@ -3528,9 +3528,9 @@ footer {
           <div class="author-quote-attr">— Osubula</div>
         </div>
         <div class="author-links">
-          <a href="#blog" class="author-link-btn primary">Read the Articles</a>
-          <a href="#newsletter" class="author-link-btn">Subscribe to Newsletter</a>
-          <a href="#" class="author-link-btn">Listen to Podcast</a>
+          <a href="#blog"       onclick="navScrollTo(event,'blog')"       class="author-link-btn primary">Read the Articles</a>
+          <a href="#newsletter" onclick="navScrollTo(event,'newsletter')" class="author-link-btn">Subscribe to Newsletter</a>
+          <a href="https://open.spotify.com/show/osubulatalks" target="_blank" rel="noopener" class="author-link-btn">Listen to Podcast</a>
         </div>
       </div>
     </div>
@@ -3555,53 +3555,53 @@ footer {
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
-      <a href="#" class="logo">OSUBULA<span>TALKS</span></a>
+      <a href="#" onclick="showHome(event)" class="logo">OSUBULA<span>TALKS</span></a>
       <p class="footer-desc">Not for motivation — for transformation. A rebellion against weakness, comfort, and mediocrity. The straight talk about men, women, and how the world actually works.</p>
       <div class="footer-socials">
-        <a href="#" class="footer-social-btn">𝕏</a>
-        <a href="#" class="footer-social-btn">📷</a>
-        <a href="#" class="footer-social-btn">▶</a>
-        <a href="#" class="footer-social-btn">✉</a>
+        <a href="https://twitter.com/osubulatalks"   target="_blank" rel="noopener" class="footer-social-btn">𝕏</a>
+        <a href="https://instagram.com/osubulatalks" target="_blank" rel="noopener" class="footer-social-btn">📷</a>
+        <a href="https://youtube.com/@osubulatalks"  target="_blank" rel="noopener" class="footer-social-btn">▶</a>
+        <a href="#newsletter" onclick="navScrollTo(event,'newsletter')"             class="footer-social-btn">✉</a>
       </div>
     </div>
     <div>
       <div class="footer-col-title">Topics</div>
       <ul class="footer-links">
-        <li><a href="#">Intersexual Dynamics</a></li>
-        <li><a href="#">Masculinity & Identity</a></li>
-        <li><a href="#">Relationships & Dating</a></li>
-        <li><a href="#">Female Psychology</a></li>
-        <li><a href="#">Marriage & Commitment</a></li>
-        <li><a href="#">Self-Improvement</a></li>
+        <li><a href="#blog" onclick="navScrollTo(event,'blog')">Intersexual Dynamics</a></li>
+        <li><a href="#blog" onclick="navScrollTo(event,'blog')">Masculinity &amp; Identity</a></li>
+        <li><a href="#blog" onclick="navScrollTo(event,'blog')">Relationships &amp; Dating</a></li>
+        <li><a href="#blog" onclick="navScrollTo(event,'blog')">Female Psychology</a></li>
+        <li><a href="#blog" onclick="navScrollTo(event,'blog')">Marriage &amp; Commitment</a></li>
+        <li><a href="#blog" onclick="navScrollTo(event,'blog')">Self-Improvement</a></li>
       </ul>
     </div>
     <div>
       <div class="footer-col-title">Read</div>
       <ul class="footer-links">
-        <li><a href="#">Featured Articles</a></li>
-        <li><a href="#">Latest Posts</a></li>
-        <li><a href="#">Trending Now</a></li>
-        <li><a href="#">Opinion Pieces</a></li>
-        <li><a href="#">Archives</a></li>
+        <li><a href="#featured"  onclick="navScrollTo(event,'featured')">Featured Articles</a></li>
+        <li><a href="#blog"      onclick="navScrollTo(event,'blog')">Latest Posts</a></li>
+        <li><a href="#blog"      onclick="navScrollTo(event,'blog')">Trending Now</a></li>
+        <li><a href="#opinions"  onclick="navScrollTo(event,'opinions')">Opinion Pieces</a></li>
+        <li><a href="#blog"      onclick="navScrollTo(event,'blog')">Archives</a></li>
       </ul>
     </div>
     <div>
       <div class="footer-col-title">Connect</div>
       <ul class="footer-links">
-        <li><a href="#">About the Author</a></li>
-        <li><a href="#">Newsletter</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Submit a Story</a></li>
-        <li><a href="#">Advertise</a></li>
+        <li><a href="#author"      onclick="navScrollTo(event,'author')">About the Author</a></li>
+        <li><a href="#newsletter"  onclick="navScrollTo(event,'newsletter')">Newsletter</a></li>
+        <li><a href="mailto:hello@osubulatalks.com">Contact</a></li>
+        <li><a href="mailto:hello@osubulatalks.com">Submit a Story</a></li>
+        <li><a href="mailto:hello@osubulatalks.com">Advertise</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
     <span>© 2024 OSUBULATALKS — All rights reserved.</span>
     <div class="footer-legal">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms of Use</a>
-      <a href="#">Disclaimer</a>
+      <a href="#" onclick="showToast && showToast('Privacy Policy — Coming Soon')">Privacy Policy</a>
+      <a href="#" onclick="showToast && showToast('Terms of Use — Coming Soon')">Terms of Use</a>
+      <a href="#" onclick="showToast && showToast('Disclaimer — Coming Soon')">Disclaimer</a>
     </div>
   </div>
 </footer>
@@ -3661,81 +3661,90 @@ footer {
       </div>
 
       <!-- ── ARTICLE BODY ── -->
-      <p class="article-lead">I want to start with something most people won't say out loud. There is no "The One." There never was. It is one of the most comfortable lies we have ever agreed to believe together.</p>
+      <p class="article-lead">There is no single perfect soulmate waiting for you. There is no "The One." There are good matches and bad matches, but never one magical person who is your only destiny.</p>
 
       <!-- ── SECTION 1 ── -->
       <div id="toc-oneitis" class="article-section-title">What Is ONEitis?</div>
 
-      <p class="article-p">ONEitis is when you lock your entire emotional future onto one person. You convince yourself they are irreplaceable. You start making decisions based on keeping them, not based on what is actually good for you.</p>
+      <p class="article-p">ONEitis is believing "This person is my possible soulmate."</p>
 
-      <p class="article-p">I have watched men destroy themselves over this. Good men. Smart men. Men who could reason their way through a business problem in ten minutes but could not see what was happening to them in their own relationship.</p>
+      <p class="article-p">I have watched men destroy their careers, their health, and their self-respect over one woman who had already moved on. They were not in love. They were paralysed.</p>
 
-      <p class="article-p">It feels like love. That is the trap. It is actually fear dressed up as devotion. Fear that you are not enough to attract someone else. Fear that this was your one shot and you blew it. Fear running the whole show, and you calling it love.</p>
+      <p class="article-p">You stop growing. You stop moving forward. You stop being your real self.</p>
+
+      <p class="article-p">It feels like love. It is not. It is fear and insecurity wearing love's clothes.</p>
 
       <!-- ── SECTION 2 ── -->
       <div id="toc-myth" class="article-section-title">The Soulmate Myth (The Fantasy Everyone Believes)</div>
 
-      <p class="article-p">We were all taught this. Movies, songs, books, and ads have been drilling the same story into us since childhood. One day you meet THE perfect person. You just know. Everything falls into place. That is the template.</p>
+      <p class="article-p">Movies, songs, books, and ads tell us: "One day you will meet THE perfect person."</p>
 
-      <p class="article-p">It is a beautiful story. It is also one of the most damaging ideas ever sold to men and women. It makes people waste years chasing a feeling instead of building something real. I have seen it happen. I have done it myself.</p>
+      <p class="article-p">We grew up absorbing that story. By the time we were old enough to date, it felt less like a movie and more like a fact.</p>
 
-      <p class="article-p">The dating industry profits from this myth directly. They need you to believe your soulmate is one more swipe away. The longer you believe that, the longer you stay on the platform. The longer you stay, the more money they make. Your loneliness is their business model.</p>
+      <p class="article-p">This is a nice story for romantic comedies, but terrible for real life. It makes people waste years searching for a fantasy instead of building real relationships.</p>
 
       <!-- ── SECTION 3 ── -->
       <div id="toc-why" class="article-section-title">Why It Messes People Up</div>
 
-      <p class="article-p">When you are single and you believe in "The One," every failed date feels catastrophic. You are not just unmatched — you are failing to find your destiny. That pressure changes how you show up. You stop being curious. You start being desperate. People feel that difference immediately.</p>
+      <p class="article-p">When you're single: You feel desperate and scared you'll never find "The One." Every rejection feels like evidence that something is wrong with you.</p>
 
-      <p class="article-p">When you are already in a relationship, the myth becomes a trap you built yourself. You stay past the point you should leave. You tolerate things you should not tolerate. You ignore red flags because you have already decided this person is irreplaceable. You try to fix them. You try to fix yourself. Anything to make the fantasy work.</p>
+      <p class="article-p">When you're in a relationship: You stay even if it's unhealthy, because you think "If I lose this person, I'll never find anyone else."</p>
+
+      <p class="article-p">You ignore red flags and try to "fix" the person or yourself to make the fantasy come true.</p>
+
+      <p class="article-p">The myth does not protect you. It traps you.</p>
 
       <!-- ── SECTION 4 ── -->
       <div id="toc-power" class="article-section-title">It Creates a Power Problem</div>
 
-      <p class="article-p">When you decide someone is your only option, you hand them all the power. Not because they took it. Because you gave it. The moment they know — consciously or not — that you will not leave, the dynamic shifts. You stop being a partner. You become someone who is managed.</p>
+      <p class="article-p">If you believe your partner is your ONLY possible love: They hold all the power.</p>
 
-      <div class="article-example">
-        <strong>I have seen this:</strong> A woman stays with a man who humiliates her publicly. Her friends see it clearly. She sees it too. But she has convinced herself the connection is rare. So she stays. She has made a myth more important than her own dignity.
-      </div>
+      <p class="article-p">You feel powerless. The relationship becomes lopsided — one person dominates, the other begs or settles.</p>
 
-      <div class="article-example">
-        <strong>And this:</strong> A man watches his marriage fall apart slowly — contempt at the dinner table, decisions made without him, respect gone years ago. He stays because his entire identity is built around being her husband. Losing that feels worse than losing himself. So he loses himself quietly, every single day.
-      </div>
+      <p class="article-p">I have seen this up close. The man who stays silent at dinner because he is terrified of losing her. The woman who keeps going back to a man who hurts her because she has convinced herself he is irreplaceable.</p>
+
+      <div class="article-example"><strong>Example 1:</strong> A beautiful woman stays with an abusive boyfriend because she thinks he is her "One."</div>
+
+      <div class="article-example"><strong>Example 2:</strong> A man stays in a bad marriage because he believes no one else will ever love him.</div>
+
+      <p class="article-p">Both are living inside a lie. The lie is comfortable. The lie is also destroying them.</p>
 
       <!-- ── SECTION 5 ── -->
       <div id="toc-source" class="article-section-title">Where Does This Idea Come From?</div>
 
       <ul class="article-list">
-        <li>Pop culture — every film, song, and novel repeating the same story until it feels like truth</li>
-        <li>Dating apps built to profit from your belief that the perfect match is just one more swipe away</li>
-        <li>Society, repeating the myth like religion — generation after generation, never questioning it</li>
+        <li>Pop culture (movies, music, books)</li>
+        <li>Dating apps and ads that say "We'll find your soulmate!"</li>
+        <li>Society keeps repeating the myth like it's a religion.</li>
       </ul>
 
-      <p class="article-p">I have noticed something about the men who push back hardest on this. They are perfectly logical about money, career, and health. The moment you touch this myth, they get emotional and defensive. That tells you everything. The belief is not in their head. It is in their identity.</p>
+      <p class="article-p">Even guys who are logical about science, business, and sports suddenly become emotional and defensive when you say "There is no The One."</p>
+
+      <p class="article-p">I have said it in rooms full of men. I have watched the faces change. The discomfort is instant.</p>
+
+      <p class="article-p">It scares them. Because accepting it means rebuilding something they built their entire romantic life around.</p>
 
       <!-- ── SECTION 6 ── -->
       <div id="toc-healthy" class="article-section-title">Healthy Love vs. ONEitis</div>
 
-      <div class="article-comparison">
-        <div class="article-comparison-col good">
-          <div class="article-comparison-label">✓ Healthy Relationship</div>
-          <p>Both people choose each other every day. Both can leave. Neither one is begging. That is what respect looks like.</p>
-        </div>
-        <div class="article-comparison-col bad">
-          <div class="article-comparison-label">✕ ONEitis Relationship</div>
-          <p>One person cannot imagine leaving. They stay out of fear, not choice. That is not love. That is dependency with a romantic name on it.</p>
-        </div>
-      </div>
+      <p class="article-p">A healthy relationship is mutual respect. Both people are happy. Both can leave if needed.</p>
+
+      <p class="article-p">An ONEitis relationship is one person who feels they "can't live without" the other.</p>
+
+      <p class="article-p">That's not love. That's dependency. And dependency never ends well for the person doing the clinging.</p>
 
       <!-- ── SECTION 7 ── -->
       <div id="toc-better" class="article-section-title">The Better Way to Think</div>
 
-      <p class="article-p">Here is what I know. There are many good people out there who you could build something real with. Some will be great for you. Some will be terrible. But none of them is your only shot. Not one.</p>
+      <p class="article-p">Forget "The One." Instead, remember this simple truth: There are LOTS of good "Ones" out there. Some will be great. Some will be bad.</p>
 
-      <p class="article-p">When you actually accept that, something shifts. You stop performing. You stop shrinking yourself to fit what someone else wants. You show up as you actually are. And that version of you — the unedited one — is far more attractive than anything fear could design.</p>
+      <p class="article-p">But none of them is your only chance at happiness.</p>
 
-      <p class="article-p">Drop the myth. Not because love is not real. It is. But the version the myth is selling keeps you small, scared, and stuck. Real love is chosen. Every day. By two people who both know they could leave — and both decide to stay.</p>
+      <p class="article-p">Real power comes from knowing you control your own life, not from chasing a fantasy soulmate.</p>
 
-      <p class="article-p">There is no One. There are many good ones. That is not sad news. That is the most freeing thing I have ever written down.</p>
+      <p class="article-p">Drop the myth. You will be freer, happier, and able to grow.</p>
+
+      <p class="article-p">There is no One. There are many good ones — and that's actually much better news.</p>
 
       <div class="article-closing">
         <p>THERE IS NO <span>ONE.</span><br>THERE ARE MANY GOOD ONES —<br>AND THAT'S ACTUALLY <span>MUCH BETTER NEWS.</span></p>
@@ -4027,55 +4036,83 @@ footer {
       </div>
 
       <!-- ── ARTICLE BODY ── -->
-      <p class="article-lead">Let me be direct about what the Red Pill is and what it is not. It is not a religion. It is not a political movement. It is not a rulebook telling you how to treat women. It is a practical framework for understanding how men and women actually behave in relationships — not how we wish they behaved, not how society says they should behave. What is real. That is all.</p>
+      <p class="article-lead">The Red Pill is not a religion, political belief, or set of rules about right and wrong.</p>
+
+      <p class="article-p">It is a practical way of studying and understanding the real nature of men and women in relationships.</p>
+
+      <p class="article-p">It focuses on what is reality — NOT what should be morality or ideals.</p>
 
       <!-- SECTION 1 -->
       <div id="rp-toc-principles" class="article-section-title">Its Core Principles</div>
 
-      <p class="article-p">The Red Pill tries to stay objective. It asks uncomfortable questions about male and female behaviour without flinching. When better information appears, it updates. It is written in pencil, not ink. And it gives you tools and awareness — but what you do with them is entirely your decision. Nobody is telling you what to conclude.</p>
+      <p class="article-p">It tries to stay as objective as possible.</p>
 
-      <p class="article-p">That last part matters. I have seen too many men treat it like scripture. They find a few ideas that resonate and suddenly they have a religion. That is the opposite of the point.</p>
+      <p class="article-p">It asks hard questions about why men and women behave the way they do. Questions most people refuse to ask because the answers make them uncomfortable.</p>
+
+      <p class="article-p">It can be updated or corrected when new information appears. Written in pencil, not ink.</p>
+
+      <p class="article-p">It gives you awareness and tools. But you decide what to do with them. That part is always yours.</p>
 
       <!-- SECTION 2 -->
       <div id="rp-toc-problem" class="article-section-title">The Problem</div>
 
-      <p class="article-p">Most people cannot encounter an idea that challenges their worldview without immediately trying to domesticate it. They take Red Pill truths and bend them to fit what they already believe. They keep what flatters them. They discard what challenges them. Then they call that thinking.</p>
+      <p class="article-p">Many people take Red Pill truths and twist them to fit their existing beliefs.</p>
 
-      <p class="article-p">When Red Pill observations genuinely threaten someone's self-image, one of two things happens. They redefine it — they say "that is misogyny" or "that is toxic" — anything to avoid engaging with the actual content. Or they get angry. The anger is always the tell. Anger is what happens when a belief you built your life around starts to crack.</p>
+      <p class="article-p">They cherry-pick parts they like. They ignore parts that don't fit. They turn it into an ideology — a belief system with "shoulds" and "oughts."</p>
 
-      <div class="article-pullquote">
-        <p>The Blue Pill runs deep. It is not just an idea you were taught. It is the story you built your identity around — about love, about fairness, about how the world owes you if you are a good person. Questioning it feels like an attack on yourself. I know. I went through it too. But once you see clearly, you cannot unsee it.</p>
-      </div>
+      <p class="article-p">When pure Red Pill facts challenge someone's ego or long-held beliefs, they redefine the Red Pill to attack it. They go into denial and get angry.</p>
+
+      <p class="article-p">I have watched this happen repeatedly. A man engages with an idea for five minutes, feels his self-image threatened, and immediately decides the idea is the problem — not his reaction to it.</p>
+
+      <p class="article-p">Because the Blue Pill conditioning runs deep.</p>
+
+      <p class="article-p">Accepting Red Pill truths can feel like an attack on your self-image. It forces you to question things you built your life around — especially about love, relationships, and fairness.</p>
+
+      <p class="article-p">But once you truly see truth, there's no going back.</p>
 
       <!-- SECTION 3 -->
       <div id="rp-toc-approach" class="article-section-title">How to Approach the Red Pill</div>
 
-      <p class="article-p">There is no formula here. No twelve steps. No guru to follow. I am not interested in disciples. The moment you start treating any thinker — including me — as someone with all the answers, you have already failed the first test.</p>
+      <p class="article-p">There is no step-by-step life formula here.</p>
 
-      <p class="article-p">The goal is simple. Give men accurate information. Let them think. Let them decide. Men should be the artists of their own lives, not sheep looking for a shepherd. If you leave this blog looking for someone to tell you exactly what to do next, you missed everything.</p>
+      <p class="article-p">There is no "12 rules for success." Don't become a follower or a disciple.</p>
+
+      <p class="article-p">The goal is to give men clear information so they can think for themselves and build better lives.</p>
+
+      <p class="article-p">Men should become "the artist of their own life" — NOT sheep looking for a shepherd.</p>
+
+      <p class="article-p">I wrote this for the man who is done being told what to think and is ready to start doing the thinking himself.</p>
 
       <!-- SECTION 4 -->
       <div id="rp-toc-how" class="article-section-title">How to Use the Red Pill Correctly</div>
 
       <ul class="article-list">
-        <li>Start with an open, neutral mind. Not a defensive one.</li>
-        <li>Study the data and patterns honestly. Not selectively.</li>
-        <li>Accept what is true, even when it is uncomfortable. Especially then.</li>
-        <li>Build your own practical plan from that truth. Your life, your architecture.</li>
-        <li>Do not use it to justify anger, bitterness, or hopelessness. That is the Blue Pill in disguise.</li>
+        <li>Start with an open, neutral mind.</li>
+        <li>Study the data and patterns honestly.</li>
+        <li>Accept what is true, even if uncomfortable.</li>
+        <li>Create your own practical plan based on that truth.</li>
+        <li>Avoid using it just to justify anger, hopelessness, or old beliefs.</li>
       </ul>
+
+      <p class="article-p">That last point is the one most men fail on. They find the Red Pill angry and use it to stay angry. That is not awareness. That is just a new costume for old bitterness.</p>
 
       <!-- SECTION 5 -->
       <div id="rp-toc-tool" class="article-section-title">What It Is — And What It Isn't</div>
 
-      <p class="article-p">The Red Pill is a tool for understanding reality. That is the whole job description. It is not your moral compass. It is not your life plan. It is not a community you join or an identity you adopt. It is a lens. You look through it, you see more clearly, and then you decide what to do with what you see.</p>
+      <p class="article-p">The Red Pill is a tool for understanding reality between men and women.</p>
 
-      <p class="article-p">Real growth does not come from finding the right set of beliefs to adopt. It comes from facing what is true, sitting with the discomfort of it, and then building your own path forward. Not someone else's path. Yours.</p>
+      <p class="article-p">It is not a belief system.</p>
 
-      <p class="article-p">Stay objective. Stay curious. Take ownership of your life. Nobody is coming to rescue you — and that is actually the best news you will hear today.</p>
+      <p class="article-p">It is not a moral code.</p>
+
+      <p class="article-p">It is not a complete life manual.</p>
+
+      <p class="article-p">Real growth happens when you take the awareness, face the truth, and responsibly build your own path — instead of looking for someone to tell you exactly what to do.</p>
+
+      <p class="article-p">Stay objective. Stay curious. Take ownership of your life.</p>
 
       <div class="article-closing">
-        <p>STAY <span>OBJECTIVE.</span><br>STAY <span>CURIOUS.</span><br>TAKE OWNERSHIP OF YOUR LIFE.</p>
+        <p>STAY <span>OBJECTIVE.</span><br>STAY <span>CURIOUS.</span><br>TAKE <span>OWNERSHIP OF YOUR LIFE.</span></p>
       </div>
 
       <!-- ══════════ ENGAGEMENT ══════════ -->
@@ -4338,6 +4375,26 @@ function showToast(msg, duration=2800) {
   t.textContent = msg;
   t.classList.add('show');
   setTimeout(() => t.classList.remove('show'), duration);
+}
+
+// ═══════════════════════════════════════════════════════════════
+// SMART NAV SCROLL — works from home AND article pages
+// ═══════════════════════════════════════════════════════════════
+function navScrollTo(e, sectionId) {
+  if (e && e.preventDefault) e.preventDefault();
+  const isOnHome = !homePage.classList.contains('hidden');
+  if (!isOnHome) {
+    // go home first, then scroll after paint
+    showHome();
+    setTimeout(() => {
+      const el = document.getElementById(sectionId);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 80);
+  } else {
+    const el = document.getElementById(sectionId);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+  closeMobile();
 }
 
 // ═══════════════════════════════════════════════════════════════
